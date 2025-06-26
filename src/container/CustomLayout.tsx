@@ -117,7 +117,14 @@ const CustomLayout = () => {
               <Flex direction="column" justify="center" gap={20} w={{ base: "100%", sm: "50%" }}>
                 <Text size="2rem">Tentang Kami</Text>
                 <Text size="lg" fw={300} ta="justify">
-                  <Text span c="#4F8025" fw={600} inherit>DENEXT</Text> adalah perusahaan IT Support & Konsultan Teknologi modern... (dipersingkat)
+                  <Text span c="#4F8025" fw={600} inherit>DENEXT</Text> adalah perusahaan IT Support & Konsultan Teknologi modern yang
+                berkomitmen untuk memberikan solusi teknologi yang handal,
+                fleksibel, dan terjangkau bagi UMKM, startup, hingga perusahaan
+                berskala besar. Kami memandang teknologi bukan sekadar alat
+                bantu, tetapi sebagai strategi utama untuk mendorong pertumbuhan
+                dan efisiensi bisnis. Dengan pendekatan yang berpusat pada
+                manusia dan berorientasi pada hasil, kami hadir sebagai mitra
+                terpercaya dalam mendampingi transformasi digital bisnis Anda.
                 </Text>
                 <Text size="2rem">Kenapa DENEXT?</Text>
                 <Flex gap={10} wrap="wrap">
@@ -135,21 +142,60 @@ const CustomLayout = () => {
             <Text size="2rem" ta="center" mb="lg">Layanan Kami</Text>
             <Grid justify="center" align="center" gutter={20}>
               {[{
-                title: "IT Support (Remote & On-site)", icon: <IconHeadset size={32} />, desc: "Kami menyediakan dukungan teknis harian..."
+                title: "IT Support (Remote & On-site)", icon: <IconHeadset size={32} />, desc: "Kami menyediakan dukungan teknis harian untuk membantu
+                      menangani berbagai masalah IT serta menjaga agar sistem
+                      dan perangkat tetap berjalan optimal. Layanan ini mencakup
+                      instalasi sistem operasi dan software, serta pemeliharaan
+                      rutin untuk memastikan performa perangkat kerja seperti
+                      PC, laptop, dan printer tetap maksimal—baik secara jarak
+                      jauh maupun langsung di lokasi Anda."
               }, {
-                title: "Jaringan & Infrastruktur", icon: <IconTopologyStar size={32} />, desc: "Kami merancang dan mengimplementasikan sistem jaringan..."
+                title: "Jaringan & Infrastruktur", icon: <IconTopologyStar size={32} />, desc: "ami merancang dan mengimplementasikan sistem jaringan
+                      kantor seperti LAN, WAN, dan WiFi. Proses instalasi dan
+                      konfigurasi mencakup perangkat seperti Mikrotik, Ubiquiti,
+                      Cisco, dan TP-Link, dilengkapi dengan manajemen bandwidth,
+                      pengaturan VLAN, dan pengamanan jaringan agar tetap stabil
+                      dan aman."
               }, {
-                title: "Virtualisasi & Server", icon: <IconServer2 size={32} />, desc: "Kami membantu bisnis membangun infrastruktur server..."
+                title: "Virtualisasi & Server", icon: <IconServer2 size={32} />, desc: "Kami membantu bisnis membangun infrastruktur server fisik
+                      maupun virtual menggunakan platform seperti Proxmox,
+                      VMware, Hyper-V, dan Windows Server. Layanan ini termasuk
+                      konfigurasi Active Directory, DNS, DHCP, hingga sistem
+                      replikasi dan High Availability (HA) untuk memastikan
+                      keandalan operasional server Anda."
               }, {
-                title: "Website & Aplikasi", icon: <IconWorldWww size={32} />, desc: "Kami mengembangkan website dan aplikasi berbasis web..."
+                title: "Website & Aplikasi", icon: <IconWorldWww size={32} />, desc: " Kami mengembangkan website dan aplikasi berbasis web yang
+                      disesuaikan dengan kebutuhan bisnis Anda. Layanan kami
+                      mencakup pendaftaran domain, pengelolaan SSL, maintenance
+                      rutin, backup otomatis, dan optimasi SEO agar bisnis Anda
+                      tampil maksimal secara online."
               }, {
-                title: "Cloud & Email Hosting", icon: <IconCloudComputing size={32} />, desc: "Kami mendukung migrasi dan pengelolaan layanan cloud..."
+                title: "Cloud & Email Hosting", icon: <IconCloudComputing size={32} />, desc: "Kami mendukung migrasi dan pengelolaan layanan cloud
+                      seperti Google Workspace, Microsoft 365, dan Zoho Mail.
+                      Kami juga mengintegrasikan email bisnis, penyimpanan
+                      cloud, dan kolaborasi tim, dilengkapi konfigurasi keamanan
+                      email seperti SMTP, DKIM, dan SPF untuk menjaga reputasi
+                      email dan keamanan data."
               }, {
-                title: "Keamanan Digital & CCTV", icon: <IconShieldLock size={32} />, desc: "Kami menyediakan solusi pengawasan digital melalui..."
+                title: "Keamanan Digital & CCTV", icon: <IconShieldLock size={32} />, desc: "Kami menyediakan solusi pengawasan digital melalui
+                      instalasi CCTV analog maupun IP dari merek terpercaya
+                      seperti Hikvision, Dahua, dan Ezviz. Sistem kami mendukung
+                      pemantauan lokal maupun jarak jauh, serta integrasi dengan
+                      jaringan dan penyimpanan terpusat seperti NAS atau cloud."
               }, {
-                title: "Backup & Disaster Recovery", icon: <IconDatabase size={32} />, desc: "Kami menawarkan solusi backup lokal, offsite, dan cloud..."
+                title: "Backup & Disaster Recovery", icon: <IconDatabase size={32} />, desc: " Kami menawarkan solusi backup lokal, offsite, dan cloud
+                      menggunakan sistem seperti Synology, ZFS, rsync, dan
+                      Google Drive. Selain itu, kami menangani sinkronisasi data
+                      antar server (misalnya antara kantor pusat dan data
+                      center) serta menyusun dan menerapkan rencana pemulihan
+                      bencana (Disaster Recovery Plan)."
               }, {
-                title: "Perangkat IT & Pemeliharaan", icon: <IconTools size={32} />, desc: "Kami melayani perbaikan dan upgrade perangkat..."
+                title: "Perangkat IT & Pemeliharaan", icon: <IconTools size={32} />, desc: "Kami melayani perbaikan dan upgrade perangkat seperti PC,
+                      laptop, dan MacBook untuk berbagai sistem operasi
+                      (Windows, macOS, Linux). Layanan kami juga mencakup
+                      pengadaan perangkat keras, instalasi, audit infrastruktur
+                      IT, dan dokumentasi aset untuk membantu manajemen
+                      perangkat Anda lebih tertata."
               }].map((item, i) => (
                 <Grid.Col key={i} span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="md" padding="lg" style={{ transition: "transform 0.2s ease" }}
