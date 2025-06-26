@@ -61,7 +61,7 @@ const CustomLayout = () => {
               <Image src={iconLogo} alt="Logo" height={50} />
               <Flex direction={"column"} gap={2}>
                 <Text size="1.5rem" fw={700} lts={8.5}>
-                  DENEXTs
+                  DENEXT
                 </Text>
                 <Text size="8px" fw={400}>
                   DELIVERING THE NEXT INNOVATION
@@ -142,9 +142,8 @@ const CustomLayout = () => {
               <Text size="2.5rem">DENEXT</Text>
               <Text size="2.5rem">
                 <Text span c="#4F8025" fw={600} inherit>
-                  One Stop
-                </Text>{" "}
-                IT Solutions
+                  DELIVERING THE NEXT INNOVATION
+                </Text>
               </Text>
               <Text size="lg" fw={300}>
                 {/* Empowering your business through smart analysis, <br />
