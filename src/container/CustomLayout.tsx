@@ -26,12 +26,14 @@ import { useEffect, useState } from "react";
 import {
   IconBrandWhatsapp,
   IconCircleDashedCheck,
-  IconCloudLock,
-  IconCode,
-  IconDeviceDesktopCog,
-  IconDeviceLaptop,
   IconHeadset,
-  IconServerCog,
+  IconTopologyStar,
+  IconServer2,
+  IconBrowserCode,
+  IconCloudComputing,
+  IconShieldLock,
+  IconDatabaseRepeat,
+  IconTools
 } from "@tabler/icons-react";
 import { GetInTouch } from "./ContactUs";
 
@@ -260,7 +262,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconCloudLock size={32} />
+                      <IconTopologyStar size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
@@ -280,7 +282,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconDeviceDesktopCog size={32} />
+                      <IconServer2 size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
@@ -300,7 +302,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconDeviceLaptop size={32} />
+                      <IconBrowserCode size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
@@ -319,7 +321,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconCode size={32} />
+                      <IconCloudComputing size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
@@ -339,7 +341,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconServerCog size={32} />
+                      <IconShieldLock size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
@@ -358,7 +360,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconServerCog size={32} />
+                      <IconDatabaseRepeat size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
@@ -378,7 +380,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconServerCog size={32} />
+                      <IconTools size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
