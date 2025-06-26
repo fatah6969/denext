@@ -32,7 +32,7 @@ import {
   IconWorldWww,
   IconCloudComputing,
   IconShieldLock,
-  IconDatabaseRepeat,
+  IconDatabase,
   IconTools,
 } from "@tabler/icons-react";
 import { GetInTouch } from "./ContactUs";
@@ -360,7 +360,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconDatabaseRepeat size={32} />
+                      <IconDatabase size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
