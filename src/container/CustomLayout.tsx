@@ -61,7 +61,7 @@ const CustomLayout = () => {
               <Image src={iconLogo} alt="Logo" height={50} />
               <Flex direction={"column"} gap={2}>
                 <Text size="1.5rem" fw={700} lts={8.5}>
-                  DENEXT
+                  DENEXTs
                 </Text>
                 <Text size="8px" fw={400}>
                   DELIVERING THE NEXT INNOVATION
