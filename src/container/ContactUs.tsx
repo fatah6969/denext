@@ -39,7 +39,7 @@ export function GetInTouch() {
               <TextInput label="Your name" placeholder="Your name" />
               <TextInput
                 label="Your email"
-                placeholder="info@denext.co.id"
+                placeholder="info@denext.id"
                 required
               />
             </SimpleGrid>
