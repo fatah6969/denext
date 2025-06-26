@@ -19,7 +19,7 @@ import {
 import classes from "./custom.module.css";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
-import iconLogo from "../assets/ic_header_blk.png";
+import iconLogo from "../public/favicon.png";
 import gifHero from "../assets/gif_hero.gif";
 import gifAbout from "../assets/gif_about.gif";
 import { useEffect, useState } from "react";
@@ -59,14 +59,14 @@ const CustomLayout = () => {
           <Group justify="space-between" style={{ flex: 1 }}>
             <Flex justify={"center"} align={"center"}>
               <Image src={iconLogo} alt="Logo" height={50} />
-              {/*<Flex direction={"column"} gap={2}>
+              <Flex direction={"column"} gap={2}>
                 <Text size="1.5rem" fw={700} lts={8.5}>
                   DENEXTs
                 </Text>
                 <Text size="8px" fw={400}>
                   DELIVERING THE NEXT INNOVATION
                 </Text>
-              </Flex>*/}
+              </Flex>
             </Flex>
             <Group gap={"xl"} visibleFrom="sm">
               <UnstyledButton
