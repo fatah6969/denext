@@ -29,7 +29,7 @@ import {
   IconHeadset,
   IconTopologyStar,
   IconServer2,
-  IconBrowserCode,
+  IconWorldWww,
   IconCloudComputing,
   IconShieldLock,
   IconDatabaseRepeat,
@@ -302,7 +302,7 @@ const CustomLayout = () => {
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
-                      <IconBrowserCode size={32} />
+                      <IconWorldWww size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
