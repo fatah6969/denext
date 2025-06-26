@@ -191,14 +191,10 @@ const CustomLayout = () => {
                 <Text span c="#4F8025" fw={600} inherit>
                   DENEXT
                 </Text>{" "}
-                adalah perusahaan IT Support & Konsultan Teknologi modern yang
-                berkomitmen untuk memberikan solusi teknologi yang handal,
-                fleksibel, dan terjangkau bagi UMKM, startup, hingga perusahaan
-                berskala besar. Kami memandang teknologi bukan sekadar alat
-                bantu, tetapi sebagai strategi utama untuk mendorong pertumbuhan
-                dan efisiensi bisnis. Dengan pendekatan yang berpusat pada
-                manusia dan berorientasi pada hasil, kami hadir sebagai mitra
-                terpercaya dalam mendampingi transformasi digital bisnis Anda.
+                adalah perusahaan IT Support & Konsultan Teknologi modern yang berkomitmen menghadirkan solusi teknologi yang
+                handal, fleksibel, dan terjangkau bagi UMKM, startup, hingga perusahaan berskala besar.
+                Kami memandang teknologi bukan sekadar alat bantu, melainkan sebagai strategi utama dalam mendorong pertumbuhan dan efisiensi bisnis.
+                Dengan pendekatan yang berpusat pada manusia dan berorientasi pada hasil, kami hadir sebagai mitra terpercaya dalam mendampingi transformasi digital bisnis Anda.
               </Text>
 
               <Flex direction={"column"} gap={20}>
@@ -249,13 +245,9 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami menyediakan dukungan teknis harian untuk membantu
-                      menangani berbagai masalah IT serta menjaga agar sistem
-                      dan perangkat tetap berjalan optimal. Layanan ini mencakup
-                      instalasi sistem operasi dan software, serta pemeliharaan
-                      rutin untuk memastikan performa perangkat kerja seperti
-                      PC, laptop, dan printer tetap maksimal—baik secara jarak
-                      jauh maupun langsung di lokasi Anda.
+                      Kami menyediakan dukungan teknis harian untuk menangani berbagai permasalahan IT serta menjaga sistem dan perangkat tetap berjalan optimal.
+                      Layanan ini mencakup instalasi sistem operasi dan software, pemeliharaan rutin, serta troubleshooting untuk memastikan performa perangkat seperti PC,
+                      laptop, dan printer—baik secara remote maupun langsung di lokasi Anda.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -270,12 +262,9 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami merancang dan mengimplementasikan sistem jaringan
-                      kantor seperti LAN, WAN, dan WiFi. Proses instalasi dan
-                      konfigurasi mencakup perangkat seperti Mikrotik, Ubiquiti,
-                      Cisco, dan TP-Link, dilengkapi dengan manajemen bandwidth,
-                      pengaturan VLAN, dan pengamanan jaringan agar tetap stabil
-                      dan aman.
+                      Kami merancang dan mengimplementasikan sistem jaringan kantor, termasuk LAN, WAN, dan WiFi.
+                      Instalasi dan konfigurasi mencakup perangkat seperti MikroTik, Ubiquiti, Cisco, dan TP-Link, lengkap dengan manajemen bandwidth,
+                      pengaturan VLAN, serta pengamanan jaringan untuk memastikan koneksi yang stabil dan aman.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -290,12 +279,8 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami membantu bisnis membangun infrastruktur server fisik
-                      maupun virtual menggunakan platform seperti Proxmox,
-                      VMware, Hyper-V, dan Windows Server. Layanan ini termasuk
-                      konfigurasi Active Directory, DNS, DHCP, hingga sistem
-                      replikasi dan High Availability (HA) untuk memastikan
-                      keandalan operasional server Anda.
+                     Kami membantu bisnis membangun infrastruktur server fisik maupun virtual menggunakan platform seperti Proxmox, VMware, Hyper-V, dan Windows Server.
+                      Layanan mencakup konfigurasi Active Directory, DNS, DHCP, replikasi, hingga High Availability (HA) untuk menjaga keandalan sistem operasional Anda.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -310,11 +295,9 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami mengembangkan website dan aplikasi berbasis web yang
-                      disesuaikan dengan kebutuhan bisnis Anda. Layanan kami
-                      mencakup pendaftaran domain, pengelolaan SSL, maintenance
-                      rutin, backup otomatis, dan optimasi SEO agar bisnis Anda
-                      tampil maksimal secara online.
+                      Kami mengembangkan website dan aplikasi berbasis web sesuai kebutuhan bisnis Anda.
+                      Layanan mencakup pendaftaran domain, instalasi dan pengelolaan SSL, maintenance rutin, backup otomatis,
+                      serta optimasi SEO untuk meningkatkan visibilitas dan performa bisnis Anda secara online.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -329,12 +312,8 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami mendukung migrasi dan pengelolaan layanan cloud
-                      seperti Google Workspace, Microsoft 365, dan Zoho Mail.
-                      Kami juga mengintegrasikan email bisnis, penyimpanan
-                      cloud, dan kolaborasi tim, dilengkapi konfigurasi keamanan
-                      email seperti SMTP, DKIM, dan SPF untuk menjaga reputasi
-                      email dan keamanan data.
+                      Kami melayani migrasi dan pengelolaan layanan cloud bisnis seperti Google Workspace, Microsoft 365, dan Zoho Mail.
+                      Kami juga menyediakan integrasi email bisnis, penyimpanan cloud, dan solusi kolaborasi tim, lengkap dengan pengamanan email melalui konfigurasi SMTP, DKIM, dan SPF untuk menjaga reputasi dan keamanan data.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -349,11 +328,8 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami menyediakan solusi pengawasan digital melalui
-                      instalasi CCTV analog maupun IP dari merek terpercaya
-                      seperti Hikvision, Dahua, dan Ezviz. Sistem kami mendukung
-                      pemantauan lokal maupun jarak jauh, serta integrasi dengan
-                      jaringan dan penyimpanan terpusat seperti NAS atau cloud.
+                      Kami menyediakan solusi pengawasan digital melalui instalasi CCTV analog maupun IP, menggunakan perangkat dari merek terpercaya seperti Hikvision, Dahua, dan Ezviz.
+                      Sistem kami mendukung pemantauan lokal dan jarak jauh, serta integrasi dengan jaringan dan penyimpanan terpusat seperti NAS maupun cloud.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -368,12 +344,8 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami menawarkan solusi backup lokal, offsite, dan cloud
-                      menggunakan sistem seperti Synology, ZFS, rsync, dan
-                      Google Drive. Selain itu, kami menangani sinkronisasi data
-                      antar server (misalnya antara kantor pusat dan data
-                      center) serta menyusun dan menerapkan rencana pemulihan
-                      bencana (Disaster Recovery Plan).
+                      Kami menawarkan solusi backup lokal, offsite, dan cloud menggunakan teknologi seperti Synology, ZFS, rsync, dan Google Drive.
+                      Selain itu, kami juga menangani sinkronisasi data antar server—misalnya antara kantor pusat dan data center—serta perencanaan dan implementasi Disaster Recovery Plan (DRP) yang solid.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -388,12 +360,8 @@ const CustomLayout = () => {
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami melayani perbaikan dan upgrade perangkat seperti PC,
-                      laptop, dan MacBook untuk berbagai sistem operasi
-                      (Windows, macOS, Linux). Layanan kami juga mencakup
-                      pengadaan perangkat keras, instalasi, audit infrastruktur
-                      IT, dan dokumentasi aset untuk membantu manajemen
-                      perangkat Anda lebih tertata.
+                     Kami melayani perbaikan dan upgrade perangkat seperti PC, laptop, dan MacBook untuk sistem operasi Windows, macOS, maupun Linux.
+                      Layanan mencakup pengadaan hardware, instalasi, audit infrastruktur IT, hingga dokumentasi aset untuk mendukung pengelolaan perangkat Anda secara efisien dan terstruktur.
                     </Text>
                   </Card>
                 </Grid.Col>
