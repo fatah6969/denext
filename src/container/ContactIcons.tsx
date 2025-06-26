@@ -34,13 +34,13 @@ function ContactIcon({
 const MOCKDATA = [
   {
     title: "Email",
-    description: "info@denext.co.id",
+    description: "info@denext.id",
     icon: IconAt,
   },
-  { title: "Phone", description: "+62 21 1234 5678", icon: IconPhone },
+  { title: "Phone", description: "+62851 1747 7481", icon: IconPhone },
   {
     title: "Address",
-    description: "Jl. Jendral Sudirman No. 45, Jakarta, Indonesia",
+    description: "Amara Living, Bogor, Jawa Barat, Indonesia",
     icon: IconMapPin,
   },
 ];
