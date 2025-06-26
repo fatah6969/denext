@@ -19,7 +19,7 @@ import {
 import classes from "./custom.module.css";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
-import iconLogo from "../assets/ic_header.png";
+import iconLogo from "../assets/ic_header_blk.png";
 import gifHero from "../assets/gif_hero.gif";
 import gifAbout from "../assets/gif_about.gif";
 import { useEffect, useState } from "react";
