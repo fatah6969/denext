@@ -1,4 +1,3 @@
-// CustomLayout.tsx dengan animasi dan perbaikan UI
 "use client";
 
 import {
@@ -42,7 +41,7 @@ import {
 import { GetInTouch } from "./ContactUs";
 import { motion } from "framer-motion";
 
-const MotionCard = motion(Card);
+const MotionDiv = motion.div;
 
 const CustomLayout = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -152,19 +151,22 @@ const CustomLayout = () => {
             <Grid justify="center" align="center" gutter={20}>
               {services.map((item, i) => (
                 <Grid.Col key={i} span={{ base: 12, sm: 6, md: 3 }}>
-                  <MotionCard
-                    shadow="md"
-                    padding="lg"
+                  <MotionDiv
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: i * 0.1 }}
                     viewport={{ once: true }}
-                    className={classes.cardHover}
                   >
-                    <Avatar color="green" radius="md" size="lg">{item.icon}</Avatar>
-                    <Text fw={500} size="lg" mt="md">{item.title}</Text>
-                    <Text mt="xs" c="dimmed" size="sm" ta="justify">{item.desc}</Text>
-                  </MotionCard>
+                    <Card
+                      shadow="md"
+                      padding="lg"
+                      className={classes.cardHover}
+                    >
+                      <Avatar color="green" radius="md" size="lg">{item.icon}</Avatar>
+                      <Text fw={500} size="lg" mt="md">{item.title}</Text>
+                      <Text mt="xs" c="dimmed" size="sm" ta="justify">{item.desc}</Text>
+                    </Card>
+                  </MotionDiv>
                 </Grid.Col>
               ))}
             </Grid>
