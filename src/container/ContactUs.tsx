@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Button,
   Group,
@@ -6,11 +7,50 @@ import {
   Text,
   Textarea,
   TextInput,
+  Notification,
 } from "@mantine/core";
+import { IconCheck } from "@tabler/icons-react";
 import { ContactIconsList } from "./ContactIcons";
 import classes from "./GetInTouch.module.css";
 
 export function GetInTouch() {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const res = await fetch("https://formspree.io/f/movwpgqv", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: new FormData(e.target as HTMLFormElement),
+      });
+
+      if (res.ok) {
+        setSuccess(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+      }
+    } catch (err) {
+      console.error("Gagal kirim:", err);
+    }
+
+    setLoading(false);
+  };
+
   return (
     <Paper shadow="0" radius="lg" px={{ base: 20, sm: 100 }} bg={"transparent"}>
       <div className={classes.wrapper}>
@@ -19,7 +59,8 @@ export function GetInTouch() {
           style={{
             backgroundImage:
               "linear-gradient(to right, #4F8025 ,rgb(144, 183, 110))",
-          }}>
+          }}
+        >
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
             Informasi Kontak
           </Text>
@@ -27,34 +68,70 @@ export function GetInTouch() {
           <ContactIconsList />
         </div>
 
-        <form
-          className={classes.form}
-          onSubmit={(event) => event.preventDefault()}>
+        <form className={classes.form} onSubmit={handleSubmit}>
           <Text fz="lg" fw={700} className={classes.title}>
             Get in touch
           </Text>
 
+          {success && (
+            <Notification
+              mt="md"
+              color="green"
+              icon={<IconCheck size="1.2rem" />}
+              onClose={() => setSuccess(false)}
+            >
+              Pesan berhasil dikirim!
+            </Notification>
+          )}
+
           <div className={classes.fields}>
             <SimpleGrid cols={{ base: 1, sm: 2 }}>
-              <TextInput label="Your name" placeholder="Your name" />
+              <TextInput
+                label="Your name"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Your name"
+                required
+              />
               <TextInput
                 label="Your email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 placeholder="info@denext.id"
                 required
               />
             </SimpleGrid>
 
-            <TextInput mt="md" label="Subject" placeholder="Subject" required />
+            <TextInput
+              mt="md"
+              label="Subject"
+              name="subject"
+              value={form.subject}
+              onChange={handleChange}
+              placeholder="Subject"
+              required
+            />
 
             <Textarea
               mt="md"
               label="Your message"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
               placeholder="Please include all relevant information"
               minRows={3}
+              required
             />
 
             <Group justify="flex-end" mt="md">
-              <Button type="submit" color="#4F8025" className={classes.control}>
+              <Button
+                type="submit"
+                color="#4F8025"
+                className={classes.control}
+                loading={loading}
+              >
                 Send message
               </Button>
             </Group>
