@@ -415,7 +415,7 @@ const CustomLayout = () => {
           component="a"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => window.open("https://wa.me/6285156095138")}>
+          onClick={() => window.open("https://wa.me/6285117477481")}>
           <IconBrandWhatsapp
             style={{ width: "70%", height: "70%" }}
             size={20}
