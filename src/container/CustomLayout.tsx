@@ -33,7 +33,7 @@ import {
   IconCloudComputing,
   IconShieldLock,
   IconDatabaseRepeat,
-  IconTools
+  IconTools,
 } from "@tabler/icons-react";
 import { GetInTouch } from "./ContactUs";
 
