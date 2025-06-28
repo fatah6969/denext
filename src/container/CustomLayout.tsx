@@ -140,12 +140,13 @@ const CustomLayout = () => {
             <Flex direction={"column"} justify={"center"} gap={10}>
               <Text size="sm" fw={300}>
                 - Expert Consulting -
-              </Text>
+            </Text>
               <Text size="2.5rem">DENEXT</Text>
               <Text size="2.5rem">
                 <Text span c="#4F8025" fw={600} inherit>
-                  DELIVERING THE NEXT INNOVATION
-                </Text>
+                  One Stop
+                </Text>{" "}
+                IT Solutions
               </Text>
               <Text size="lg" fw={300}>
                 {/* Empowering your business through smart analysis, <br />
