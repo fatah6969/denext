@@ -387,6 +387,7 @@ const CustomLayout = () => {
 
         <AppShell.Section id="contact-us">
           <GetInTouch />
+          <TestimonialForm />
         </AppShell.Section>
 
         <ActionIcon
