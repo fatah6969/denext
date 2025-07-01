@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   Button,
   Group,
@@ -9,9 +8,7 @@ import {
   Text,
   Textarea,
   TextInput,
-  Notification,
 } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
 import { ContactIconsList } from "./ContactIcons";
 import classes from "./GetInTouch.module.css";
 

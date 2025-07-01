@@ -23,7 +23,6 @@ import iconLogo from "../../public/favicon.png";
 import gifHero from "../assets/gif_hero.gif";
 import gifAbout from "../assets/gif_about.gif";
 import { useEffect, useState } from "react";
-import { TestimonialForm } from "../container/TestimonialForm";
 import {
   IconBrandWhatsapp,
   IconCircleDashedCheck,
