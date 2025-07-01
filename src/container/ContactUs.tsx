@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import {
   Button,
@@ -12,6 +14,7 @@ import {
 import { IconCheck } from "@tabler/icons-react";
 import { ContactIconsList } from "./ContactIcons";
 import classes from "./GetInTouch.module.css";
+import { supabase } from "@/utils/supabaseClient";
 
 export function GetInTouch() {
   const [loading, setLoading] = useState(false);
@@ -32,18 +35,38 @@ export function GetInTouch() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://formspree.io/f/movwpgqv", {
+      // 1. Kirim ke Formspree
+      await fetch("https://formspree.io/f/movwpgqv", {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
+        headers: { Accept: "application/json" },
         body: new FormData(e.target as HTMLFormElement),
       });
 
-      if (res.ok) {
-        setSuccess(true);
-        setForm({ name: "", email: "", subject: "", message: "" });
+      // 2. Simpan ke Supabase
+      const { error } = await supabase.from("contact_messages").insert({
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+      });
+
+      if (error) {
+        console.error("Gagal simpan ke Supabase:", error.message);
       }
+
+      // 3. Kirim notifikasi Telegram
+      await fetch("/api/send-telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: "📩 Kontak Baru Masuk",
+          ...form,
+        }),
+      });
+
+      // 4. Reset form & tampilkan notifikasi
+      setSuccess(true);
+      setForm({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
       console.error("Gagal kirim:", err);
     }
@@ -52,7 +75,7 @@ export function GetInTouch() {
   };
 
   return (
-    <Paper shadow="0" radius="lg" px={{ base: 20, sm: 100 }} bg={"transparent"}>
+    <Paper shadow="0" radius="lg" px={{ base: 20, sm: 100 }} bg="transparent">
       <div className={classes.wrapper}>
         <div
           className={classes.contacts}
@@ -64,7 +87,6 @@ export function GetInTouch() {
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
             Informasi Kontak
           </Text>
-
           <ContactIconsList />
         </div>
 
