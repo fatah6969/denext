@@ -261,7 +261,7 @@ const CustomLayout = () => {
                       perangkat tetap berjalan optimal. Layanan ini mencakup
                       instalasi sistem operasi dan software, pemeliharaan rutin,
                       serta troubleshooting untuk memastikan performa perangkat
-                      seperti PC, laptop, dan printer—baik secara remote maupun
+                      seperti PC, laptop, dan printer, baik secara remote maupun
                       langsung di lokasi Anda.
                     </Text>
                   </Card>
@@ -379,8 +379,8 @@ const CustomLayout = () => {
                       Kami menawarkan solusi backup lokal, offsite, dan cloud
                       menggunakan teknologi seperti Synology, ZFS, rsync, dan
                       Google Drive. Selain itu, kami juga menangani sinkronisasi
-                      data antar server—misalnya antara kantor pusat dan data
-                      center—serta perencanaan dan implementasi Disaster
+                      data antar server, misalnya antara kantor pusat dan data
+                      center, serta perencanaan dan implementasi Disaster
                       Recovery Plan (DRP) yang solid.
                     </Text>
                   </Card>
