@@ -37,7 +37,7 @@ const MOCKDATA = [
     description: "info@denext.id",
     icon: IconAt,
   },
-  { title: "Phone", description: "+62851 1747 7481", icon: IconPhone },
+  { title: "Phone", description: "+62 851 1747 7481", icon: IconPhone },
   {
     title: "Address",
     description: "Amara Living, Bogor, Jawa Barat, Indonesia",
