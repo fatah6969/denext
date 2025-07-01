@@ -239,9 +239,14 @@ const CustomLayout = () => {
                 Layanan Kami
               </Text>
 
-              <Grid justify="center" align="center" p={15}>
+              <Grid
+                justify="start"
+                align="start"
+                p={15}
+                h={"100%"}
+                mih={"100%"}>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconHeadset size={32} />
                     </Avatar>
@@ -262,7 +267,7 @@ const CustomLayout = () => {
                   </Card>
                 </Grid.Col>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconTopologyStar size={32} />
                     </Avatar>
@@ -282,7 +287,7 @@ const CustomLayout = () => {
                   </Card>
                 </Grid.Col>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconServer2 size={32} />
                     </Avatar>
@@ -302,7 +307,7 @@ const CustomLayout = () => {
                   </Card>
                 </Grid.Col>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconWorldWww size={32} />
                     </Avatar>
@@ -321,7 +326,7 @@ const CustomLayout = () => {
                   </Card>
                 </Grid.Col>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconCloudComputing size={32} />
                     </Avatar>
@@ -341,7 +346,7 @@ const CustomLayout = () => {
                   </Card>
                 </Grid.Col>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconShieldLock size={32} />
                     </Avatar>
@@ -361,7 +366,7 @@ const CustomLayout = () => {
                   </Card>
                 </Grid.Col>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconDatabase size={32} />
                     </Avatar>
@@ -381,7 +386,7 @@ const CustomLayout = () => {
                   </Card>
                 </Grid.Col>
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg">
+                  <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
                       <IconTools size={32} />
                     </Avatar>
