@@ -1,63 +1,110 @@
-'use client'
-import { useState } from 'react'
-import { supabase } from '@/utils/supabaseClient'
+"use client";
 
-export default function TestimonialForm() {
-  const [form, setForm] = useState({ name: '', company: '', message: '' })
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
+import { useState } from "react";
+import {
+  Button,
+  Paper,
+  Text,
+  Textarea,
+  TextInput,
+  Notification,
+} from "@mantine/core";
+import { IconCheck } from "@tabler/icons-react";
+import { supabase } from "@/utils/supabaseClient";
+
+export function TestimonialForm() {
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    const { error } = await supabase.from('Testimonials').insert([form])
-    setLoading(false)
+    e.preventDefault();
+    setLoading(true);
+
+    const { error } = await supabase.from("Testimonials").insert({
+      ...form,
+      is_approved: false,
+    });
+
     if (!error) {
-      setSuccess(true)
-      setForm({ name: '', company: '', message: '' })
+      setSuccess(true);
+      setForm({ name: "", company: "", message: "" });
+
+      // kirim notifikasi ke Telegram
+      await fetch("/api/send-telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
     } else {
-      alert('❌ Gagal mengirim testimoni: ' + error.message)
+      console.error(error);
     }
-  }
+
+    setLoading(false);
+  };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-xl mx-auto">
-      <input
-        name="name"
-        value={form.name}
-        onChange={handleChange}
-        placeholder="Nama"
-        required
-        className="w-full border p-2 rounded"
-      />
-      <input
-        name="company"
-        value={form.company}
-        onChange={handleChange}
-        placeholder="Perusahaan"
-        required
-        className="w-full border p-2 rounded"
-      />
-      <textarea
-        name="message"
-        value={form.message}
-        onChange={handleChange}
-        placeholder="Pesan testimoni"
-        required
-        className="w-full border p-2 rounded"
-      />
-      <button
-        type="submit"
-        disabled={loading}
-        className="bg-blue-600 text-white px-4 py-2 rounded"
-      >
-        {loading ? 'Mengirim...' : 'Kirim Testimoni'}
-      </button>
-      {success && <p className="text-green-600">✅ Testimoni berhasil dikirim! Akan muncul setelah disetujui admin.</p>}
-    </form>
-  )
+    <Paper shadow="xs" radius="lg" p="lg" mt="lg">
+      <Text size="xl" fw={700} mb="sm">
+        Tinggalkan Testimoni
+      </Text>
+
+      {success && (
+        <Notification
+          mt="md"
+          color="green"
+          icon={<IconCheck size="1.2rem" />}
+          onClose={() => setSuccess(false)}
+        >
+          Testimoni berhasil dikirim! Akan tampil setelah disetujui admin.
+        </Notification>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <TextInput
+          label="Nama"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          placeholder="Nama Anda"
+          required
+          mb="sm"
+        />
+        <TextInput
+          label="Perusahaan (opsional)"
+          name="company"
+          value={form.company}
+          onChange={handleChange}
+          placeholder="Nama Perusahaan"
+          mb="sm"
+        />
+        <Textarea
+          label="Pesan"
+          name="message"
+          value={form.message}
+          onChange={handleChange}
+          placeholder="Tulis testimoni Anda..."
+          required
+          minRows={4}
+        />
+        <Button
+          type="submit"
+          loading={loading}
+          mt="md"
+          color="green"
+        >
+          Kirim Testimoni
+        </Button>
+      </form>
+    </Paper>
+  );
 }
