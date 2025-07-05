@@ -14,8 +14,32 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Denext",
-  description: "One Stop IT Solutions",
+  title: "Denext | One Stop IT Solutions",
+  description: "Solusi lengkap untuk kebutuhan IT Anda: software, hardware, jaringan, dan konsultasi.",
+  keywords: ["denext", "it solutions", "konsultan teknologi", "jasa komputer", "service laptop", "software", "hardware", "jaringan"],
+  authors: [{ name: "Denext.id", url: "https://denext.id" }],
+  metadataBase: new URL("https://denext.id"),
+  openGraph: {
+    title: "Denext | One Stop IT Solutions",
+    description: "Solusi lengkap untuk kebutuhan IT Anda.",
+    url: "https://denext.id",
+    siteName: "Denext",
+    images: [
+      {
+        url: "/favicon.png",
+        width: 512,
+        height: 512,
+        alt: "Denext Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Denext | One Stop IT Solutions",
+    description: "Solusi lengkap untuk kebutuhan IT Anda.",
+    images: ["/favicon.png"],
+  },
   icons: {
     icon: "/favicon.png",
   },
@@ -43,6 +67,23 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script id="ld-json" type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Denext",
+            "url": "https://denext.id",
+            "logo": "https://denext.id/favicon.png",
+            "sameAs": [
+              "https://www.instagram.com/denext.id"
+    ]
+  }
+  `}
+</Script>
+
+        
+        
         {/* Page Content */}
         <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
