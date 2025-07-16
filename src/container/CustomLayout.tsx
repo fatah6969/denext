@@ -429,7 +429,7 @@ const CustomLayout = () => {
           </Stack>
         </AppShell.Section>
 
-        <AppShell.Section id="clients">
+        <AppShell.Section id="clients" style={{ marginTop: "4rem", marginBottom: "4rem" }}>
           <Text ta="center" size="2rem" mt={40} mb={10}>
             Klien Kami
           </Text>
