@@ -37,6 +37,19 @@ import {
 } from "@tabler/icons-react";
 import { GetInTouch } from "./ContactUs";
 
+const clientLogos = [
+  {
+    name: "QOALA",
+    logo: "/clients/Qoala-Logo.png",
+    url: "https://www.qoala.app/id",
+  },
+  {
+    name: "TRIJEE",
+    logo: "/clients/Trijee-Logo.png",
+    url: "https://trijee.com/",
+  },
+];
+
 const CustomLayout = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
@@ -410,6 +423,48 @@ const CustomLayout = () => {
           </Stack>
         </AppShell.Section>
 
+        <AppShell.Section id="clients">
+          <Stack align="center" my={40}>
+            <Text size="2rem" ta="center" fw={600}>
+              Dipercaya Oleh
+            </Text>
+            <Grid
+              justify="center"
+              align="center"
+              gutter="xl"
+              p="md"
+              style={{ maxWidth: "1000px", margin: "0 auto" }}>
+                {clientLogos.map((client, index) => (
+                <Grid.Col
+                          key={index}
+                  span={{ base: 6, sm: 4, md: 3 }}
+                  style={{ textAlign: "center" }}>
+                  <a
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.logoCard}>
+                    <Image
+                      src={client.logo}
+                      alt={client.name}
+                      width={200} // besar & seragam
+                      height={100}
+                      style={{
+                        objectFit: "contain",
+                        borderRadius: "12px",
+                        padding: "16px",
+                        background: "#ffffff",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                      }}
+                    />
+                  </a>
+                </Grid.Col>
+              ))}
+            </Grid>
+          </Stack>
+        </AppShell.Section>
+
+        
         <AppShell.Section id="contact-us">
           <GetInTouch />
         </AppShell.Section>
