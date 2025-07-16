@@ -46,3 +46,11 @@
 .logoCard:hover .logoImage {
   filter: grayscale(0%);
 }
+
+#home,
+#about-us,
+#our-services,
+#clients,
+#contact-us {
+  scroll-margin-top: 100px; /* bisa disesuaikan, misal 60px, 80px, dll */
+}
