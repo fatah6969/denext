@@ -105,6 +105,12 @@ const CustomLayout = () => {
               <UnstyledButton
                 className={classes.control}
                 component="a"
+                href="#clients">
+                Klien Kami
+              </UnstyledButton>
+              <UnstyledButton
+                className={classes.control}
+                component="a"
                 href="#contact-us">
                 Kontak
               </UnstyledButton>
