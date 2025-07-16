@@ -424,46 +424,28 @@ const CustomLayout = () => {
         </AppShell.Section>
 
         <AppShell.Section id="clients">
-          <Stack align="center" my={40}>
-            <Text size="2rem" ta="center" fw={600}>
-              Dipercaya Oleh
-            </Text>
-            <Grid
-              justify="center"
-              align="center"
-              gutter="xl"
-              p="md"
-              style={{ maxWidth: "1000px", margin: "0 auto" }}>
-                {clientLogos.map((client, index) => (
-                <Grid.Col
-                          key={index}
-                  span={{ base: 6, sm: 4, md: 3 }}
-                  style={{ textAlign: "center" }}>
-                  <a
-                    href={client.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={classes.logoCard}>
-                    <Image
-                      src={client.logo}
-                      alt={client.name}
-                      width={200} // besar & seragam
-                      height={100}
-                      style={{
-                        objectFit: "contain",
-                        borderRadius: "12px",
-                        padding: "16px",
-                        background: "#ffffff",
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-                      }}
-                    />
-                  </a>
-                </Grid.Col>
-              ))}
-            </Grid>
-          </Stack>
+          <Text ta="center" size="2rem" mt={40} mb={10}>
+            Klien Kami
+          </Text>
+          <div className={classes.clientGrid}>
+            {clientLogos.map((client, index) => (
+              <a
+                key={index}
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.logoCard}>
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={120}
+                  height={80}
+                  className={classes.logoImage}
+                />
+              </a>
+            ))}
+          </div>
         </AppShell.Section>
-
         
         <AppShell.Section id="contact-us">
           <GetInTouch />
