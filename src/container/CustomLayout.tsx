@@ -48,6 +48,21 @@ const clientLogos = [
     logo: "/clients/Trijee-Logo.png",
     url: "https://trijee.com/",
   },
+  {
+    name: "AAA",
+    logo: "/clients/AAA-Logo.png",
+    url: "https://adyaarthaabadi.com/",
+  },
+  {
+    name: "LPP",
+    logo: "/clients/Lpp-Logo.png",
+    url: "https://psikotes.psikologiperspective.com/",
+  },
+  {
+    name: "Siliwangi",
+    logo: "/clients/Siliwangi-Logo.png",
+    url: "https://www.siliwangiexpress.web.id/",
+  },
 ];
 
 const CustomLayout = () => {
