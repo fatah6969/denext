@@ -262,7 +262,7 @@ const CustomLayout = () => {
           </Flex>
         </AppShell.Section>
 
-        <AppShell.Section id="our-services">
+       <AppShell.Section id="our-services" style={{ scrollMarginTop: "100px" }}>
           <Stack justify="center" align="center">
             <Flex
               justify={"center"}
