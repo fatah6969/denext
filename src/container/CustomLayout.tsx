@@ -50,12 +50,12 @@ const clientLogos = [
   },
   {
     name: "AAA",
-    logo: "/clients/AAA-Logo.png",
+    logo: "/clients/AAA_Logo.png",
     url: "https://adyaarthaabadi.com/",
   },
   {
     name: "LPP",
-    logo: "/clients/Lpp-Logo.png",
+    logo: "/clients/Lpp_Logo.png",
     url: "https://psikotes.psikologiperspective.com/",
   },
   {
