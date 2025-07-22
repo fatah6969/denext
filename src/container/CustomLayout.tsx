@@ -102,31 +102,36 @@ const CustomLayout = () => {
               <UnstyledButton
                 className={classes.control}
                 component="a"
-                href="#home">
+                href="#home"
+              >
                 Beranda
               </UnstyledButton>
               <UnstyledButton
                 className={classes.control}
                 component="a"
-                href="#about-us">
+                href="#about-us"
+              >
                 Tentang
               </UnstyledButton>
               <UnstyledButton
                 className={classes.control}
                 component="a"
-                href="#our-services">
+                href="#our-services"
+              >
                 Layanan
               </UnstyledButton>
               <UnstyledButton
                 className={classes.control}
                 component="a"
-                href="#clients">
+                href="#clients"
+              >
                 Klien Kami
               </UnstyledButton>
               <UnstyledButton
                 className={classes.control}
                 component="a"
-                href="#contact-us">
+                href="#contact-us"
+              >
                 Kontak
               </UnstyledButton>
             </Group>
@@ -140,7 +145,8 @@ const CustomLayout = () => {
           display: "flex",
           flexDirection: "column",
           gap: isMobile ? "3rem" : "2rem",
-        }}>
+        }}
+      >
         <AppShell.Section>
           <Drawer
             hiddenFrom="md"
@@ -148,20 +154,36 @@ const CustomLayout = () => {
             size="xs"
             opened={opened}
             onClose={close}
-            withCloseButton={false}>
+            withCloseButton={false}
+          >
+            <Flex justify={"start"} align={"center"} pb={16}>
+              <Image src={iconLogo} alt="Logo" height={50} />
+              <Flex direction={"column"} gap={2}>
+                <Text size="1.5rem" fw={700} lts={8.5}>
+                  DENEXT
+                </Text>
+                <Text size="8px" fw={400}>
+                  DELIVERING THE NEXT INNOVATION
+                </Text>
+              </Flex>
+            </Flex>
             <Group
+              w="100%"
               gap={"xl"}
-              style={{ flexDirection: "column", alignItems: "flex-start" }}>
-              <UnstyledButton className={classes.control}>Home</UnstyledButton>
-              <UnstyledButton className={classes.control}>
-                About Us
-              </UnstyledButton>
-              <UnstyledButton className={classes.control}>
-                Services
-              </UnstyledButton>
-              <UnstyledButton className={classes.control}>
-                Contact Us
-              </UnstyledButton>
+              style={{ flexDirection: "column", alignItems: "flex-start" }}
+            >
+              <a href="#home" className={classes.link} onClick={close}>
+                Beranda
+              </a>
+              <a href="#about-us" className={classes.link} onClick={close}>
+                Tentang
+              </a>
+              <a href="#our-services" className={classes.link} onClick={close}>
+                Layanan
+              </a>
+              <a href="#contact-us" className={classes.link} onClick={close}>
+                Kontak Kami
+              </a>
             </Group>
           </Drawer>
         </AppShell.Section>
@@ -170,7 +192,8 @@ const CustomLayout = () => {
           <Flex
             justify={{ base: "center", sm: "space-around" }}
             direction={{ base: "column-reverse", sm: "row" }}
-            gap={"md"}>
+            gap={"md"}
+          >
             <Flex direction={"column"} justify={"center"} gap={10}>
               <Text size="sm" fw={300}>
                 - Expert Consulting -
@@ -206,7 +229,8 @@ const CustomLayout = () => {
             justify={{ base: "center" }}
             direction={{ base: "column-reverse", sm: "row" }}
             // m={"md"}
-            gap={"xs"}>
+            gap={"xs"}
+          >
             <Flex justify="center" p={0}>
               <Image
                 src={gifAbout}
@@ -220,7 +244,8 @@ const CustomLayout = () => {
               direction={"column"}
               justify={"center"}
               gap={20}
-              w={{ base: "100%", sm: "50%" }}>
+              w={{ base: "100%", sm: "50%" }}
+            >
               <Text size="2rem">Tentang Kami</Text>
               <Text size="lg" fw={300} ta={"justify"}>
                 <Text span c="#4F8025" fw={600} inherit>
@@ -262,13 +287,17 @@ const CustomLayout = () => {
           </Flex>
         </AppShell.Section>
 
-       <AppShell.Section id="our-services" style={{ scrollMarginTop: "100px" }}>
+        <AppShell.Section
+          id="our-services"
+          style={{ scrollMarginTop: "100px" }}
+        >
           <Stack justify="center" align="center">
             <Flex
               justify={"center"}
               direction={"column"}
               gap={"md"}
-              w={{ base: "100%", sm: "90%" }}>
+              w={{ base: "100%", sm: "90%" }}
+            >
               <Text size="2rem" ta={"center"} py={10}>
                 Layanan Kami
               </Text>
@@ -278,7 +307,8 @@ const CustomLayout = () => {
                 align="start"
                 p={15}
                 h={"100%"}
-                mih={"100%"}>
+                mih={"100%"}
+              >
                 <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg" h={300}>
                     <Avatar color="green" radius="md" size="lg">
@@ -444,7 +474,10 @@ const CustomLayout = () => {
           </Stack>
         </AppShell.Section>
 
-        <AppShell.Section id="clients" style={{ marginTop: "4rem", marginBottom: "4rem" }}>
+        <AppShell.Section
+          id="clients"
+          style={{ marginTop: "4rem", marginBottom: "4rem" }}
+        >
           <Text ta="center" size="2rem" mt={40} mb={10}>
             Klien Kami
           </Text>
@@ -455,7 +488,8 @@ const CustomLayout = () => {
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={classes.logoCard}>
+                className={classes.logoCard}
+              >
                 <Image
                   src={client.logo}
                   alt={client.name}
@@ -467,7 +501,7 @@ const CustomLayout = () => {
             ))}
           </div>
         </AppShell.Section>
-        
+
         <AppShell.Section id="contact-us">
           <GetInTouch />
         </AppShell.Section>
@@ -482,7 +516,8 @@ const CustomLayout = () => {
           component="a"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => window.open("https://wa.me/6285117477481")}>
+          onClick={() => window.open("https://wa.me/6285117477481")}
+        >
           <IconBrandWhatsapp
             style={{ width: "70%", height: "70%" }}
             size={20}
@@ -494,7 +529,8 @@ const CustomLayout = () => {
           p={"md"}
           style={{
             borderTop: "1px solid #eaeaea",
-          }}>
+          }}
+        >
           <footer style={{ textAlign: "center", justifyContent: "center" }}>
             <Text size="sm" c="dimmed">
               © {new Date().getFullYear()} DENEXT. All rights reserved.

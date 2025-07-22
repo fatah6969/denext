@@ -5,6 +5,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
+
 import { MantineProvider } from "@mantine/core";
 import { theme } from "@/utils/customTheme";
 
@@ -15,8 +16,18 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Denext | One Stop IT Solutions",
-  description: "Solusi lengkap untuk kebutuhan IT Anda: software, hardware, jaringan, dan konsultasi.",
-  keywords: ["denext", "it solutions", "konsultan teknologi", "jasa komputer", "service laptop", "software", "hardware", "jaringan"],
+  description:
+    "Solusi lengkap untuk kebutuhan IT Anda: software, hardware, jaringan, dan konsultasi.",
+  keywords: [
+    "denext",
+    "it solutions",
+    "konsultan teknologi",
+    "jasa komputer",
+    "service laptop",
+    "software",
+    "hardware",
+    "jaringan",
+  ],
   authors: [{ name: "Denext.id", url: "https://denext.id" }],
   metadataBase: new URL("https://denext.id"),
   openGraph: {
@@ -53,22 +64,25 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${roboto.className}`}>
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZT2G9T1CSM"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
+        <MantineProvider theme={theme}>{children}</MantineProvider>
+      </body>
+
+      {/* Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-ZT2G9T1CSM"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-ZT2G9T1CSM');
           `}
-        </Script>
+      </Script>
 
-        <Script id="ld-json" type="application/ld+json">
-          {`
+      <Script id="ld-json" type="application/ld+json">
+        {`
           {
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -80,13 +94,7 @@ export default function RootLayout({
     ]
   }
   `}
-</Script>
-
-        
-        
-        {/* Page Content */}
-        <MantineProvider theme={theme}>{children}</MantineProvider>
-      </body>
+      </Script>
     </html>
   );
 }
