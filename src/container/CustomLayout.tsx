@@ -181,6 +181,9 @@ const CustomLayout = () => {
               <a href="#our-services" className={classes.link} onClick={close}>
                 Layanan
               </a>
+              <a href="#clients" className={classes.link} onClick={close}>
+                Klien Kami
+              </a>
               <a href="#contact-us" className={classes.link} onClick={close}>
                 Kontak Kami
               </a>
