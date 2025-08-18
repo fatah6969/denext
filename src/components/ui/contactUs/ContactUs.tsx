@@ -14,7 +14,7 @@ import classes from "./GetInTouch.module.css";
 
 export function GetInTouch() {
   return (
-    <Paper shadow="0" radius="lg" px={{ base: 20, sm: 100 }} bg="transparent">
+    <Paper id="contact-us" shadow="0" radius="lg" px={{ base: 20, sm: 100 }} bg="transparent" pt={{ base: "0px", md:"72"}}>
       <div className={classes.wrapper}>
         <div
           className={classes.contacts}

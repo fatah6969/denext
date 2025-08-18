@@ -35,7 +35,7 @@ import {
   IconDatabase,
   IconTools,
 } from "@tabler/icons-react";
-import { GetInTouch } from "./ContactUs";
+// import { GetInTouch } from "./ContactUs";
 
 const clientLogos = [
   {
@@ -503,10 +503,6 @@ const CustomLayout = () => {
               </a>
             ))}
           </div>
-        </AppShell.Section>
-
-        <AppShell.Section id="contact-us">
-          <GetInTouch />
         </AppShell.Section>
 
         <ActionIcon
