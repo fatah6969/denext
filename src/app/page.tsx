@@ -1,46 +1,32 @@
-"use client";
+'use client'
 
-import { Footer } from "@/components/layouts/footer/footer";
-import { Navbar } from "@/components/layouts/navbar/navbar";
-import { Sidebar } from "@/components/layouts/sidebar/sidebar";
-import { AboutUs } from "@/components/ui/aboutUs/aboutUs";
-import { Clients } from "@/components/ui/clients/clients";
-import { GetInTouch } from "@/components/ui/contactUs/ContactUs";
-import { Home } from "@/components/ui/home/home";
-import { OurService } from "@/components/ui/ourServices/ourService";
-import { Box, Container, Stack } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Footer } from '@/components/layouts/footer/footer'
+import { Navbar } from '@/components/layouts/navbar/navbar'
+import { WhatsappFloating } from '@/components/layouts/whatsapp/whatsapp'
+import { AboutUs } from '@/components/ui/aboutUs/aboutUs'
+import { Clients } from '@/components/ui/clients/clients'
+import { GetInTouch } from '@/components/ui/contactUs/ContactUs'
+import { Home } from '@/components/ui/home/home'
+import { OurService } from '@/components/ui/ourServices/ourService'
+import { WhyUs } from '@/components/ui/whyUs/whyUs'
+import { Container, Stack } from '@mantine/core'
 
 const Page = () => {
-  const [opened, { close, toggle }] = useDisclosure(false);
-
   return (
-    <Container fluid px="md">
-      {/* Sidebar terhubung ke state */}
-      <Sidebar opened={opened} close={close} />
-        <Box
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 1000,
-          background: "white", // biar ga transparan
-        }}
-      >
-        <Navbar opened={opened} toggle={toggle} />
-      </Box>
-
+    <Container fluid pl={{ base: 0, sm: 84 }}>
+      <Navbar />
       <Stack pt={70}>
         <Home />
         <AboutUs />
+        <WhyUs />
         <OurService />
         <Clients />
         <GetInTouch />
-        <Footer />
       </Stack>
+      <Footer />
+      <WhatsappFloating />
     </Container>
   )
-};
+}
 
-export default Page;
+export default Page

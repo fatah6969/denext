@@ -1,189 +1,104 @@
-import { Avatar, Card, Flex, Grid, Stack, Text } from "@mantine/core";
-import { IconCloudComputing, IconDatabase, IconHeadset, IconServer2, IconShieldLock, IconTools, IconTopologyStar, IconWorldWww } from "@tabler/icons-react";
+import {  Card, Flex, Grid, Stack, Text } from '@mantine/core'
+import {
+  IconCloudComputing,
+  IconDatabase,
+  IconHeadset,
+  IconServer2,
+  IconShieldLock,
+  IconTools,
+  IconTopologyStar,
+  IconWorldWww,
+} from '@tabler/icons-react'
 
 export function OurService() {
+  const services = [
+    {
+      icon: IconHeadset,
+      title: 'IT Support (Remote & On-Site)',
+      description:
+        'Daily technical support to keep your systems running smoothly. From OS and software installation to troubleshooting and preventive maintenance, we ensure your PCs, laptops, and printers perform at their best—whether remotely or on-site.',
+    },
+    {
+      icon: IconTopologyStar,
+      title: 'Networking & Infrastructure',
+      description:
+        'End-to-end design and deployment of office networks (LAN, WAN, WiFi). We configure MikroTik, Ubiquiti, Cisco, and TP-Link devices with VLAN, bandwidth management, and security to keep your connection stable and protected.',
+    },
+    {
+      icon: IconServer2,
+      title: 'Virtualization & Servers',
+      description:
+        'Build and manage physical or virtual servers with Proxmox, VMware, Hyper-V, and Windows Server. Services include Active Directory, DNS, DHCP, replication, and High Availability (HA) to keep your operations reliable.',
+    },
+    {
+      icon: IconWorldWww,
+      title: 'Websites & Applications',
+      description:
+        'Custom websites and web apps tailored to your business. We handle domain setup, SSL management, routine maintenance, backups, and SEO optimization to boost your online presence.',
+    },
+    {
+      icon: IconCloudComputing,
+      title: 'Cloud & Email Hosting',
+      description:
+        'Migration and management for Google Workspace, Microsoft 365, and Zoho Mail. We provide business email integration, cloud storage, and team collaboration with advanced email security (SMTP, DKIM, SPF).',
+    },
+    {
+      icon: IconShieldLock,
+      title: 'Security & CCTV',
+      description:
+        'Complete surveillance solutions with Hikvision, Dahua, and Ezviz. Supporting analog and IP cameras, local or remote monitoring, plus centralized storage via NAS or cloud.',
+    },
+    {
+      icon: IconDatabase,
+      title: 'Backup & Disaster Recovery',
+      description:
+        'Reliable backup solutions—local, offsite, or cloud—using Synology, ZFS, rsync, and Google Drive. We design Disaster Recovery Plans (DRP) to keep your business data secure and always available.',
+    },
+    {
+      icon: IconTools,
+      title: 'IT Devices & Maintenance',
+      description:
+        'Repair and upgrade services for PCs, laptops, and MacBooks across Windows, macOS, and Linux. We also handle hardware procurement, IT audits, and asset documentation for efficient management.',
+    },
+  ]
 
   return (
-    <Stack justify="center" align="center" id="our-service" pt={{ base: "0px", md:"70"}}>
-            <Flex
-              justify={"center"}
-              direction={"column"}
-              gap={"md"}
-              w={{ base: "100%", sm: "90%" }}
-            >
-              <Text size="2rem" ta={"center"} py={10}>
-                Layanan Kami
-              </Text>
+    <Stack justify="center" align="center" id="our-service" pt={70}>
+      <Flex
+        justify={'center'}
+        direction={'column'}
+        gap={'md'}
+        w={{ base: '100%', sm: '90%' }}
+      >
+        <Text size="2rem" ta={'center'} py={10} c="#4F8025" fw={800}>
+          Our Services
+        </Text>
 
-              <Grid
-                justify="start"
-                align="start"
-                p={15}
-                h={"100%"}
-                mih={"100%"}
-              >
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconHeadset size={32} />
-                    </Avatar>
+        <Grid justify="start" align="start" p={15} h="100%" mih="100%">
+          {services.map((service, index) => (
+            <Grid.Col key={index} span={{ base: 12, sm: 6, md: 3 }}>
+              <Card shadow="sm" padding="lg" h={300}>
+                <Flex
+                  justify="center"
+                  align="center"
+                  direction="column"
+                  gap={6}
+                >
+                  <service.icon size={32} style={{ color: '#4F8025' }} />
 
-                    <Text fw={500} size="lg" mt="md">
-                      IT Support (Remote & On-site)
-                    </Text>
+                  <Text fw={600} size="lg" mt="md" c="#4F8025">
+                    {service.title}
+                  </Text>
+                </Flex>
 
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami menyediakan dukungan teknis harian untuk menangani
-                      berbagai permasalahan IT serta menjaga sistem dan
-                      perangkat tetap berjalan optimal. Layanan ini mencakup
-                      instalasi sistem operasi dan software, pemeliharaan rutin,
-                      serta troubleshooting untuk memastikan performa perangkat
-                      seperti PC, laptop, dan printer, baik secara remote maupun
-                      langsung di lokasi Anda.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconTopologyStar size={32} />
-                    </Avatar>
-
-                    <Text fw={500} size="lg" mt="md">
-                      Jaringan & Infrastruktur
-                    </Text>
-
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami merancang dan mengimplementasikan sistem jaringan
-                      kantor, termasuk LAN, WAN, dan WiFi. Instalasi dan
-                      konfigurasi mencakup perangkat seperti MikroTik, Ubiquiti,
-                      Cisco, dan TP-Link, lengkap dengan manajemen bandwidth,
-                      pengaturan VLAN, serta pengamanan jaringan untuk
-                      memastikan koneksi yang stabil dan aman.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconServer2 size={32} />
-                    </Avatar>
-
-                    <Text fw={500} size="lg" mt="md">
-                      Virtualisasi & Server
-                    </Text>
-
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami membantu bisnis membangun infrastruktur server fisik
-                      maupun virtual menggunakan platform seperti Proxmox,
-                      VMware, Hyper-V, dan Windows Server. Layanan mencakup
-                      konfigurasi Active Directory, DNS, DHCP, replikasi, hingga
-                      High Availability (HA) untuk menjaga keandalan sistem
-                      operasional Anda.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconWorldWww size={32} />
-                    </Avatar>
-
-                    <Text fw={500} size="lg" mt="md">
-                      Website & Aplikasi
-                    </Text>
-
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami mengembangkan website dan aplikasi berbasis web
-                      sesuai kebutuhan bisnis Anda. Layanan mencakup pendaftaran
-                      domain, instalasi dan pengelolaan SSL, maintenance rutin,
-                      backup otomatis, serta optimasi SEO untuk meningkatkan
-                      visibilitas dan performa bisnis Anda secara online.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconCloudComputing size={32} />
-                    </Avatar>
-
-                    <Text fw={500} size="lg" mt="md">
-                      Cloud & Email Hosting
-                    </Text>
-
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami melayani migrasi dan pengelolaan layanan cloud bisnis
-                      seperti Google Workspace, Microsoft 365, dan Zoho Mail.
-                      Kami juga menyediakan integrasi email bisnis, penyimpanan
-                      cloud, dan solusi kolaborasi tim, lengkap dengan
-                      pengamanan email melalui konfigurasi SMTP, DKIM, dan SPF
-                      untuk menjaga reputasi dan keamanan data.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconShieldLock size={32} />
-                    </Avatar>
-
-                    <Text fw={500} size="lg" mt="md">
-                      Keamanan Digital & CCTV
-                    </Text>
-
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami menyediakan solusi pengawasan digital melalui
-                      instalasi CCTV analog maupun IP, menggunakan perangkat
-                      dari merek terpercaya seperti Hikvision, Dahua, dan Ezviz.
-                      Sistem kami mendukung pemantauan lokal dan jarak jauh,
-                      serta integrasi dengan jaringan dan penyimpanan terpusat
-                      seperti NAS maupun cloud.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconDatabase size={32} />
-                    </Avatar>
-
-                    <Text fw={500} size="lg" mt="md">
-                      Backup & Disaster Recovery
-                    </Text>
-
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami menawarkan solusi backup lokal, offsite, dan cloud
-                      menggunakan teknologi seperti Synology, ZFS, rsync, dan
-                      Google Drive. Selain itu, kami juga menangani sinkronisasi
-                      data antar server, misalnya antara kantor pusat dan data
-                      center, serta perencanaan dan implementasi Disaster
-                      Recovery Plan (DRP) yang solid.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
-                  <Card shadow="sm" padding="lg" h={300}>
-                    <Avatar color="green" radius="md" size="lg">
-                      <IconTools size={32} />
-                    </Avatar>
-
-                    <Text fw={500} size="lg" mt="md">
-                      Perangkat IT & Pemeliharaan
-                    </Text>
-
-                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Kami melayani perbaikan dan upgrade perangkat seperti PC,
-                      laptop, dan MacBook untuk sistem operasi Windows, macOS,
-                      maupun Linux. Layanan mencakup pengadaan hardware,
-                      instalasi, audit infrastruktur IT, hingga dokumentasi aset
-                      untuk mendukung pengelolaan perangkat Anda secara efisien
-                      dan terstruktur.
-                    </Text>
-                  </Card>
-                </Grid.Col>
-              </Grid>
-            </Flex>
-          </Stack>
+                <Text mt="xs" c="dimmed" size="sm" ta="justify">
+                  {service.description}
+                </Text>
+              </Card>
+            </Grid.Col>
+          ))}
+        </Grid>
+      </Flex>
+    </Stack>
   )
 }
