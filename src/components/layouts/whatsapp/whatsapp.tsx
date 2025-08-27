@@ -3,7 +3,6 @@ import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 export function WhatsappFloating() {
   return (
-
             <ActionIcon
               variant="filled"
               aria-label="Whatsapp"
