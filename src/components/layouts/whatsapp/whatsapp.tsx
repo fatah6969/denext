@@ -1,24 +1,30 @@
 import { ActionIcon } from '@mantine/core'
 import { IconBrandWhatsapp } from '@tabler/icons-react'
+import { useMediaQuery } from '@mantine/hooks'
 
 export function WhatsappFloating() {
+  const isMobile = useMediaQuery('(max-width: 48em)') // sesuai sm breakpoint Mantine (768px)
+
   return (
     <ActionIcon
-      variant="filled"
-      aria-label="Whatsapp"
-      size="3rem"
-      color="green"
-      radius="100%"
-      style={{ position: 'fixed', bottom: 20, right: 20 }}
       component="a"
+      href="https://wa.me/6285117477481"
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => window.open('https://wa.me/6285117477481')}
+      variant="filled"
+      color="green"
+      radius="100%"
+      size={isMobile ? 40 : 48} // responsif di sini, bukan di CSS
+      style={{
+        position: 'fixed',
+        bottom: 20,
+        right: 20,
+      }}
     >
       <IconBrandWhatsapp
-        style={{ width: '70%', height: '70%' }}
-        size={20}
+        size={isMobile ? 26 : 32}
         stroke={1.5}
+        style={{ width: '70%', height: '70%' }}
       />
     </ActionIcon>
   )
