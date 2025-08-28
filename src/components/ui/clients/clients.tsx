@@ -27,41 +27,42 @@ export function Clients() {
 
   const clientLogos = [
     {
+      name: 'Qoala',
       logo: '/clients/Qoala-Logo.png',
       url: 'https://www.qoala.app/id',
       description: 'Insurance Technology',
       color: 'blue',
     },
     {
-      name: 'TRIJEE',
+      name: 'Trijee',
       logo: '/clients/Trijee-Logo.png',
       url: 'https://trijee.com/',
       description: 'Sportswear Retail',
       color: 'yellow',
     },
     {
-      name: 'AAA',
+      name: 'Adya Artha Abadi',
       logo: '/clients/AAA_Logo.png',
       url: 'https://adyaarthaabadi.com/',
       description: 'Pharmaceutical Distributor',
       color: 'red',
     },
     {
-      name: 'LPP',
+      name: 'Lembaga Psikologi Perspective',
       logo: '/clients/Lpp_Logo.png',
       url: 'https://psikotes.psikologiperspective.com/',
       description: 'Psychological Assessment & Consulting',
       color: 'violet',
     },
     {
-      name: 'SILIWANGI EXPRESS',
+      name: 'Siliwangi Express',
       logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
       description: 'Cargo & Freight Logistics',
       color: 'purple',
     },
     {
-      name: 'lifepathcoach',
+      name: 'Life Path Coach',
       logo: '/clients/lifepathcoach.png',
       url: 'https://www.lifepathcoach555.com/',
       description: 'Spiritual & Holistic Life Coaching Platform',
