@@ -12,7 +12,8 @@ export function WhyUs() {
         </Text>
         <Text size="sm" fw={600} w={600} ta="center">
           More than just an IT service provider
-          DENEXT stands as a strategic partner that supports your business growth through smart, scalable, and sustainable technology solutions.
+          DENEXT stands as a strategic partner that supports your business growth through smart, 
+          scalable, and sustainable technology solutions.
         </Text>
       </Flex>
 
