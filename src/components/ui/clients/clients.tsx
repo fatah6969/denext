@@ -59,7 +59,7 @@ export function Clients() {
       logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
       description: 'Cargo & Freight Logistics',
-      color: 'sky blue',
+      color: 'purple',
     },
     {
       name: 'lifepathcoach',
