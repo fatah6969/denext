@@ -27,7 +27,6 @@ export function Clients() {
 
   const clientLogos = [
     {
-      name: 'QOALA',
       logo: '/clients/Qoala-Logo.png',
       url: 'https://www.qoala.app/id',
       description: 'Insurance Technology',
@@ -55,7 +54,7 @@ export function Clients() {
       color: 'violet',
     },
     {
-      name: 'Siliwangi',
+      name: 'SILIWANGI EXPRESS',
       logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
       description: 'Cargo & Freight Logistics',
