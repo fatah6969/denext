@@ -8,17 +8,18 @@ export function WhatsappFloating() {
   return (
     <ActionIcon
       component="a"
-      href="https://wa.me/6285117477481"
+      href="https://wa.me/6285117477481?text=Halo%2C%20saya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20Denext.%20Mohon%20informasinya%20ya."
       target="_blank"
       rel="noopener noreferrer"
       variant="filled"
       color="green"
       radius="100%"
-      size={isMobile ? 40 : 48} // responsif di sini, bukan di CSS
+      size={isMobile ? 40 : 48} // responsif di sini
       style={{
         position: 'fixed',
         bottom: 20,
         right: 20,
+        zIndex: 9999, // biar ga ketutup elemen lain
       }}
     >
       <IconBrandWhatsapp
