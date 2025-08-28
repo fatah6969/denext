@@ -8,12 +8,11 @@ export function WhyUs() {
     <Stack pt={72}>
       <Flex justify="center" direction="column" align="center" gap={12}>
         <Text size="2rem" c="#4F8025" fw={800}>
-          Kenapa DENEXT?
+          Why DENEXT?
         </Text>
         <Text size="sm" fw={600} w={600} ta="center">
-          Lebih dari sekadar penyedia layanan IT, DENEXT hadir sebagai mitra
-          strategis yang mendukung pertumbuhan bisnis Anda melalui solusi
-          teknologi yang cerdas, terukur, dan berkelanjutan
+          More than just an IT service provider
+          DENEXT stands as a strategic partner that supports your business growth through smart, scalable, and sustainable technology solutions.
         </Text>
       </Flex>
 
