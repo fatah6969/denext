@@ -38,7 +38,7 @@ export function Clients() {
       logo: '/clients/Trijee-Logo.png',
       url: 'https://trijee.com/',
       description: 'Sportswear Retail',
-      color: 'light blue',
+      color: 'yellow',
     },
     {
       name: 'AAA',
@@ -59,14 +59,14 @@ export function Clients() {
       logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
       description: 'Cargo & Freight Logistics',
-      color: 'light blue',
+      color: 'sky blue',
     },
     {
       name: 'lifepathcoach',
       logo: '/clients/lifepathcoach.png',
       url: 'https://www.lifepathcoach555.com/',
       description: 'Spiritual & Holistic Life Coaching Platform',
-      color: 'gold',
+      color: 'brown',
     },
   ]
 
