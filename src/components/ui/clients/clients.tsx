@@ -66,7 +66,7 @@ export function Clients() {
       logo: '/clients/lifepathcoach.png',
       url: 'https://www.lifepathcoach555.com/',
       description: 'Spiritual & Holistic Life Coaching Platform',
-      color: 'brown',
+      color: 'green',
     },
   ]
 
