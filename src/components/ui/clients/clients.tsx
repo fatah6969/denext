@@ -58,8 +58,7 @@ export function Clients() {
       name: 'Siliwangi',
       logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
-      description: 'Express Services',
-      color: 'red',
+ 
     },
   ]
 
