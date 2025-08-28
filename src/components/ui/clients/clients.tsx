@@ -38,14 +38,14 @@ export function Clients() {
       logo: '/clients/Trijee-Logo.png',
       url: 'https://trijee.com/',
       description: 'Sportswear Retail',
-      color: 'green',
+      color: 'light blue',
     },
     {
       name: 'AAA',
       logo: '/clients/AAA_Logo.png',
       url: 'https://adyaarthaabadi.com/',
       description: 'Pharmaceutical Distributor',
-      color: 'orange',
+      color: 'red',
     },
     {
       name: 'LPP',
@@ -59,7 +59,14 @@ export function Clients() {
       logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
       description: 'Cargo & Freight Logistics',
-      color: 'red',
+      color: 'light blue',
+    },
+    {
+      name: 'lifepathcoach',
+      logo: '/clients/lifepathcoach.png',
+      url: 'https://www.lifepathcoach555.com/',
+      description: 'Spiritual & Holistic Life Coaching Platform',
+      color: 'gold',
     },
   ]
 
@@ -208,7 +215,7 @@ export function Clients() {
         >
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
-              5+
+              6+
             </Text>
             <Text size="sm" c="dimmed" ta="center">
               Trusted Clients
