@@ -10,15 +10,16 @@ export function WhyUs() {
         <Text size="2rem" c="#4F8025" fw={800}>
           Why DENEXT?
         </Text>
-        <Text size="sm" fw={600} w={600} ta="center">
-          More than just an IT service provider
-          DENEXT stands as a strategic partner that supports your business growth through smart, 
-          scalable, and sustainable technology solutions.
+        <Text size="sm" fw={600} w={{ base: '90%', sm: 600 }} ta="center">
+          More than just an IT service provider DENEXT stands as a strategic
+          partner that supports your business growth through smart, scalable,
+          and sustainable technology solutions.
         </Text>
       </Flex>
 
-      <Grid columns={24} justify="center" align="center" pt={24}>
-        <Grid.Col span={12}>
+      {/* First Row Grid */}
+      <Grid columns={24} justify="center" align="stretch" pt={24}>
+        <Grid.Col span={{ base: 24, md: 12 }}>
           <Flex
             justify="space-between"
             style={{
@@ -31,6 +32,7 @@ export function WhyUs() {
               backgroundColor: 'white',
               overflow: 'hidden',
               minHeight: '200px',
+              height: '100%',
             }}
           >
             <Flex
@@ -41,13 +43,14 @@ export function WhyUs() {
                 position: 'absolute',
                 top: 12,
                 left: 12,
+                right: 140, // Provide space for image
               }}
             >
               <Text size="lg" fw={600}>
                 Expert Team with Proven Experience
               </Text>
               <Text size="sm" c="dimmed">
-                We offer industry-leading IT job training for today’s tech
+                We offer industry-leading IT job training for todays tech
                 landscape.
               </Text>
             </Flex>
@@ -60,13 +63,14 @@ export function WhyUs() {
               height={120}
               style={{
                 position: 'absolute',
-                bottom: 6, // nempel ke garis bawah
-                right: 6, // nempel ke garis kanan
+                bottom: 6,
+                right: 6,
               }}
             />
           </Flex>
         </Grid.Col>
-        <Grid.Col span={6}>
+
+        <Grid.Col span={{ base: 24, sm: 12, md: 6 }}>
           <Flex
             justify="space-between"
             style={{
@@ -79,6 +83,7 @@ export function WhyUs() {
               backgroundColor: 'white',
               overflow: 'hidden',
               minHeight: '200px',
+              height: '100%',
             }}
           >
             <Flex
@@ -89,6 +94,7 @@ export function WhyUs() {
                 position: 'absolute',
                 top: 12,
                 left: 12,
+                right: 140,
               }}
             >
               <Text size="lg" fw={600}>
@@ -100,7 +106,6 @@ export function WhyUs() {
               </Text>
             </Flex>
 
-            {/* gambar di pojok kanan bawah */}
             <Image
               src={lamp}
               alt="lamp"
@@ -108,13 +113,14 @@ export function WhyUs() {
               height={120}
               style={{
                 position: 'absolute',
-                bottom: 6, // nempel ke garis bawah
-                right: 6, // nempel ke garis kanan
+                bottom: 6,
+                right: 6,
               }}
             />
           </Flex>
         </Grid.Col>
-        <Grid.Col span={6}>
+
+        <Grid.Col span={{ base: 24, sm: 12, md: 6 }}>
           <Flex
             justify="space-between"
             style={{
@@ -127,6 +133,7 @@ export function WhyUs() {
               backgroundColor: 'white',
               overflow: 'hidden',
               minHeight: '200px',
+              height: '100%',
             }}
           >
             <Flex
@@ -137,6 +144,7 @@ export function WhyUs() {
                 position: 'absolute',
                 top: 12,
                 left: 12,
+                right: 140,
               }}
             >
               <Text size="lg" fw={600}>
@@ -148,7 +156,6 @@ export function WhyUs() {
               </Text>
             </Flex>
 
-            {/* gambar di pojok kanan bawah */}
             <Image
               src={team}
               alt="team"
@@ -156,16 +163,17 @@ export function WhyUs() {
               height={120}
               style={{
                 position: 'absolute',
-                bottom: 6, // nempel ke garis bawah
-                right: 6, // nempel ke garis kanan
+                bottom: 6,
+                right: 6,
               }}
             />
           </Flex>
         </Grid.Col>
       </Grid>
 
-      <Grid columns={24} justify="center" align="center">
-        <Grid.Col span={6}>
+      {/* Second Row Grid */}
+      <Grid columns={24} justify="center" align="stretch">
+        <Grid.Col span={{ base: 24, sm: 12, md: 6 }}>
           <Flex
             justify="space-between"
             style={{
@@ -178,6 +186,7 @@ export function WhyUs() {
               backgroundColor: 'white',
               overflow: 'hidden',
               minHeight: '200px',
+              height: '100%',
             }}
           >
             <Flex
@@ -188,6 +197,7 @@ export function WhyUs() {
                 position: 'absolute',
                 top: 12,
                 left: 12,
+                right: 140,
               }}
             >
               <Text size="lg" fw={600}>
@@ -199,7 +209,6 @@ export function WhyUs() {
               </Text>
             </Flex>
 
-            {/* gambar di pojok kanan bawah */}
             <Image
               src={lamp}
               alt="lamp"
@@ -207,13 +216,14 @@ export function WhyUs() {
               height={120}
               style={{
                 position: 'absolute',
-                bottom: 6, // nempel ke garis bawah
-                right: 6, // nempel ke garis kanan
+                bottom: 6,
+                right: 6,
               }}
             />
           </Flex>
         </Grid.Col>
-        <Grid.Col span={18}>
+
+        <Grid.Col span={{ base: 24, sm: 12, md: 18 }}>
           <Flex
             justify="space-between"
             style={{
@@ -226,6 +236,7 @@ export function WhyUs() {
               backgroundColor: 'white',
               overflow: 'hidden',
               minHeight: '200px',
+              height: '100%',
             }}
           >
             <Flex
@@ -236,6 +247,7 @@ export function WhyUs() {
                 position: 'absolute',
                 top: 12,
                 left: 12,
+                right: 140,
               }}
             >
               <Text size="lg" fw={600}>
@@ -247,7 +259,6 @@ export function WhyUs() {
               </Text>
             </Flex>
 
-            {/* gambar di pojok kanan bawah */}
             <Image
               src={team}
               alt="team"
@@ -255,8 +266,8 @@ export function WhyUs() {
               height={120}
               style={{
                 position: 'absolute',
-                bottom: 6, // nempel ke garis bawah
-                right: 6, // nempel ke garis kanan
+                bottom: 6,
+                right: 6,
               }}
             />
           </Flex>

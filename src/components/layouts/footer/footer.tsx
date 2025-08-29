@@ -15,7 +15,7 @@ export function Footer() {
       <Flex justify="center" align="center">
         <Text size="sm" c="dimmed">
           © {new Date().getFullYear()} DENEXT. All rights reserved.
-        </Text>  
+        </Text>
       </Flex>
     </Box>
   );

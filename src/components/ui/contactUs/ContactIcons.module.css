@@ -1,25 +1,240 @@
+/* ContactIcons.module.css */
+
+.stack {
+  gap: 1.5rem !important;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
-  color: var(--mantine-color-white);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideInLeft 0.6s ease-out both;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.wrapper:hover::before {
+  left: 100%;
+}
+
+.wrapper:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.iconContainer {
+  position: relative;
+  margin-right: 1rem;
+  padding: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper:hover .iconContainer {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .icon {
-  margin-right: var(--mantine-spacing-md);
-  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Custom colors for each icon type */
+.wrapper:has([data-icon='email']) .icon {
+  color: #60a5fa; /* Blue for email */
+  stroke: #3b82f6;
+  fill: url(#emailGradient);
+}
+
+.wrapper:has([data-icon='phone']) .icon {
+  color: #34d399; /* Green for phone */
+  stroke: #22c55e;
+  fill: url(#phoneGradient);
+}
+
+.wrapper:has([data-icon='location']) .icon {
+  color: #f87171; /* Red for location */
+  stroke: #ef4444;
+  fill: url(#locationGradient);
+}
+
+/* SVG Gradients for Icons */
+.defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.iconGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 60%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.wrapper:hover .iconGlow {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
 }
 
 .title {
-  color: var(--mantine-color-blue-0);
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+  margin-bottom: 5px !important;
+  font-size: 0.8rem !important;
 }
 
 .description {
-  color: var(--mantine-color-white);
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  word-break: break-word !important;
+  transition: all 0.3s ease !important;
 }
 
+.wrapper:hover .description {
+  transform: translateX(6px);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
 
-.logoCard:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+/* Staggered animation for each contact item */
+.wrapper:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.wrapper:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.wrapper:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* New bounce animation for icons */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.wrapper:nth-child(odd) .iconContainer {
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+.wrapper:nth-child(even) .iconContainer {
+  animation: bounce 2.5s ease-in-out infinite 1.25s;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .iconContainer {
+    margin-right: 0.8rem;
+    padding: 12px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .title {
+    font-size: 0.75rem !important;
+  }
+
+  .description {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Icon-specific wrapper backgrounds */
+.wrapper:has([data-icon='email']) {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.25),
+    rgba(147, 51, 234, 0.25)
+  );
+}
+
+.wrapper:has([data-icon='phone']) {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.25),
+    rgba(59, 130, 246, 0.25)
+  );
+}
+
+.wrapper:has([data-icon='location']) {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.25),
+    rgba(245, 158, 11, 0.25)
+  );
 }

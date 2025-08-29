@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.heroTitle::after {
+/* .heroTitle::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -44,7 +44,7 @@
   background: linear-gradient(90deg, #4F8025, #10b981);
   animation: underlineExpand 1.5s ease-out 0.5s forwards;
   border-radius: 2px;
-}
+} */
 
 .heroSubtitle {
   animation: slideInUp 1s ease-out 0.2s both;
@@ -301,6 +301,12 @@
 
   .contentVector {
     display: none;
+  }
+
+  .heroButton {
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

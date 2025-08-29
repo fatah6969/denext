@@ -1,31 +1,120 @@
-.link {
-  display: inline-block;
-  width: 100%;
-  padding: 8px 12px;
-  background-color: transparent;
-  color: black;
-  border-radius: 9999px;
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
+/* navbar.module.css */
+
+.navbarWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.link:hover {
-  background-color: #4f8025;
+.navbarContainer {
+  flex: 1;
   border-radius: 9999px;
-  color: white;
+  background: linear-gradient(135deg, #F7F7F7 0%, #FFFFFF 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
-.navbar {
-  font-size: 16px;
+/* Logo Styles */
+.logoContainer {
   cursor: pointer;
-  display: inline-block;
-  padding: 8px 12px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  border-radius: 9999px;
+  transition: transform 0.2s ease;
 }
 
-.navbar:hover {
-  background-color: #4f8025;
-  border-radius: 9999px;
-  color: white;
+.logoContainer:hover {
+  transform: scale(1.05);
+}
+
+.logoImage {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: filter 0.2s ease;
+}
+
+.logoText {
+  background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logoSubtext {
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.navLink {
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.navLink:hover {
+  background-color: rgba(76, 175, 80, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Contact Button */
+.contactButton {
+  background: linear-gradient(135deg, transparent 0%, rgba(76, 175, 80, 0.05) 100%) !important;
+  border: 2px solid #4CAF50 !important;
+  transition: all 0.3s ease !important;
+  font-weight: 600 !important;
+}
+
+.contactButton:hover {
+  background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3) !important;
+}
+
+/* Mobile Menu */
+.burgerMenu {
+  transition: all 0.3s ease;
+}
+
+.mobileDropdown {
+  background: linear-gradient(135deg, #F7F7F7 0%, #FFFFFF 100%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  border-radius: 12px !important;
+}
+
+.mobileMenuItem {
+  border-radius: 8px !important;
+  margin: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.mobileMenuItem:hover {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+.mobileMenuItem .link {
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Preserve original navbar class if needed */
+.navbar {
+  /* Add your existing navbar styles here if any */
+  font-weight: 500;
+  color: #333;
+}
+
+.link {
+  /* Add your existing link styles here if any */
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
 }

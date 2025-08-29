@@ -19,21 +19,11 @@ export function Navbar() {
       h="70px"
       px={{ base: 'md', sm: '5rem' }}
       bg="white"
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-      }}
+      className={classes.navbarWrapper}
     >
       <Group
         justify="space-between"
-        style={{
-          flex: 1,
-          borderRadius: '9999px',
-        }}
-        bg="#F7F7F7"
+        className={classes.navbarContainer}
         py="16px"
         px={{ base: 'md', sm: '40px' }}
         mt="12px"
@@ -43,7 +33,7 @@ export function Navbar() {
           justify={'center'}
           align={'center'}
           direction={'row'}
-          style={{ cursor: 'pointer' }}
+          className={classes.logoContainer}
         >
           <Link
             to="home"
@@ -52,12 +42,24 @@ export function Navbar() {
             offset={-70}
           >
             <Flex align={'center'}>
-              <Image src={iconLogo} alt="Logo" height={50} />
-              <Flex direction={'column'} gap={2}>
-                <Text size="1.5rem" fw={700} lts={8.5}>
+              <Box className={classes.logoImage}>
+                <Image src={iconLogo} alt="Logo" height={50} />
+              </Box>
+              <Flex direction={'column'} gap={2} ml={8}>
+                <Text
+                  size="1.5rem"
+                  fw={700}
+                  lts={8.5}
+                  className={classes.logoText}
+                >
                   DENEXT
                 </Text>
-                <Text size="8px" fw={400}>
+                <Text
+                  size="8px"
+                  fw={400}
+                  c="dimmed"
+                  className={classes.logoSubtext}
+                >
                   DELIVERING THE NEXT INNOVATION
                 </Text>
               </Flex>
@@ -72,7 +74,7 @@ export function Navbar() {
             smooth={true}
             duration={500}
             offset={-70}
-            className={classes.navbar}
+            className={`${classes.navLink} ${classes.navbar}`}
           >
             Beranda
           </Link>
@@ -81,7 +83,7 @@ export function Navbar() {
             smooth={true}
             duration={500}
             offset={-70}
-            className={classes.navbar}
+            className={`${classes.navLink} ${classes.navbar}`}
           >
             About Us
           </Link>
@@ -90,7 +92,7 @@ export function Navbar() {
             smooth={true}
             duration={500}
             offset={-70}
-            className={classes.navbar}
+            className={`${classes.navLink} ${classes.navbar}`}
           >
             Our Service
           </Link>
@@ -99,16 +101,21 @@ export function Navbar() {
             smooth={true}
             duration={500}
             offset={-70}
-            className={classes.navbar}
+            className={`${classes.navLink} ${classes.navbar}`}
           >
             Client Us
           </Link>
         </Group>
 
-        {/* Contact Us Button (desktop) - using react-scroll for consistency */}
+        {/* Contact Us Button (desktop) */}
         <Box visibleFrom="sm">
           <Link to="contact-us" smooth={true} duration={500} offset={-70}>
-            <Button variant="outline" color="green" radius="xl">
+            <Button
+              variant="outline"
+              color="green"
+              radius="xl"
+              className={classes.contactButton}
+            >
               Contact Us
             </Button>
           </Link>
@@ -121,21 +128,25 @@ export function Navbar() {
             onChange={setOpened}
             position="bottom-end"
             withArrow
-            shadow="md"
+            shadow="lg"
           >
             <Menu.Target>
               <Burger
                 opened={opened}
                 onClick={() => setOpened((o) => !o)}
                 size="sm"
+                className={classes.burgerMenu}
               />
             </Menu.Target>
 
-            <Menu.Dropdown pt={27} w={200} bg="#F7F7F7">
+            <Menu.Dropdown
+              pt={27}
+              w={200}
+              className={classes.mobileDropdown}
+            >
               <Menu.Item
-                onClick={() => {
-                  closeMenu()
-                }}
+                onClick={closeMenu}
+                className={classes.mobileMenuItem}
               >
                 <Link
                   to="home"
@@ -150,9 +161,8 @@ export function Navbar() {
               </Menu.Item>
 
               <Menu.Item
-                onClick={() => {
-                  closeMenu()
-                }}
+                onClick={closeMenu}
+                className={classes.mobileMenuItem}
               >
                 <Link
                   to="about-us"
@@ -167,9 +177,8 @@ export function Navbar() {
               </Menu.Item>
 
               <Menu.Item
-                onClick={() => {
-                  closeMenu()
-                }}
+                onClick={closeMenu}
+                className={classes.mobileMenuItem}
               >
                 <Link
                   to="our-service"
@@ -184,9 +193,8 @@ export function Navbar() {
               </Menu.Item>
 
               <Menu.Item
-                onClick={() => {
-                  closeMenu()
-                }}
+                onClick={closeMenu}
+                className={classes.mobileMenuItem}
               >
                 <Link
                   to="client"
@@ -201,9 +209,8 @@ export function Navbar() {
               </Menu.Item>
 
               <Menu.Item
-                onClick={() => {
-                  closeMenu()
-                }}
+                onClick={closeMenu}
+                className={classes.mobileMenuItem}
               >
                 <Link
                   to="contact-us"

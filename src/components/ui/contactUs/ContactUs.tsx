@@ -14,61 +14,91 @@ import classes from "./GetInTouch.module.css";
 
 export function GetInTouch() {
   return (
-    <Paper id="contact-us" shadow="0" radius="lg" px={{ base: 20, sm: 100 }} bg="transparent" pt={72}>
+    <Paper
+      id="contact-us"
+      shadow="0"
+      radius="lg"
+      px={{ base: 20, sm: 100 }}
+      bg="transparent"
+      pt={72}
+      pb={36}
+      className={classes.container}
+    >
       <div className={classes.wrapper}>
-        <div
-          className={classes.contacts}
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #4F8025 ,rgb(144, 183, 110))",
-          }}>
-          <Text fz="lg" fw={700} className={classes.title} c="#fff">
-            Informasi Kontak
-          </Text>
-          <ContactIconsList />
+        <div className={classes.contacts}>
+          <div className={classes.contactsContent}>
+            <Text size="xl" fw={700} c="#fff">
+              Informasi Kontak
+            </Text>
+            <ContactIconsList />
+          </div>
+          <div className={classes.contactsDecoration}></div>
         </div>
 
         <form className={classes.form}>
-          <Text fz="lg" fw={700} className={classes.title}>
-            Get in touch
-          </Text>
+          <div className={classes.formHeader}>
+            <Text fz="lg" fw={700} className={classes.title}>
+              Get in touch
+            </Text>
+            <Text size="sm" c="dimmed" className={classes.subtitle}>
+              Mari diskusikan proyek Anda dengan kami
+            </Text>
+          </div>
 
           <div className={classes.fields}>
             <SimpleGrid cols={{ base: 1, sm: 2 }}>
-              <TextInput
-                label="Your name"
-                name="name"
-                placeholder="Your name"
-                required
-              />
-              <TextInput
-                label="Your email"
-                name="email"
-                placeholder="info@denext.id"
-                required
-              />
+              <div className={classes.inputWrapper}>
+                <TextInput
+                  label="Your name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  className={classes.input}
+                />
+              </div>
+              <div className={classes.inputWrapper}>
+                <TextInput
+                  label="Your email"
+                  name="email"
+                  placeholder="info@denext.id"
+                  required
+                  className={classes.input}
+                />
+              </div>
             </SimpleGrid>
 
-            <TextInput
-              mt="md"
-              label="Subject"
-              name="subject"
-              placeholder="Subject"
-              required
-            />
+            <div className={classes.inputWrapper}>
+              <TextInput
+                mt="md"
+                label="Subject"
+                name="subject"
+                placeholder="Subject"
+                required
+                className={classes.input}
+              />
+            </div>
 
-            <Textarea
-              mt="md"
-              label="Your message"
-              name="message"
-              placeholder="Please include all relevant information"
-              minRows={3}
-              required
-            />
+            <div className={classes.inputWrapper}>
+              <Textarea
+                mt="md"
+                label="Your message"
+                name="message"
+                placeholder="Please include all relevant information"
+                minRows={3}
+                required
+                className={classes.textarea}
+              />
+            </div>
 
             <Group justify="flex-end" mt="md">
-              <Button type="submit" color="#4F8025" className={classes.control}>
-                Send message
+              <Button
+                type="submit"
+                color="#4F8025"
+                className={classes.control}
+                size="md"
+              >
+                <span className={classes.buttonText}>Send message</span>
+                <div className={classes.buttonRipple}></div>
               </Button>
             </Group>
           </div>

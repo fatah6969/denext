@@ -13,10 +13,11 @@ export function Home() {
 
   return (
     <Flex
-      justify="space-between"
+      justify={isMobile ? 'start' : 'space-between'}
       direction={isMobile ? 'column' : 'row'}
       id="home"
       pt={isMobile ? 46 : 0}
+      gap={isMobile ? 24 : 0}
       className={classes.homeContainer}
     >
       {/* Floating Particles Background */}
@@ -119,7 +120,7 @@ export function Home() {
           />
         </Box>
         {isMobile && (
-          <Box pt={12}>
+          <Box>
             <Image
               src={gifHero}
               alt="Hero GIF"
