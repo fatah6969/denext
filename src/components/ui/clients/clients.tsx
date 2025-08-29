@@ -51,7 +51,7 @@ export function Clients() {
       name: 'Lembaga Psikologi Perspective',
       logo: '/clients/Lpp_Logo.png',
       url: 'https://psikotes.psikologiperspective.com/',
-      description: 'Psychological Assessment & Consulting',
+      description: 'Psychological Assessment',
       color: 'violet',
     },
     {
