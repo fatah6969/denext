@@ -17,7 +17,7 @@ export function Home() {
       direction={isMobile ? 'column' : 'row'}
       id="home"
       pt={isMobile ? 46 : 0}
-      gap={isMobile ? 24 : 0}
+      gap={isMobile ? 56 : 0}
       className={classes.homeContainer}
     >
       {/* Floating Particles Background */}

@@ -1,19 +1,12 @@
 'use client'
-import { Box, Burger, Button, Flex, Group, Menu, Text } from '@mantine/core'
+import { Box, Button, Flex, Group, Text } from '@mantine/core'
 import Image from 'next/image'
 import iconLogo from '../../../../public/favicon.png'
 import classes from './navbar.module.css'
 import { Link } from 'react-scroll'
-import { useState } from 'react'
+import { MobileMenu } from './sidebar'
 
 export function Navbar() {
-  const [opened, setOpened] = useState<boolean>(false)
-
-  // Function to close the mobile menu
-  const closeMenu = () => {
-    setOpened(false)
-  }
-
   return (
     <Group
       h="70px"
@@ -35,12 +28,7 @@ export function Navbar() {
           direction={'row'}
           className={classes.logoContainer}
         >
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            offset={-70}
-          >
+          <Link to="home" smooth={true} duration={500} offset={-70}>
             <Flex align={'center'}>
               <Box className={classes.logoImage}>
                 <Image src={iconLogo} alt="Logo" height={50} />
@@ -122,110 +110,7 @@ export function Navbar() {
         </Box>
 
         {/* Burger (mobile) */}
-        <Box hiddenFrom="sm">
-          <Menu
-            opened={opened}
-            onChange={setOpened}
-            position="bottom-end"
-            withArrow
-            shadow="lg"
-          >
-            <Menu.Target>
-              <Burger
-                opened={opened}
-                onClick={() => setOpened((o) => !o)}
-                size="sm"
-                className={classes.burgerMenu}
-              />
-            </Menu.Target>
-
-            <Menu.Dropdown
-              pt={27}
-              w={200}
-              className={classes.mobileDropdown}
-            >
-              <Menu.Item
-                onClick={closeMenu}
-                className={classes.mobileMenuItem}
-              >
-                <Link
-                  to="home"
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className={classes.link}
-                  onClick={closeMenu}
-                >
-                  Beranda
-                </Link>
-              </Menu.Item>
-
-              <Menu.Item
-                onClick={closeMenu}
-                className={classes.mobileMenuItem}
-              >
-                <Link
-                  to="about-us"
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className={classes.link}
-                  onClick={closeMenu}
-                >
-                  About Us
-                </Link>
-              </Menu.Item>
-
-              <Menu.Item
-                onClick={closeMenu}
-                className={classes.mobileMenuItem}
-              >
-                <Link
-                  to="our-service"
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className={classes.link}
-                  onClick={closeMenu}
-                >
-                  Our Service
-                </Link>
-              </Menu.Item>
-
-              <Menu.Item
-                onClick={closeMenu}
-                className={classes.mobileMenuItem}
-              >
-                <Link
-                  to="client"
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className={classes.link}
-                  onClick={closeMenu}
-                >
-                  Client Us
-                </Link>
-              </Menu.Item>
-
-              <Menu.Item
-                onClick={closeMenu}
-                className={classes.mobileMenuItem}
-              >
-                <Link
-                  to="contact-us"
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                  className={classes.link}
-                  onClick={closeMenu}
-                >
-                  Contact Us
-                </Link>
-              </Menu.Item>
-            </Menu.Dropdown>
-          </Menu>
-        </Box>
+        <MobileMenu />
       </Group>
     </Group>
   )

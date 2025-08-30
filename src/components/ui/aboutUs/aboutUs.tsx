@@ -45,7 +45,6 @@ export function AboutUs() {
               c="#4F8025"
               fw={800}
               mb={4}
-              className={styles.titleWithLine}
             >
               About Us
             </Text>

@@ -1,0 +1,90 @@
+.titleSection {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.title {
+  background: linear-gradient(135deg, #4F8025 0%, #6B9B37 50%, #4F8025 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(79, 128, 37, 0.1);
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #4F8025, #6B9B37);
+  border-radius: 2px;
+}
+
+.serviceCard {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+  border: 1px solid rgba(79, 128, 37, 0.08);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4F8025, #6B9B37);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(79, 128, 37, 0.15);
+}
+
+.serviceCard:hover::before {
+  transform: scaleX(1);
+}
+
+.serviceCard:hover .iconWrapper {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(79, 128, 37, 0.15) 0%, rgba(107, 155, 55, 0.15) 100%);
+}
+
+.serviceCard:hover .icon {
+  transform: rotate(5deg);
+}
+
+.iconWrapper {
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(79, 128, 37, 0.1) 0%, rgba(107, 155, 55, 0.1) 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  color: #4F8025;
+  transition: transform 0.3s ease;
+}
+
+.cardTitle {
+  color: #4F8025;
+  transition: color 0.3s ease;
+}
+
+.cardDescription {
+  transition: color 0.3s ease;
+}
+
+.serviceCard:hover .cardTitle {
+  color: #6B9B37;
+}
+
+.serviceCard:hover .cardDescription {
+  color: #2d2d2d;
+}

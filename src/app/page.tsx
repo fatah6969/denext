@@ -13,7 +13,7 @@ import { Container, Stack } from '@mantine/core'
 
 const Page = () => {
   return (
-    <Container fluid pl={{ base: 0, sm: 84 }}>
+    <Container fluid px={{ base: 0, sm: 84 }}>
       <Navbar />
       <Stack pt={70}>
         <Home />

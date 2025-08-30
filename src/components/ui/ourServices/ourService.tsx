@@ -1,4 +1,4 @@
-import {  Card, Flex, Grid, Stack, Text } from '@mantine/core'
+import { Card, Flex, Grid, Stack, Text } from '@mantine/core'
 import {
   IconCloudComputing,
   IconDatabase,
@@ -9,6 +9,7 @@ import {
   IconTopologyStar,
   IconWorldWww,
 } from '@tabler/icons-react'
+import styles from './ourService.module.css'
 
 export function OurService() {
   const services = [
@@ -68,30 +69,47 @@ export function OurService() {
         justify={'center'}
         direction={'column'}
         gap={'md'}
-        w={{ base: '100%', sm: '90%' }}
+        w={{ base: '100%', sm: '100%' }}
       >
-        <Text size="2rem" ta={'center'} py={10} c="#4F8025" fw={800}>
-          Our Services
-        </Text>
+        <div className={styles.titleSection}>
+          <Text size="2.5rem" fw={800} className={styles.title}>
+            Our Services
+          </Text>
+        </div>
 
         <Grid justify="start" align="start" p={15} h="100%" mih="100%">
           {services.map((service, index) => (
             <Grid.Col key={index} span={{ base: 12, sm: 6, md: 3 }}>
-              <Card shadow="sm" padding="lg" h={300}>
+              <Card shadow="md" padding="xl" h={320} className={styles.serviceCard}>
                 <Flex
                   justify="center"
                   align="center"
                   direction="column"
-                  gap={6}
+                  gap={12}
                 >
-                  <service.icon size={32} style={{ color: '#4F8025' }} />
+                  <div className={styles.iconWrapper}>
+                    <service.icon size={36} className={styles.icon} />
+                  </div>
 
-                  <Text fw={600} size="lg" mt="md" c="#4F8025">
+                  <Text
+                    fw={700}
+                    size="lg"
+                    ta="center"
+                    lh={1.3}
+                    className={styles.cardTitle}
+                  >
                     {service.title}
                   </Text>
                 </Flex>
 
-                <Text mt="xs" c="dimmed" size="sm" ta="justify">
+                <Text
+                  mt="md"
+                  c="dimmed"
+                  size="sm"
+                  ta="justify"
+                  lh={1.5}
+                  className={styles.cardDescription}
+                >
                   {service.description}
                 </Text>
               </Card>
