@@ -142,10 +142,7 @@ export function Clients() {
                   0.2 + index * 0.1
                 }s`,
                 cursor: 'pointer',
-                background:
-                  hoveredIndex === index
-                    ? 'linear-gradient(135deg, rgba(79, 128, 37, 0.05), rgba(107, 168, 50, 0.05))'
-                    : 'var(--mantine-color-white)',
+                background: 'var(--mantine-color-white)',
                 borderColor: hoveredIndex === index ? '#4F8025' : undefined,
               }}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -171,19 +168,7 @@ export function Clients() {
                   />
                 </div>
                 <Stack align="center" gap={4}>
-                  <Text
-                    fw={600}
-                    size="lg"
-                    style={{
-                      color:
-                        hoveredIndex === index
-                          ? '#4F8025'
-                          : 'var(--mantine-color-text)',
-                      transition: 'color 0.3s ease',
-                    }}
-                  >
-                    {client.name}
-                  </Text>
+                  {/* Hanya Badge deskripsi */}
                   <Badge
                     variant="light"
                     color={client.color}
