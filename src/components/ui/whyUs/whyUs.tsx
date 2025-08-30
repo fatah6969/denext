@@ -2,6 +2,7 @@ import { Flex, Grid, Stack, Text } from '@mantine/core'
 import Image from 'next/image'
 import team from '../../../assets/Team.svg'
 import lamp from '../../../assets/Lamp.png'
+import cross from '../../../assets/Cross-Platform.png'
 
 export function WhyUs() {
   return (
@@ -260,8 +261,8 @@ export function WhyUs() {
             </Flex>
 
             <Image
-              src={team}
-              alt="team"
+              src={cross}
+              alt="cross"
               width={120}
               height={120}
               style={{
