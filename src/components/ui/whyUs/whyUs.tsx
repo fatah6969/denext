@@ -2,7 +2,11 @@ import { Flex, Grid, Stack, Text } from '@mantine/core'
 import Image from 'next/image'
 import team from '../../../assets/Team.svg'
 import lamp from '../../../assets/Lamp.png'
-import cross from '../../../assets/Cross-Platform.png'
+import cross from '../../../assets/Cross_Platform.png'
+import expert from '../../../assets/Expert_Team.png'
+import fast from '../../../assets/Fast,_Efficient.png'
+import flexible from '../../../assets/Flexible_Support.png'
+import transparent from '../../../assets/Transparent_Flexible.png'
 
 export function WhyUs() {
   return (
@@ -58,8 +62,8 @@ export function WhyUs() {
 
             {/* gambar di pojok kanan bawah */}
             <Image
-              src={team}
-              alt="team"
+              src={fast}
+              alt="fast"
               width={120}
               height={120}
               style={{
