@@ -62,8 +62,8 @@ export function WhyUs() {
 
             {/* gambar di pojok kanan bawah */}
             <Image
-              src={fast}
-              alt="fast"
+              src={expert}
+              alt="expert"
               width={120}
               height={120}
               style={{
@@ -112,8 +112,8 @@ export function WhyUs() {
             </Flex>
 
             <Image
-              src={lamp}
-              alt="lamp"
+              src={fast}
+              alt="fast"
               width={120}
               height={120}
               style={{
@@ -162,8 +162,8 @@ export function WhyUs() {
             </Flex>
 
             <Image
-              src={team}
-              alt="team"
+              src={flexible}
+              alt="flexible"
               width={120}
               height={120}
               style={{
@@ -215,8 +215,8 @@ export function WhyUs() {
             </Flex>
 
             <Image
-              src={lamp}
-              alt="lamp"
+              src={transparent}
+              alt="transparent"
               width={120}
               height={120}
               style={{
