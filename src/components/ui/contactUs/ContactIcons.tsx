@@ -27,7 +27,12 @@ function ContactIcon({
     }
     if (iconName === 'phone') {
       return (
-        <a href={`tel:${description}`} className={classes.link}>
+        <a
+          href={`https://wa.me/${description.replace(/\D/g, '')}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.link}
+        >
           {description}
         </a>
       )
