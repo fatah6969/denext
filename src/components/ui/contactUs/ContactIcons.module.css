@@ -238,3 +238,13 @@
     rgba(245, 158, 11, 0.25)
   );
 }
+
+.link {
+  color: white !important;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #f3f4f6 !important; /* putih agak soft saat hover */
+  text-decoration: underline;
+}
