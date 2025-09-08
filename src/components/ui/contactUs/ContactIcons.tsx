@@ -1,13 +1,13 @@
-import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react'
+import { IconAt, IconMapPin, IconPhone } from '@tabler/icons-react'
 import { Stack, Text } from '@mantine/core'
 import classes from './ContactIcons.module.css'
 
 interface ContactIconProps
   extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
-  icon: typeof IconSun
+  icon: React.ElementType
   title: React.ReactNode
-  description: React.ReactNode
-  iconName: string // New prop for data-icon
+  description: string
+  iconName: string // untuk identifikasi link
 }
 
 function ContactIcon({
@@ -17,58 +17,54 @@ function ContactIcon({
   iconName,
   ...others
 }: ContactIconProps) {
+  const renderDescription = () => {
+    if (iconName === 'email') {
+      return (
+        <a href={`mailto:${description}`} className={classes.link}>
+          {description}
+        </a>
+      )
+    }
+    if (iconName === 'phone') {
+      return (
+        <a href={`tel:${description}`} className={classes.link}>
+          {description}
+        </a>
+      )
+    }
+    if (iconName === 'location') {
+      return (
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+            description
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.link}
+        >
+          {description}
+        </a>
+      )
+    }
+    return description
+  }
+
   return (
     <div className={classes.wrapper} {...others} data-icon={iconName}>
       <div className={classes.iconContainer}>
         <svg className={classes.defs}>
           <defs>
-            <linearGradient
-              id="emailGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                style={{ stopColor: '#60a5fa', stopOpacity: 1 }}
-              />
-              <stop
-                offset="100%"
-                style={{ stopColor: '#3b82f6', stopOpacity: 1 }}
-              />
+            <linearGradient id="emailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#60a5fa', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
             </linearGradient>
-            <linearGradient
-              id="phoneGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                style={{ stopColor: '#34d399', stopOpacity: 1 }}
-              />
-              <stop
-                offset="100%"
-                style={{ stopColor: '#22c55e', stopOpacity: 1 }}
-              />
+            <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#34d399', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#22c55e', stopOpacity: 1 }} />
             </linearGradient>
-            <linearGradient
-              id="locationGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                style={{ stopColor: '#f87171', stopOpacity: 1 }}
-              />
-              <stop
-                offset="100%"
-                style={{ stopColor: '#ef4444', stopOpacity: 1 }}
-              />
+            <linearGradient id="locationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#f87171', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
             </linearGradient>
           </defs>
         </svg>
@@ -80,7 +76,7 @@ function ContactIcon({
         <Text size="xs" className={classes.title}>
           {title}
         </Text>
-        <Text className={classes.description}>{description}</Text>
+        <Text className={classes.description}>{renderDescription()}</Text>
       </div>
     </div>
   )
