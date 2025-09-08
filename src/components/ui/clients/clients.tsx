@@ -71,7 +71,7 @@ export function Clients() {
     {
       name: 'Maxistyle',
       logo: '/clients/maxi-logo.png',
-      url: 'https://www.maxistyle.com/',
+      url: 'https://maxistyle.com/',
       description: 'Premium Textile Brand',
       color: '#a41c24',
     },
