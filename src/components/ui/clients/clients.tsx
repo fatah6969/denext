@@ -207,7 +207,7 @@ export function Clients() {
         >
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
-              6+
+              7+
             </Text>
             <Text size="sm" c="dimmed" ta="center">
               Trusted Clients
