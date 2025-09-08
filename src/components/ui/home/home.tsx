@@ -17,7 +17,7 @@ export function Home() {
       direction={isMobile ? 'column' : 'row'}
       id="home"
       pt={isMobile ? 46 : 0}
-      gap={isMobile ? 56 : 0}
+      // gap={isMobile ? 56 : 0}
       className={classes.homeContainer}
     >
       {/* Floating Particles Background */}
@@ -79,7 +79,7 @@ export function Home() {
           for sustainable growth.
         </Text>
 
-        <Box pt={isMobile ? 12 : 24} className={classes.heroButton}>
+        <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
           <Button
             color="green"
             radius="xl"

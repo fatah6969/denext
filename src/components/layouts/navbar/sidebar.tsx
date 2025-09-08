@@ -13,7 +13,7 @@ export function MobileMenu() {
   }
 
   const menuItems = [
-    { to: 'home', label: 'Beranda', icon: '🏠' },
+    { to: 'home', label: 'Home', icon: '🏠' },
     { to: 'about-us', label: 'About Us', icon: '👥' },
     { to: 'our-service', label: 'Our Service', icon: '⚙️' },
     { to: 'client', label: 'Client Us', icon: '🤝' },

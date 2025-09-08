@@ -5,6 +5,7 @@
   width: 100%;
   max-width: 1200px;
   margin-top: 1rem;
+  justify-content: center;
 }
 
 .logoCard {
@@ -55,6 +56,16 @@
 }
 
 /* Responsive adjustments */
+@media (min-width: 769px) {
+  .clientGrid > :nth-child(7) {
+    grid-column: 2; /* taruh di kolom kedua (tengah) */
+    justify-self: center; /* pastikan di tengah kolom */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
 @media (max-width: 768px) {
   .clientGrid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

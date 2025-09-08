@@ -17,54 +17,76 @@ function ContactIcon({
   iconName,
   ...others
 }: ContactIconProps) {
-  const renderDescription = () => {
-    if (iconName === 'email') {
-      return (
-        <a href={`mailto:${description}`} className={classes.link}>
-          {description}
-        </a>
-      )
+  const getHref = () => {
+    switch (iconName) {
+      case 'email':
+        return `mailto:${description}`
+      case 'phone':
+        return `tel:${description}`
+      case 'location':
+        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+          description
+        )}`
+      default:
+        return undefined
     }
-    if (iconName === 'phone') {
-      return (
-        <a href={`tel:${description}`} className={classes.link}>
-          {description}
-        </a>
-      )
-    }
-    if (iconName === 'location') {
-      return (
-        <a
-          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-            description
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={classes.link}
-        >
-          {description}
-        </a>
-      )
-    }
-    return description
   }
 
-  return (
-    <div className={classes.wrapper} {...others} data-icon={iconName}>
+  const href = getHref()
+  const isClickable = Boolean(href)
+
+  const content = (
+    <>
       <div className={classes.iconContainer}>
         <svg className={classes.defs}>
           <defs>
-            <linearGradient id="emailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#60a5fa', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
+            <linearGradient
+              id="emailGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop
+                offset="0%"
+                style={{ stopColor: '#60a5fa', stopOpacity: 1 }}
+              />
+              <stop
+                offset="100%"
+                style={{ stopColor: '#3b82f6', stopOpacity: 1 }}
+              />
             </linearGradient>
-            <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#34d399', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#22c55e', stopOpacity: 1 }} />
+            <linearGradient
+              id="phoneGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop
+                offset="0%"
+                style={{ stopColor: '#34d399', stopOpacity: 1 }}
+              />
+              <stop
+                offset="100%"
+                style={{ stopColor: '#22c55e', stopOpacity: 1 }}
+              />
             </linearGradient>
-            <linearGradient id="locationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#f87171', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
+            <linearGradient
+              id="locationGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop
+                offset="0%"
+                style={{ stopColor: '#f87171', stopOpacity: 1 }}
+              />
+              <stop
+                offset="100%"
+                style={{ stopColor: '#ef4444', stopOpacity: 1 }}
+              />
             </linearGradient>
           </defs>
         </svg>
@@ -76,8 +98,37 @@ function ContactIcon({
         <Text size="xs" className={classes.title}>
           {title}
         </Text>
-        <Text className={classes.description}>{renderDescription()}</Text>
+        <Text className={classes.description}>{description}</Text>
       </div>
+    </>
+  )
+
+  const baseClassName = `${classes.wrapper} ${
+    isClickable ? classes.clickable : ''
+  }`
+
+  if (isClickable) {
+    return (
+      <a
+        href={href}
+        {...(iconName === 'location'
+          ? { target: '_blank', rel: 'noopener noreferrer' }
+          : {})}
+        className={baseClassName}
+        data-icon={iconName}
+        style={{
+          textDecoration: 'none',
+          ...others.style,
+        }}
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <div className={baseClassName} data-icon={iconName} {...others}>
+      {content}
     </div>
   )
 }

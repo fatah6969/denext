@@ -141,6 +141,7 @@
   letter-spacing: 1.2px !important;
   margin-bottom: 5px !important;
   font-size: 0.8rem !important;
+  text-decoration: none;
 }
 
 .description {
@@ -172,7 +173,8 @@
 
 /* New bounce animation for icons */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {

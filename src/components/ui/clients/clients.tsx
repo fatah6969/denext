@@ -197,8 +197,9 @@ export function Clients() {
 
         {/* Stats Section */}
         <Group
-          gap="xl"
+          justify="space-evenly"
           mt="md"
+          w="100%"
           style={{
             transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
             opacity: isVisible ? 1 : 0,
