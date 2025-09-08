@@ -68,6 +68,13 @@ export function Clients() {
       description: 'Spiritual & Holistic Life Coaching Platform',
       color: '#e6d595',
     },
+    {
+      name: 'Maxistyle',
+      logo: '/clients/maxi-logo.png',
+      url: 'https://www.maxistyle.com/',
+      description: 'Premium Textile Brand',
+      color: '#a41c24',
+    },
   ]
 
   return (
