@@ -67,14 +67,7 @@ export function Clients() {
       url: 'https://www.lifepathcoach555.com/',
       description: 'Spiritual & Holistic Life Coaching Platform',
       color: '#e6d595',
-    },
-    {
-      name: 'Maxistyle',
-      logo: '/clients/maxi-logo.png',
-      url: 'https://maxistyle.com/',
-      description: 'Premium Textile Brand',
-      color: '#a41c24',
-    },
+    }
   ]
 
   return (
@@ -208,7 +201,7 @@ export function Clients() {
         >
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
-              7+
+              6+
             </Text>
             <Text size="sm" c="dimmed" ta="center">
               Trusted Clients
