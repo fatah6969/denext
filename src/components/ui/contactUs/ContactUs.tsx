@@ -41,7 +41,7 @@ export function GetInTouch() {
               Get in touch
             </Text>
             <Text size="sm" c="dimmed" className={classes.subtitle}>
-              Mari diskusikan proyek Anda dengan kami
+              Let’s discuss your project with us
             </Text>
           </div>
 
