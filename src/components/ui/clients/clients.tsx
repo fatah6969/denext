@@ -68,6 +68,13 @@ export function Clients() {
       description: 'Spiritual & Holistic Life Coaching Platform',
       color: '#e6d595',
     }
+    {
+      name: 'EduALL',
+      logo: '/clients/EduALL.png',
+      url: 'https://edu-all.com/id-en',
+      description: 'Global Education & University Admission Mentorship Platform',
+      color: '#1A1AFF',
+    }
   ]
 
   return (
@@ -201,7 +208,7 @@ export function Clients() {
         >
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
-              6+
+              7+
             </Text>
             <Text size="sm" c="dimmed" ta="center">
               Trusted Clients
@@ -217,7 +224,7 @@ export function Clients() {
           </Stack>
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
-              2+
+              3+
             </Text>
             <Text size="sm" c="dimmed" ta="center">
               Years Experience
