@@ -67,7 +67,7 @@ export function Clients() {
       url: 'https://www.lifepathcoach555.com/',
       description: 'Spiritual & Holistic Life Coaching Platform',
       color: '#e6d595',
-    }
+    },
     {
       name: 'EduALL',
       logo: '/clients/EduALL.png',
