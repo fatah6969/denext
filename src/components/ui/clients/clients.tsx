@@ -56,7 +56,7 @@ export function Clients() {
     },
     {
       name: 'Siliwangi Express',
-      logo: 'https://www.siliwangiexpress.web.id/wp-content/uploads/2026/02/Logo-Baru-Siliwangi-Express-1-1-scaled.png',
+      logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
       description: 'Cargo & Freight Logistics',
       color: '#63b4d2',
