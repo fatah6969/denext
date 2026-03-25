@@ -35,7 +35,11 @@ export function GetInTouch() {
           <div className={classes.contactsDecoration}></div>
         </div>
 
-        <form className={classes.form}>
+        <form 
+         className={classes.form}
+         action="https://formspree.io/f/movwpgqv"
+         method="POST"
+        >
           <div className={classes.formHeader}>
             <Text fz="lg" fw={700} className={classes.title}>
               Get in touch
