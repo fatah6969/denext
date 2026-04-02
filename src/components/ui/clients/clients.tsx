@@ -74,7 +74,7 @@ export function Clients() {
       url: 'https://edu-all.com/id-en',
       description: 'Global Education & University Admission Mentorship Platform',
       color: '#1A1AFF',
-    }
+    },
     {
       name: 'FNLogistik',
       logo: '/clients/fnlogistik.png',
