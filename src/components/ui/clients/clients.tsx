@@ -75,6 +75,13 @@ export function Clients() {
       description: 'Global Education & University Admission Mentorship Platform',
       color: '#1A1AFF',
     }
+    {
+      name: 'FNLogistik,
+      logo: '/clients/fnlogistik.png',
+      url: 'https://www.fnlogistik.com/',
+      description: 'Fast, Safe & Reliable Logistics',
+      color: '#1A1AFF',
+    }
   ]
 
   return (
@@ -208,7 +215,7 @@ export function Clients() {
         >
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
-              7+
+              8+
             </Text>
             <Text size="sm" c="dimmed" ta="center">
               Trusted Clients
