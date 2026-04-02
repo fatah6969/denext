@@ -76,11 +76,11 @@ export function Clients() {
       color: '#1A1AFF',
     }
     {
-      name: 'FNLogistik,
+      name: 'FNLogistik',
       logo: '/clients/fnlogistik.png',
       url: 'https://www.fnlogistik.com/',
       description: 'Fast, Safe & Reliable Logistics',
-      color: '#1A1AFF',
+      color: '#1060A0',
     }
   ]
 
