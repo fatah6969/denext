@@ -18,6 +18,7 @@ export function Home() {
       direction={isMobile ? 'column' : 'row'}
       id="home"
       pt={isMobile ? 46 : 0}
+      px={isMobile ? 'md' : 0} // ✅ FIX padding mobile
       className={classes.homeContainer}
     >
       {/* Floating Particles Background */}
@@ -63,6 +64,7 @@ export function Home() {
           mt="md"
           c="dimmed"
           className={classes.heroDescription}
+          style={{ wordBreak: 'break-word' }} // ✅ biar aman wrap
         >
           Tingkatkan performa bisnis Anda dengan{' '}
           <Text span fw={500} className={classes.highlightGreen}>
