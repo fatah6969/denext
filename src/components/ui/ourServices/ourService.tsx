@@ -17,49 +17,49 @@ export function OurService() {
       icon: IconHeadset,
       title: 'IT Support (Remote & On-Site)',
       description:
-        'Daily technical support to keep your systems running smoothly. From OS and software installation to troubleshooting and preventive maintenance, we ensure your PCs, laptops, and printers perform at their best—whether remotely or on-site.',
+        'Dukungan teknis harian untuk memastikan sistem Anda berjalan optimal. Mulai dari instalasi OS & software, troubleshooting, hingga maintenance rutin untuk PC, laptop, dan printer—baik remote maupun on-site.',
     },
     {
       icon: IconTopologyStar,
-      title: 'Networking & Infrastructure',
+      title: 'Jaringan & Infrastruktur',
       description:
-        'End-to-end design and deployment of office networks (LAN, WAN, WiFi). We configure MikroTik, Ubiquiti, Cisco, and TP-Link devices with VLAN, bandwidth management, and security to keep your connection stable and protected.',
+        'Perancangan dan implementasi jaringan kantor (LAN, WAN, WiFi). Konfigurasi MikroTik, Ubiquiti, Cisco, dan TP-Link dengan VLAN, manajemen bandwidth, dan keamanan untuk koneksi yang stabil dan aman.',
     },
     {
       icon: IconServer2,
-      title: 'Virtualization & Servers',
+      title: 'Server & Virtualisasi',
       description:
-        'Build and manage physical or virtual servers with Proxmox, VMware, Hyper-V, and Windows Server. Services include Active Directory, DNS, DHCP, replication, and High Availability (HA) to keep your operations reliable.',
+        'Pembangunan dan pengelolaan server fisik maupun virtual (Proxmox, VMware, Hyper-V, Windows Server). Termasuk Active Directory, DNS, DHCP, replikasi, dan High Availability (HA).',
     },
     {
       icon: IconWorldWww,
-      title: 'Websites & Applications',
+      title: 'Website & Aplikasi',
       description:
-        'Custom websites and web apps tailored to your business. We handle domain setup, SSL management, routine maintenance, backups, and SEO optimization to boost your online presence.',
+        'Pembuatan website dan aplikasi web sesuai kebutuhan bisnis. Termasuk domain, SSL, maintenance, backup, dan optimasi SEO untuk meningkatkan visibilitas online Anda.',
     },
     {
       icon: IconCloudComputing,
       title: 'Cloud & Email Hosting',
       description:
-        'Migration and management for Google Workspace, Microsoft 365, and Zoho Mail. We provide business email integration, cloud storage, and team collaboration with advanced email security (SMTP, DKIM, SPF).',
+        'Migrasi dan pengelolaan Google Workspace, Microsoft 365, dan Zoho Mail. Integrasi email bisnis, cloud storage, serta keamanan email (SMTP, DKIM, SPF).',
     },
     {
       icon: IconShieldLock,
       title: 'Security & CCTV',
       description:
-        'Complete surveillance solutions with Hikvision, Dahua, and Ezviz. Supporting analog and IP cameras, local or remote monitoring, plus centralized storage via NAS or cloud.',
+        'Solusi keamanan dan pengawasan dengan Hikvision, Dahua, dan Ezviz. Mendukung kamera analog & IP, monitoring lokal maupun remote, serta penyimpanan terpusat.',
     },
     {
       icon: IconDatabase,
       title: 'Backup & Disaster Recovery',
       description:
-        'Reliable backup solutions—local, offsite, or cloud—using Synology, ZFS, rsync, and Google Drive. We design Disaster Recovery Plans (DRP) to keep your business data secure and always available.',
+        'Solusi backup data (lokal, offsite, atau cloud) dengan Synology, ZFS, rsync, dan Google Drive. Termasuk perencanaan Disaster Recovery (DRP) untuk menjaga data tetap aman.',
     },
     {
       icon: IconTools,
-      title: 'IT Devices & Maintenance',
+      title: 'Perangkat IT & Maintenance',
       description:
-        'Repair and upgrade services for PCs, laptops, and MacBooks across Windows, macOS, and Linux. We also handle hardware procurement, IT audits, and asset documentation for efficient management.',
+        'Perbaikan dan upgrade PC, laptop, dan MacBook (Windows, macOS, Linux). Termasuk pengadaan hardware, audit IT, dan dokumentasi aset untuk manajemen yang lebih efisien.',
     },
   ]
 
@@ -73,7 +73,7 @@ export function OurService() {
       >
         <div className={styles.titleSection}>
           <Text size="2.5rem" fw={800} className={styles.title}>
-            Our Services
+            Layanan Kami
           </Text>
         </div>
 
