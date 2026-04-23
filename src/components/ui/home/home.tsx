@@ -89,7 +89,7 @@ export function Home() {
             size="lg"
             className={classes.exploreButton}
           >
-            Konsultasi Sekarang
+            Konsultasi Gratis!
           </Button>
 
           {!isMobile && (
