@@ -80,6 +80,10 @@ export function Home() {
 
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
           <Button
+            component="a"
+            href="https://api.whatsapp.com/send/?phone=6285117477481&text=Halo%2C+saya+tertarik+untuk+mengetahui+lebih+lanjut+tentang+layanan+Denext.+Mohon+informasinya+ya.&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
             color="green"
             radius="xl"
             size="lg"
@@ -87,6 +91,7 @@ export function Home() {
           >
             Konsultasi Sekarang
           </Button>
+
           {!isMobile && (
             <Image
               src={vector}
