@@ -44,42 +44,42 @@ export function Clients() {
       name: 'Adya Artha Abadi',
       logo: '/clients/AAA_Logo.png',
       url: 'https://adyaarthaabadi.com/',
-      description: 'Pharmaceutical Distributor',
+      description: 'Distributor Farmasi',
       color: '#c1121d',
     },
     {
       name: 'Lembaga Psikologi Perspective',
       logo: '/clients/Lpp_Logo.png',
       url: 'https://psikotes.psikologiperspective.com/',
-      description: 'Psychological Assessment',
+      description: 'Layanan Psikologi',
       color: '#402365',
     },
     {
       name: 'Siliwangi Express',
       logo: '/clients/Siliwangi-Logo.png',
       url: 'https://www.siliwangiexpress.web.id/',
-      description: 'Cargo & Freight Logistics',
+      description: 'Logistik & Pengiriman',
       color: '#63b4d2',
     },
     {
       name: 'Life Path Coach',
       logo: '/clients/lifepathcoach.png',
       url: 'https://www.lifepathcoach555.com/',
-      description: 'Spiritual & Holistic Life Coaching Platform',
+      description: 'Life Coaching Platform',
       color: '#e6d595',
     },
     {
       name: 'EduALL',
       logo: '/clients/EduALL.png',
       url: 'https://edu-all.com/id-en',
-      description: 'Global Education & University Admission Mentorship Platform',
+      description: 'Platform Edukasi Global',
       color: '#1A1AFF',
     },
     {
       name: 'FNLogistik',
       logo: '/clients/fnlogistik.png',
       url: 'https://www.fnlogistik.com/',
-      description: 'Fast, Safe & Reliable Logistics',
+      description: 'Jasa Logistik',
       color: '#1060A0',
     }
   ]
@@ -87,7 +87,8 @@ export function Clients() {
   return (
     <Container size="xl" id="client" pt={72}>
       <Stack gap="xl" align="center" ref={sectionRef}>
-        {/* Header Section */}
+        
+        {/* Header */}
         <Stack gap="xs" align="center">
           <Badge
             size="lg"
@@ -100,25 +101,25 @@ export function Clients() {
               transition: 'all 0.6s ease-out',
             }}
           >
-            Trusted Partners
+            Partner Terpercaya
           </Badge>
+
           <Text
             ta="center"
             size="3rem"
-            c="#4F8025"
             fw={800}
             style={{
               transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
               opacity: isVisible ? 1 : 0,
               transition: 'all 0.8s ease-out 0.2s',
               background: 'linear-gradient(135deg, #4F8025, #6BA832)',
-              backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Our Clients
+            Klien Kami
           </Text>
+
           <Text
             ta="center"
             size="lg"
@@ -130,12 +131,12 @@ export function Clients() {
               transition: 'all 0.8s ease-out 0.4s',
             }}
           >
-            We are proud to work with amazing companies that trust us with their
-            digital transformation journey
+            Kami bangga dipercaya oleh berbagai perusahaan untuk mendukung
+            transformasi digital dan pengembangan teknologi mereka.
           </Text>
         </Stack>
 
-        {/* Clients Grid */}
+        {/* Grid */}
         <div className={classes.clientGrid}>
           {clientLogos.map((client, index) => (
             <Paper
@@ -149,14 +150,13 @@ export function Clients() {
                 transform: isVisible
                   ? hoveredIndex === index
                     ? 'translateY(-8px) scale(1.02)'
-                    : 'translateY(0) scale(1)'
+                    : 'translateY(0)'
                   : 'translateY(40px)',
                 opacity: isVisible ? 1 : 0,
                 transition: `all ${0.6 + index * 0.1}s ease-out ${
                   0.2 + index * 0.1
                 }s`,
                 cursor: 'pointer',
-                background: 'var(--mantine-color-white)',
                 borderColor: hoveredIndex === index ? '#4F8025' : undefined,
               }}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -176,65 +176,50 @@ export function Clients() {
                     className={classes.logoImage}
                     style={{
                       filter:
-                        hoveredIndex === index ? 'none' : 'grayscale(20%)',
-                      transition: 'filter 0.3s ease',
+                        hoveredIndex === index ? 'none' : 'grayscale(30%)',
+                      transition: '0.3s',
                     }}
                   />
                 </div>
-                <Stack align="center" gap={4}>
-                  {/* Hanya Badge deskripsi */}
-                  <Badge
-                    variant="light"
-                    color={client.color}
-                    size="sm"
-                    style={{
-                      opacity: hoveredIndex === index ? 1 : 0.7,
-                      transform:
-                        hoveredIndex === index ? 'scale(1)' : 'scale(0.95)',
-                      transition: 'all 0.3s ease',
-                    }}
-                  >
-                    {client.description}
-                  </Badge>
-                </Stack>
+
+                <Badge
+                  variant="light"
+                  color={client.color}
+                  size="sm"
+                >
+                  {client.description}
+                </Badge>
               </Stack>
             </Paper>
           ))}
         </div>
 
-        {/* Stats Section */}
-        <Group
-          justify="space-evenly"
-          mt="md"
-          w="100%"
-          style={{
-            transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-            opacity: isVisible ? 1 : 0,
-            transition: 'all 0.8s ease-out 1s',
-          }}
-        >
+        {/* Stats */}
+        <Group justify="space-evenly" mt="md" w="100%">
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
               8+
             </Text>
-            <Text size="sm" c="dimmed" ta="center">
-              Trusted Clients
+            <Text size="sm" c="dimmed">
+              Klien Aktif
             </Text>
           </Stack>
+
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
               100%
             </Text>
-            <Text size="sm" c="dimmed" ta="center">
-              Success Rate
+            <Text size="sm" c="dimmed">
+              Kepuasan Klien
             </Text>
           </Stack>
+
           <Stack align="center" gap={4}>
             <Text size="2rem" fw={800} c="#4F8025">
               3+
             </Text>
-            <Text size="sm" c="dimmed" ta="center">
-              Years Experience
+            <Text size="sm" c="dimmed">
+              Tahun Pengalaman
             </Text>
           </Stack>
         </Group>
