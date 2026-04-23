@@ -11,105 +11,72 @@ export function Navbar() {
     <Group
       h="70px"
       px={{ base: 'md', sm: '5rem' }}
-      bg="white"
       className={classes.navbarWrapper}
     >
       <Group
         justify="space-between"
         className={classes.navbarContainer}
-        py="16px"
+        py="12px"
         px={{ base: 'md', sm: '40px' }}
         mt="12px"
       >
-        {/* Logo + Text */}
-        <Flex
-          justify={'center'}
-          align={'center'}
-          direction={'row'}
-          className={classes.logoContainer}
-        >
-          <Link to="home" smooth={true} duration={500} offset={-70}>
-            <Flex align={'center'}>
+        {/* LOGO */}
+        <Flex align="center" className={classes.logoContainer}>
+          <Link to="home" smooth duration={500} offset={-70}>
+            <Flex align="center">
               <Box className={classes.logoImage}>
-                <Image src={iconLogo} alt="Logo" height={50} />
+                <Image src={iconLogo} alt="Logo" height={44} />
               </Box>
-              <Flex direction={'column'} gap={2} ml={8}>
+
+              <Flex direction="column" gap={0} ml={8}>
                 <Text
-                  size="1.5rem"
+                  size="1.3rem"
                   fw={700}
-                  lts={8.5}
+                  lts={6}
                   className={classes.logoText}
                 >
                   DENEXT
                 </Text>
-                <Text
-                  size="8px"
-                  fw={400}
-                  c="dimmed"
-                  className={classes.logoSubtext}
-                >
-                  DELIVERING THE NEXT INNOVATION
+                <Text size="9px" c="dimmed">
+                  IT SOLUTIONS
                 </Text>
               </Flex>
             </Flex>
           </Link>
         </Flex>
 
-        {/* Navigation Links (desktop) */}
-        <Group gap="xl" visibleFrom="sm">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className={`${classes.navLink} ${classes.navbar}`}
-          >
+        {/* MENU DESKTOP */}
+        <Group gap="lg" visibleFrom="sm">
+          <Link to="home" smooth duration={500} offset={-70} className={classes.navLink}>
             Beranda
           </Link>
-          <Link
-            to="about-us"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className={`${classes.navLink} ${classes.navbar}`}
-          >
-            About Us
+
+          <Link to="about-us" smooth duration={500} offset={-70} className={classes.navLink}>
+            Tentang Kami
           </Link>
-          <Link
-            to="our-service"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className={`${classes.navLink} ${classes.navbar}`}
-          >
-            Our Service
+
+          <Link to="our-service" smooth duration={500} offset={-70} className={classes.navLink}>
+            Layanan
           </Link>
-          <Link
-            to="client"
-            smooth={true}
-            duration={500}
-            offset={-70}
-            className={`${classes.navLink} ${classes.navbar}`}
-          >
-            Client Us
+
+          <Link to="client" smooth duration={500} offset={-70} className={classes.navLink}>
+            Klien
           </Link>
         </Group>
 
-        {/* Contact Us Button (desktop) */}
+        {/* CTA */}
         <Box visibleFrom="sm">
-          <Link to="contact-us" smooth={true} duration={500} offset={-70}>
+          <Link to="contact-us" smooth duration={500} offset={-70}>
             <Button
-              variant="outline"
-              color="green"
               radius="xl"
               className={classes.contactButton}
             >
-              Contact Us
+              Konsultasi
             </Button>
           </Link>
         </Box>
 
-        {/* Burger (mobile) */}
+        {/* MOBILE */}
         <MobileMenu />
       </Group>
     </Group>
