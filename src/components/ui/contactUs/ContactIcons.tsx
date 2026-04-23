@@ -7,7 +7,7 @@ interface ContactIconProps
   icon: React.ElementType
   title: React.ReactNode
   description: string
-  iconName: string // untuk identifikasi link
+  iconName: string
 }
 
 function ContactIcon({
@@ -22,7 +22,7 @@ function ContactIcon({
       case 'email':
         return `mailto:${description}`
       case 'phone':
-        return `tel:${description}`
+        return `tel:${description.replace(/\s/g, '')}`
       case 'location':
         return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
           description
@@ -40,56 +40,23 @@ function ContactIcon({
       <div className={classes.iconContainer}>
         <svg className={classes.defs}>
           <defs>
-            <linearGradient
-              id="emailGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                style={{ stopColor: '#60a5fa', stopOpacity: 1 }}
-              />
-              <stop
-                offset="100%"
-                style={{ stopColor: '#3b82f6', stopOpacity: 1 }}
-              />
+            <linearGradient id="emailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#60a5fa' }} />
+              <stop offset="100%" style={{ stopColor: '#3b82f6' }} />
             </linearGradient>
-            <linearGradient
-              id="phoneGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                style={{ stopColor: '#34d399', stopOpacity: 1 }}
-              />
-              <stop
-                offset="100%"
-                style={{ stopColor: '#22c55e', stopOpacity: 1 }}
-              />
+
+            <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#34d399' }} />
+              <stop offset="100%" style={{ stopColor: '#22c55e' }} />
             </linearGradient>
-            <linearGradient
-              id="locationGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop
-                offset="0%"
-                style={{ stopColor: '#f87171', stopOpacity: 1 }}
-              />
-              <stop
-                offset="100%"
-                style={{ stopColor: '#ef4444', stopOpacity: 1 }}
-              />
+
+            <linearGradient id="locationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#f87171' }} />
+              <stop offset="100%" style={{ stopColor: '#ef4444' }} />
             </linearGradient>
           </defs>
         </svg>
+
         <Icon size={26} className={classes.icon} />
         <div className={classes.iconGlow}></div>
       </div>
@@ -141,14 +108,14 @@ const MOCKDATA = [
     iconName: 'email',
   },
   {
-    title: 'Phone',
+    title: 'Telepon',
     description: '+62 851 1747 7481',
     icon: IconPhone,
     iconName: 'phone',
   },
   {
-    title: 'Address',
-    description: 'Bogor, Jawa Barat, Indonesia',
+    title: 'Lokasi',
+    description: 'Bogor, Jawa Barat',
     icon: IconMapPin,
     iconName: 'location',
   },
@@ -164,5 +131,6 @@ export function ContactIconsList() {
       }}
     />
   ))
+
   return <Stack className={classes.stack}>{items}</Stack>
 }
