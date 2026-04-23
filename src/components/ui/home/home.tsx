@@ -87,12 +87,12 @@ export function Home() {
             rel="noopener noreferrer"
             color="green"
             radius="xl"
-            size="lg"
+            size={isMobile ? 'md' : 'lg'}
+            fullWidth={isMobile}
             className={classes.exploreButton}
-            style={{ whiteSpace: 'nowrap' }}
             leftSection={<IconBrandWhatsapp size={20} />}
           >
-            Konsultasi Gratis
+            {isMobile ? 'Konsultasi' : 'Konsultasi Gratis'}
           </Button>
 
           {!isMobile && (
@@ -126,6 +126,7 @@ export function Home() {
             className={classes.heroImageDesktop}
           />
         </Box>
+
         {isMobile && (
           <Box>
             <Image
