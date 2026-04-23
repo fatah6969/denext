@@ -5,15 +5,18 @@
   inset: 0 0 auto 0;
   z-index: 1000;
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* CONTAINER */
+/* CONTAINER (INI YANG FIX CENTER) */
 .navbarContainer {
   border-radius: 9999px;
   background: linear-gradient(135deg, #f7f7f7, #ffffff);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   transition: 0.25s ease;
+
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin: 12px auto 0; /* ⬅️ CENTER */
 }
 
 /* LOGO */
@@ -37,6 +40,7 @@
   padding: 8px 14px;
   border-radius: 18px;
   transition: 0.25s ease;
+  cursor: pointer;
 }
 
 .navLink:hover {
@@ -129,5 +133,7 @@
 @media (max-width: 768px) {
   .navbarContainer {
     border-radius: 16px;
+    width: calc(100% - 20px); /* biar pas di HP */
+    margin-top: 8px;
   }
 }
