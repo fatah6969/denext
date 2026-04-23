@@ -11,7 +11,7 @@ export function AboutUs() {
   const isMobile = useMediaQuery('(max-width: 768px)')
 
   return (
-    <Box id="about-us" pt={46}>
+    <Box id="about-us" pt={46} px={isMobile ? 'md' : 0}>
       {/* Main Section */}
       <Flex
         justify={{ base: 'space-between' }}
@@ -40,16 +40,12 @@ export function AboutUs() {
           className={styles.fadeInRight}
         >
           <Box>
-            <Text
-              size="2.2rem"
-              c="#4F8025"
-              fw={800}
-              mb={4}
-            >
-              About Us
+            <Text size="2.2rem" c="#4F8025" fw={800} mb={4}>
+              Tentang Kami
             </Text>
+
             <Text size="lg" fw={300} ta={'justify'} pt={20} lh={1.6} c="#333">
-              At{' '}
+              Di{' '}
               <Text
                 span
                 c="#4F8025"
@@ -59,17 +55,17 @@ export function AboutUs() {
               >
                 DENEXT
               </Text>
-              , we are more than just an IT Support & Consulting company — we
-              are your technology growth partner. Our mission is to deliver
-              smart, reliable, and cost-effective solutions designed to empower
-              small businesses, startups, and enterprises alike.
+              , kami bukan sekadar penyedia layanan IT — kami adalah partner
+              teknologi yang membantu pertumbuhan bisnis Anda.
               <br />
               <br />
-              We believe technology is not only a tool but a powerful strategy
-              to unlock efficiency, accelerate growth, and future-proof your
-              business. With a people-first approach and a strong focus on
-              results, we are here to guide and support your digital
-              transformation journey every step of the way.
+              Kami menghadirkan solusi yang cerdas, handal, dan efisien biaya
+              untuk mendukung kebutuhan UMKM hingga perusahaan.
+              <br />
+              <br />
+              Kami percaya teknologi bukan hanya alat, tetapi strategi untuk
+              meningkatkan efisiensi, mempercepat pertumbuhan, dan mempersiapkan
+              bisnis Anda menghadapi masa depan.
             </Text>
           </Box>
         </Flex>
@@ -81,38 +77,37 @@ export function AboutUs() {
         gap={24}
         className={styles.fadeInUp}
       >
+        {/* Mission */}
         <Paper shadow="lg" radius="xl" p={32} className={styles.card}>
           <Group mb={16} gap={12}>
             <Box className={styles.iconContainer}>
               <IconTarget size={24} color="white" />
             </Box>
-            <Text size="1.8rem" c="#4F8025" fw={800}>
-              Our Mission
+            <Text size="1.6rem" c="#4F8025" fw={800}>
+              Misi Kami
             </Text>
           </Group>
+
           <Text size="lg" fw={300} ta={'justify'} lh={1.6} c="#555">
-            We believe technology is not only a tool but a powerful strategy to
-            unlock efficiency, accelerate growth, and future-proof your
-            business. With a people-first approach and a strong focus on
-            results, we are here to guide and support your digital
-            transformation journey every step of the way.
+            Memberikan solusi IT yang inovatif, terpercaya, dan efisien biaya
+            untuk membantu bisnis berkembang lebih cepat dan berkelanjutan.
           </Text>
         </Paper>
 
+        {/* Who We Are */}
         <Paper shadow="lg" radius="xl" p={32} className={styles.card}>
           <Group mb={16} gap={12}>
             <Box className={styles.iconContainer}>
               <IconUsers size={24} color="white" />
             </Box>
-            <Text size="1.8rem" c="#4F8025" fw={800}>
-              Who We Are
+            <Text size="1.6rem" c="#4F8025" fw={800}>
+              Siapa Kami
             </Text>
           </Group>
+
           <Text size="lg" fw={300} ta={'justify'} lh={1.6} c="#555">
-            We are more than just an IT Support & Consulting company — we are
-            your technology growth partner. Our mission is to deliver smart,
-            reliable, and cost-effective solutions designed to empower small
-            businesses, startups, and enterprises alike.
+            Tim profesional di bidang IT yang berpengalaman dalam menangani
+            berbagai kebutuhan teknologi, mulai dari UMKM hingga perusahaan.
           </Text>
         </Paper>
       </Flex>
