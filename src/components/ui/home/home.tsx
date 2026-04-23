@@ -1,6 +1,7 @@
 'use client'
 
 import { Box, Button, Flex, Stack, Text } from '@mantine/core'
+import { IconBrandWhatsapp } from '@tabler/icons-react'
 import Image from 'next/image'
 import hero from '../../../assets/hero_background.png'
 import vector from '../../../assets/content_vector.png'
@@ -81,15 +82,17 @@ export function Home() {
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
           <Button
             component="a"
-            href="https://api.whatsapp.com/send/?phone=6285117477481&text=Halo%2C+saya+tertarik+untuk+mengetahui+lebih+lanjut+tentang+layanan+Denext.+Mohon+informasinya+ya.&type=phone_number&app_absent=0"
+            href="https://wa.me/6285117477481?text=Halo%2C%20saya%20tertarik%20untuk%20konsultasi%20terkait%20layanan%20IT%20Denext."
             target="_blank"
             rel="noopener noreferrer"
             color="green"
             radius="xl"
             size="lg"
             className={classes.exploreButton}
+            style={{ whiteSpace: 'nowrap' }}
+            leftSection={<IconBrandWhatsapp size={20} />}
           >
-            Konsultasi Gratis!
+            Konsultasi Gratis
           </Button>
 
           {!isMobile && (
