@@ -41,7 +41,7 @@ export function Home() {
               inherit
               className={classes.highlightGreen}
             >
-              Solusi Terpadu
+              Solusi IT Terpadu
             </Text>
           </Text>
 
@@ -51,7 +51,7 @@ export function Home() {
             pt={16}
             className={classes.heroSubtitle}
           >
-            Solusi IT
+            Untuk Bisnis Modern
           </Text>
         </Box>
 
@@ -63,19 +63,19 @@ export function Home() {
           c="dimmed"
           className={classes.heroDescription}
         >
-          Memberdayakan bisnis Anda dengan{' '}
+          Tingkatkan performa bisnis Anda dengan{' '}
           <Text span fw={500} className={classes.highlightGreen}>
             analitik cerdas
           </Text>
-          ,<br />
+          ,{' '}
           <Text span fw={500} className={classes.highlightGreen}>
-            pemecahan masalah yang efektif
+            solusi yang efektif
           </Text>
           , dan{' '}
           <Text span fw={500} className={classes.highlightTeal}>
-            solusi IT yang disesuaikan
+            layanan IT yang dirancang khusus
           </Text>{' '}
-          untuk pertumbuhan yang berkelanjutan.
+          untuk mendorong pertumbuhan bisnis Anda secara maksimal.
         </Text>
 
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
@@ -85,7 +85,7 @@ export function Home() {
             size="lg"
             className={classes.exploreButton}
           >
-            Mulai Sekarang!
+            Konsultasi Sekarang
           </Button>
           {!isMobile && (
             <Image
