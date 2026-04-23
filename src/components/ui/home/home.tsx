@@ -17,7 +17,6 @@ export function Home() {
       direction={isMobile ? 'column' : 'row'}
       id="home"
       pt={isMobile ? 46 : 0}
-      // gap={isMobile ? 56 : 0}
       className={classes.homeContainer}
     >
       {/* Floating Particles Background */}
@@ -42,7 +41,7 @@ export function Home() {
               inherit
               className={classes.highlightGreen}
             >
-              One Stop
+              Solusi Terpadu
             </Text>
           </Text>
 
@@ -52,7 +51,7 @@ export function Home() {
             pt={16}
             className={classes.heroSubtitle}
           >
-            IT Solutions
+            Solusi IT
           </Text>
         </Box>
 
@@ -64,19 +63,19 @@ export function Home() {
           c="dimmed"
           className={classes.heroDescription}
         >
-          Empowering your business with{' '}
+          Memberdayakan bisnis Anda dengan{' '}
           <Text span fw={500} className={classes.highlightGreen}>
-            intelligent analytics
+            analitik cerdas
           </Text>
           ,<br />
           <Text span fw={500} className={classes.highlightGreen}>
-            effective problem-solving
+            pemecahan masalah yang efektif
           </Text>
-          , and{' '}
+          , dan{' '}
           <Text span fw={500} className={classes.highlightTeal}>
-            tailored IT solutions
+            solusi IT yang disesuaikan
           </Text>{' '}
-          for sustainable growth.
+          untuk pertumbuhan yang berkelanjutan.
         </Text>
 
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
@@ -86,7 +85,7 @@ export function Home() {
             size="lg"
             className={classes.exploreButton}
           >
-            Explore Now!
+            Mulai Sekarang!
           </Button>
           {!isMobile && (
             <Image
@@ -113,7 +112,7 @@ export function Home() {
         <Box visibleFrom="sm">
           <Image
             src={hero}
-            alt="Hero GIF"
+            alt="Hero Image"
             height={721}
             width={837}
             className={classes.heroImageDesktop}
@@ -123,7 +122,7 @@ export function Home() {
           <Box>
             <Image
               src={gifHero}
-              alt="Hero GIF"
+              alt="Hero Image"
               height={200}
               width={200}
               className={classes.heroImageMobile}
