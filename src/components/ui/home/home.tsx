@@ -91,9 +91,9 @@ export function Home() {
             fullWidth={isMobile}
             className={classes.exploreButton}
             leftSection={<IconBrandWhatsapp size={20} />}
-            style={{ whiteSpace: 'normal', textAlign: 'center' }}
+            style={{ whiteSpace: 'nowrap' }}
           >
-            Konsultasi<br />Gratis
+            Konsultasi Gratis
           </Button>
 
           {!isMobile && (
