@@ -43,13 +43,13 @@ export function Navbar() {
             Beranda
           </Link>
           <Link to="about-us" smooth duration={500} offset={-70} className={classes.navLink}>
-            About Us
+            Tentang Kami
           </Link>
           <Link to="our-service" smooth duration={500} offset={-70} className={classes.navLink}>
-            Our Service
+            Layanan
           </Link>
           <Link to="client" smooth duration={500} offset={-70} className={classes.navLink}>
-            Client
+            Klien
           </Link>
         </Group>
 
