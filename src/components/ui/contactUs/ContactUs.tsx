@@ -25,46 +25,51 @@ export function GetInTouch() {
       className={classes.container}
     >
       <div className={classes.wrapper}>
+        
+        {/* LEFT SIDE */}
         <div className={classes.contacts}>
           <div className={classes.contactsContent}>
             <Text size="xl" fw={700} c="#fff">
-              Informasi Kontak
+              Hubungi Kami
             </Text>
             <ContactIconsList />
           </div>
           <div className={classes.contactsDecoration}></div>
         </div>
 
+        {/* FORM */}
         <form 
-         className={classes.form}
-         action="https://formspree.io/f/movwpgqv"
-         method="POST"
+          className={classes.form}
+          action="https://formspree.io/f/movwpgqv"
+          method="POST"
         >
           <div className={classes.formHeader}>
             <Text fz="lg" fw={700} className={classes.title}>
-              Get in touch
+              Konsultasi Sekarang
             </Text>
             <Text size="sm" c="dimmed" className={classes.subtitle}>
-              Let’s discuss your project with us
+              Diskusikan kebutuhan IT bisnis Anda bersama tim kami
             </Text>
           </div>
 
           <div className={classes.fields}>
             <SimpleGrid cols={{ base: 1, sm: 2 }}>
+              
               <div className={classes.inputWrapper}>
                 <TextInput
-                  label="Your name"
+                  label="Nama"
                   name="name"
-                  placeholder="Your name"
+                  placeholder="Masukkan nama Anda"
                   required
                   className={classes.input}
                 />
               </div>
+
               <div className={classes.inputWrapper}>
                 <TextInput
-                  label="Your email"
+                  label="Email"
                   name="email"
-                  placeholder="info@denext.id"
+                  placeholder="email@perusahaan.com"
                   required
                   className={classes.input}
                 />
@@ -74,9 +79,9 @@ export function GetInTouch() {
             <div className={classes.inputWrapper}>
               <TextInput
                 mt="md"
-                label="Subject"
+                label="Subjek"
                 name="subject"
-                placeholder="Subject"
+                placeholder="Contoh: Setup Server / Jaringan"
                 required
                 className={classes.input}
               />
@@ -85,9 +90,9 @@ export function GetInTouch() {
             <div className={classes.inputWrapper}>
               <Textarea
                 mt="md"
-                label="Your message"
+                label="Pesan"
                 name="message"
-                placeholder="Please include all relevant information"
+                placeholder="Jelaskan kebutuhan Anda secara singkat..."
                 minRows={3}
                 required
                 className={classes.textarea}
@@ -101,7 +106,7 @@ export function GetInTouch() {
                 className={classes.control}
                 size="md"
               >
-                <span className={classes.buttonText}>Send message</span>
+                <span className={classes.buttonText}>Kirim Pesan</span>
                 <div className={classes.buttonRipple}></div>
               </Button>
             </Group>
