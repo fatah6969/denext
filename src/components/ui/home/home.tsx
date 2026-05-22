@@ -111,7 +111,7 @@ export function Home() {
       fontWeight: 600,
     }}
   >
-    Lihat layanan service komputer Jakarta →
+    Lihat Layanan Service Komputer Jakarta →
   </a>
 </Text>
           
