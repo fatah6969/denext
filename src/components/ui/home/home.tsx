@@ -30,56 +30,60 @@ export function Home() {
 
       <Stack gap={6} ta="start" justify="center">
         <Box className={classes.heroTitle}>
-          <Text
-            size={isMobile ? '42px' : '84px'}
-            fw={700}
-            className={isMobile ? '' : classes.typingAnimation}
-          >
-            DENEXT{' '}
-            <Text
-              span
-              c="#4F8025"
-              fw={800}
-              inherit
-              className={classes.highlightGreen}
-            >
-              Solusi IT Terpadu
-            </Text>
-          </Text>
+  <Text
+    component="h1"
+    size={isMobile ? '34px' : '72px'}
+    fw={800}
+    lh={1.1}
+    className={isMobile ? '' : classes.typingAnimation}
+  >
+    Service Komputer &{' '}
+    <Text
+      span
+      c="#4F8025"
+      fw={900}
+      inherit
+      className={classes.highlightGreen}
+    >
+      IT Support
+    </Text>
+  </Text>
 
-          <Text
-            size={isMobile ? '42px' : '84px'}
-            fw={700}
-            pt={16}
-            className={classes.heroSubtitle}
-          >
-            Untuk Bisnis Modern
-          </Text>
-        </Box>
+  <Text
+    size={isMobile ? '30px' : '64px'}
+    fw={700}
+    pt={12}
+    className={classes.heroSubtitle}
+  >
+    Jabodetabek
+  </Text>
+</Box>
 
         <Text
-          size="lg"
-          fw={300}
-          lh={1.6}
-          mt="md"
-          c="dimmed"
-          className={classes.heroDescription}
-          style={{ wordBreak: 'break-word' }} // ✅ biar aman wrap
-        >
-          Tingkatkan performa bisnis Anda dengan{' '}
-          <Text span fw={500} className={classes.highlightGreen}>
-            analitik cerdas
-          </Text>
-          ,{' '}
-          <Text span fw={500} className={classes.highlightGreen}>
-            solusi yang efektif
-          </Text>
-          , dan{' '}
-          <Text span fw={500} className={classes.highlightTeal}>
-            layanan IT yang dirancang khusus
-          </Text>{' '}
-          untuk mendorong pertumbuhan bisnis Anda secara maksimal.
-        </Text>
+  size="lg"
+  fw={400}
+  lh={1.8}
+  mt="md"
+  c="dimmed"
+  className={classes.heroDescription}
+  style={{ wordBreak: 'break-word' }}
+>
+  DENEXT menyediakan jasa{' '}
+  <Text span fw={700} className={classes.highlightGreen}>
+    service komputer
+  </Text>
+  ,{' '}
+  <Text span fw={700} className={classes.highlightGreen}>
+    maintenance server
+  </Text>
+  ,{' '}
+  <Text span fw={700} className={classes.highlightTeal}>
+    Linux server
+  </Text>
+  , Mikrotik, CCTV, jaringan kantor, email server Zimbra,
+  dan solusi IT profesional untuk perusahaan di area
+  Jakarta, Bogor, Depok, Tangerang, dan Bekasi.
+</Text>
 
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
           <Button
@@ -123,7 +127,7 @@ export function Home() {
         <Box visibleFrom="sm">
           <Image
             src={hero}
-            alt="Hero Image"
+            alt="Service Komputer dan IT Support Jabodetabek"
             height={721}
             width={837}
             className={classes.heroImageDesktop}
@@ -134,7 +138,7 @@ export function Home() {
           <Box>
             <Image
               src={gifHero}
-              alt="Hero Image"
+              alt="Jasa IT Support dan Maintenance Server"
               height={200}
               width={200}
               className={classes.heroImageMobile}
