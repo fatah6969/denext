@@ -55,7 +55,7 @@ export function Home() {
     pt={12}
     className={classes.heroSubtitle}
   >
-    Jabodetabek
+    JABODETABEK
   </Text>
 </Box>
 
@@ -70,18 +70,18 @@ export function Home() {
 >
   DENEXT menyediakan jasa{' '}
   <Text span fw={700} className={classes.highlightGreen}>
-    service komputer
+    Service Komputer
   </Text>
   ,{' '}
   <Text span fw={700} className={classes.highlightGreen}>
-    maintenance server
+    Maintenance Server
   </Text>
   ,{' '}
   <Text span fw={700} className={classes.highlightTeal}>
-    Linux server
+    Linux Server
   </Text>
-  , Mikrotik, CCTV, jaringan kantor, email server Zimbra,
-  dan solusi IT profesional untuk perusahaan di area
+  , Mikrotik, CCTV, Jaringan Kantor, Email Server Zimbra,
+  dan Solusi IT Profesional untuk perusahaan di area
   Jakarta, Bogor, Depok, Tangerang, dan Bekasi.
 </Text>
 
