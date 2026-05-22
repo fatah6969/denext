@@ -102,6 +102,19 @@ export function Home() {
             Konsultasi Gratis
           </Button>
 
+          <Text mt="md">
+  <a
+    href="/service-komputer-jakarta"
+    style={{
+      color: '#4F8025',
+      textDecoration: 'none',
+      fontWeight: 600,
+    }}
+  >
+    Lihat layanan service komputer Jakarta →
+  </a>
+</Text>
+          
           {!isMobile && (
             <Image
               src={vector}
