@@ -15,44 +15,75 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Denext | One Stop IT Solutions",
+  title:
+    "Service Komputer Jabodetabek | IT Support, Server & Mikrotik - DENEXT",
+
   description:
-    "Solusi lengkap untuk kebutuhan IT Anda: software, hardware, jaringan, dan konsultasi.",
+    "DENEXT menyediakan jasa service komputer Jabodetabek, maintenance kantor, Linux server, Mikrotik, CCTV, jaringan, email server Zimbra, dan solusi IT profesional untuk perusahaan.",
+
   keywords: [
-    "denext",
-    "it solutions",
-    "konsultan teknologi",
-    "jasa komputer",
-    "service laptop",
-    "software",
-    "hardware",
-    "jaringan",
+    "service komputer jabodetabek",
+    "IT support jakarta",
+    "service komputer murah",
+    "maintenance komputer kantor",
+    "linux server jakarta",
+    "mikrotik jakarta",
+    "jasa jaringan kantor",
+    "email server zimbra",
+    "cctv jakarta",
+    "service laptop jakarta",
+    "IT support jabodetabek",
+    "maintenance server jakarta",
   ],
+
   authors: [{ name: "Denext.id", url: "https://denext.id" }],
+
   metadataBase: new URL("https://denext.id"),
+
   openGraph: {
-    title: "Denext | One Stop IT Solutions",
-    description: "Solusi lengkap untuk kebutuhan IT Anda.",
+    title:
+      "Service Komputer Jabodetabek | IT Support & Server - DENEXT",
+
+    description:
+      "Service komputer, Linux server, Mikrotik, maintenance kantor, CCTV, jaringan, dan solusi IT profesional untuk perusahaan.",
+
     url: "https://denext.id",
-    siteName: "Denext",
+
+    siteName: "DENEXT",
+
+    locale: "id_ID",
+
     images: [
       {
         url: "/favicon.png",
         width: 512,
         height: 512,
-        alt: "Denext Logo",
+        alt: "DENEXT IT Solutions",
       },
     ],
+
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Denext | One Stop IT Solutions",
-    description: "Solusi lengkap untuk kebutuhan IT Anda.",
+
+    title:
+      "Service Komputer Jabodetabek | DENEXT",
+
+    description:
+      "IT support, Linux server, Mikrotik, maintenance komputer kantor dan solusi jaringan.",
+
     images: ["/favicon.png"],
   },
+
   icons: {
     icon: "/favicon.png",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -62,7 +93,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <body className={`${roboto.className}`}>
         <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
@@ -82,19 +113,30 @@ export default function RootLayout({
       </Script>
 
       <Script id="ld-json" type="application/ld+json">
-        {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Denext",
-            "url": "https://denext.id",
-            "logo": "https://denext.id/favicon.png",
-            "sameAs": [
-              "https://www.instagram.com/denext.id"
+  {`
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DENEXT",
+    "url": "https://denext.id",
+    "logo": "https://denext.id/favicon.png",
+    "description": "Service komputer Jabodetabek dan solusi IT profesional.",
+
+    "areaServed": [
+      "Jakarta",
+      "Bogor",
+      "Depok",
+      "Tangerang",
+      "Bekasi"
+    ],
+
+    "sameAs": [
+      "https://www.instagram.com/denext.id"
     ]
   }
   `}
-      </Script>
+</Script>
+      
     </html>
   );
 }
