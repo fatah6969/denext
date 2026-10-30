@@ -13,7 +13,7 @@ export default function ContactPage() {
       <main style={{ padding: '2rem', maxWidth: 800, margin: 'auto' }}>
         <h1>Kontak Kami</h1>
         <p>
-          Email: <a href="mailto:info@denext.id">info.denext@gmail.com</a>
+          Email: <a href="mailto:info.denext@gmail.com">info.denext@gmail.com</a>
         </p>
         <p>
           WA:{' '}
