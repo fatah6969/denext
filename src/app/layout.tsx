@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "maintenance server jakarta",
   ],
 
-  authors: [{ name: "Denext.id", url: "https://denext.id" }],
+  authors: [{ name: "Denext", url: "https://denext.biz.id" }],
 
-  metadataBase: new URL("https://denext.id"),
+  metadataBase: new URL("https://denext.biz.id"),
 
   openGraph: {
     title:
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description:
       "Service komputer, Linux server, Mikrotik, maintenance kantor, CCTV, jaringan, dan solusi IT profesional untuk perusahaan.",
 
-    url: "https://denext.id",
+    url: "https://denext.biz.id",
 
     siteName: "DENEXT",
 
@@ -118,8 +118,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "DENEXT",
-    "url": "https://denext.id",
-    "logo": "https://denext.id/favicon.png",
+    "url": "https://denext.biz.id",
+    "logo": "https://denext.biz.id/favicon.png",
     "description": "Service komputer Jabodetabek dan solusi IT profesional.",
 
     "areaServed": [
