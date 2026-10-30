@@ -23,7 +23,7 @@ export default function ContactPage() {
         </p>
         <p>
           Website:{' '}
-          <a href="https://denext.id" target="_blank">
+          <a href="https://denext.biz.id" target="_blank">
             denext
           </a>
         </p>
