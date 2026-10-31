@@ -103,7 +103,7 @@ function ContactIcon({
 const MOCKDATA = [
   {
     title: 'Email',
-    description: 'info@denext.id',
+    description: 'info.denext.biz.id',
     icon: IconAt,
     iconName: 'email',
   },
