@@ -92,7 +92,7 @@ export function MobileMenu() {
               <Button
                 fullWidth
                 radius="xl"
-                color="green"
+                color="green.8"
                 component="a"
                 href="https://wa.me/6285117477481"
               >

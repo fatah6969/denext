@@ -58,7 +58,7 @@ export function Navbar() {
           <Link to="contact-us" smooth duration={500} offset={-70}>
             <Button
               variant="outline"
-              color="green"
+              color="green.8"
               radius="xl"
               className={classes.contactButton}
             >
