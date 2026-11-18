@@ -40,7 +40,7 @@ export function AboutUs() {
           className={styles.fadeInRight}
         >
           <Box>
-            <Text size="2.2rem" c="#4F8025" fw={800} mb={4}>
+            <Text size="2.2rem" c="#166534" fw={800} mb={4}>
               Tentang Kami
             </Text>
 
@@ -48,7 +48,7 @@ export function AboutUs() {
               Di{' '}
               <Text
                 span
-                c="#4F8025"
+                c="#166534"
                 fw={700}
                 inherit
                 className={styles.brandText}
@@ -83,7 +83,7 @@ export function AboutUs() {
             <Box className={styles.iconContainer}>
               <IconTarget size={24} color="white" />
             </Box>
-            <Text size="1.6rem" c="#4F8025" fw={800}>
+            <Text size="1.6rem" c="#166534" fw={800}>
               Misi Kami
             </Text>
           </Group>
@@ -100,7 +100,7 @@ export function AboutUs() {
             <Box className={styles.iconContainer}>
               <IconUsers size={24} color="white" />
             </Box>
-            <Text size="1.6rem" c="#4F8025" fw={800}>
+            <Text size="1.6rem" c="#166534" fw={800}>
               Siapa Kami
             </Text>
           </Group>

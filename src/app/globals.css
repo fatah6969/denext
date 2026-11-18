@@ -1,36 +1,41 @@
 :root {
   font-family: "Roboto, sans-serif";
+
+  /* Design tokens (fresh, professional, still lively) */
+  --color-bg: #f6f8f7;
+  --color-surface: #ffffff;
+  --color-ink: #0f172a;
+  --color-ink-2: #334155;
+  --color-ink-3: #475569;
+  --color-brand: #166534;
+  --color-brand-2: #15803d;
+  --color-accent: #0ea5e9;
+  --color-divider: #e2e8f0;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f3f5f6;
-  /* background-color: #f33; */
+  background-color: var(--color-bg);
 }
 
 /* CUSTOM SCROLL BAR */
-
-/* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f5f9;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #2c4b807c;
+  background: #0f172a33;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2c4b80;
+  background: #0f172a;
 }
 
 html {
