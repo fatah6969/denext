@@ -55,9 +55,9 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/favicon.png",
-        width: 512,
-        height: 512,
+        url: "/og-banner.png",
+        width: 1200,
+        height: 630,
         alt: "DENEXT IT Solutions",
       },
     ],
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     description:
       "IT support, Linux server, Mikrotik, maintenance komputer kantor dan solusi jaringan.",
 
-    images: ["/favicon.png"],
+    images: ["/og-banner.png"],
   },
 
   icons: {
@@ -121,6 +121,8 @@ export default function RootLayout({
     "url": "https://denext.biz.id",
     "logo": "https://denext.biz.id/favicon.png",
     "description": "Service komputer Jabodetabek dan solusi IT profesional.",
+
+    "telephone": "+6285117477481",
 
     "areaServed": [
       "Jakarta",
