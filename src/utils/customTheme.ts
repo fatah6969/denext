@@ -42,7 +42,6 @@ export const theme = createTheme({
       "#1e293b", // 900
       "#0f172a", // 950
     ],
-    ],
     warning: [
       "#fffbeb", "#fef3c7", "#fde68a", "#fcd34d", "#fbbf24",
       "#f59e0b", "#d97706", "#b45309", "#92400e", "#78350f",
