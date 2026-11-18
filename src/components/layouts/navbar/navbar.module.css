@@ -57,7 +57,7 @@
 }
 
 .contactButton:hover {
-  background: linear-gradient(135deg, #2E7D32, #1B5E20) !important;
+  background: linear-gradient(135deg, var(--mantine-color-green-8), var(--mantine-color-green-9)) !important;
   color: #fff !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(76, 175, 80, 0.25);
