@@ -112,7 +112,7 @@ export function Clients() {
               transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
               opacity: isVisible ? 1 : 0,
               transition: 'all 0.8s ease-out 0.2s',
-              background: 'linear-gradient(135deg, #4F8025, #6BA832)',
+              background: 'linear-gradient(135deg, #166534, #6BA832)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
@@ -157,7 +157,7 @@ export function Clients() {
                   0.2 + index * 0.1
                 }s`,
                 cursor: 'pointer',
-                borderColor: hoveredIndex === index ? '#4F8025' : undefined,
+                borderColor: hoveredIndex === index ? '#166534' : undefined,
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -197,7 +197,7 @@ export function Clients() {
         {/* Stats */}
         <Group justify="space-evenly" mt="md" w="100%">
           <Stack align="center" gap={4}>
-            <Text size="2rem" fw={800} c="#4F8025">
+            <Text size="2rem" fw={800} c="#166534">
               8+
             </Text>
             <Text size="sm" c="dimmed">
@@ -206,7 +206,7 @@ export function Clients() {
           </Stack>
 
           <Stack align="center" gap={4}>
-            <Text size="2rem" fw={800} c="#4F8025">
+            <Text size="2rem" fw={800} c="#166534">
               100%
             </Text>
             <Text size="sm" c="dimmed">
@@ -215,7 +215,7 @@ export function Clients() {
           </Stack>
 
           <Stack align="center" gap={4}>
-            <Text size="2rem" fw={800} c="#4F8025">
+            <Text size="2rem" fw={800} c="#166534">
               3+
             </Text>
             <Text size="sm" c="dimmed">
