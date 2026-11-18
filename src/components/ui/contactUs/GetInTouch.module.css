@@ -208,7 +208,7 @@
 }
 
 .control {
-  background: linear-gradient(135deg, #4f8025 0%, #90b76e 100%) !important;
+  background: linear-gradient(135deg, var(--mantine-color-green-8) 0%, var(--mantine-color-green-9) 100%) !important;
   border: none !important;
   border-radius: 25px !important;
   padding: 12px 30px !important;

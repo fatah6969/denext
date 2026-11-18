@@ -102,7 +102,7 @@ export function GetInTouch() {
             <Group justify="flex-end" mt="md">
               <Button
                 type="submit"
-                color="#4F8025"
+                color="green"
                 className={classes.control}
                 size="md"
               >

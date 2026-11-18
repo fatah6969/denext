@@ -50,14 +50,14 @@
 
 /* CTA BUTTON */
 .contactButton {
-  border: 2px solid #4caf50 !important;
+  border: 2px solid var(--mantine-color-green-8) !important;
   border-radius: 999px !important;
   font-weight: 600 !important;
   transition: 0.25s ease !important;
 }
 
 .contactButton:hover {
-  background: linear-gradient(135deg, #4caf50, #2e7d32) !important;
+  background: linear-gradient(135deg, #2E7D32, #1B5E20) !important;
   color: #fff !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(76, 175, 80, 0.25);

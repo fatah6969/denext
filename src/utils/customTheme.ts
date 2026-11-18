@@ -14,6 +14,18 @@ export const theme = createTheme({
       "#596671",
       "#495865",
     ],
+    green: [
+      "#E6F4EA",
+      "#C8E6C9",
+      "#A5D6A7",
+      "#81C784",
+      "#66BB6A",
+      "#4CAF50",
+      "#43A047",
+      "#388E3C",
+      "#2E7D32",
+      "#1B5E20",
+    ],
     secondary: [
       "#ebf9fc",
       "#dfedef",
