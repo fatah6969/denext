@@ -15,30 +15,49 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Service Komputer Jabodetabek | IT Support, Server & Mikrotik - DENEXT",
+  metadataBase: new URL("https://www.denext.biz.id"),
+
+  title: {
+    default:
+      "DENEXT - Service Komputer & IT Support Jabodetabek",
+    template: "%s | DENEXT",
+  },
 
   description:
-    "DENEXT menyediakan jasa service komputer Jabodetabek, maintenance kantor, Linux server, Mikrotik, CCTV, jaringan, email server Zimbra, dan solusi IT profesional untuk perusahaan.",
+    "DENEXT menyediakan jasa service komputer, IT support, maintenance kantor, Linux server, Mikrotik, CCTV, jaringan, email server Zimbra, backup & disaster recovery untuk UMKM dan perusahaan di Jakarta, Bogor, Depok, Tangerang, Bekasi.",
+
+  applicationName: "DENEXT",
+
+  category: "IT Support & Computer Service",
 
   keywords: [
-    "service komputer jabodetabek",
-    "IT support jakarta",
-    "service komputer murah",
-    "maintenance komputer kantor",
-    "linux server jakarta",
-    "mikrotik jakarta",
-    "jasa jaringan kantor",
-    "email server zimbra",
-    "cctv jakarta",
+    "service komputer jakarta",
+    "service komputer bogor",
+    "service komputer depok",
     "service laptop jakarta",
+    "service laptop bogor",
+    "IT support jakarta",
     "IT support jabodetabek",
-    "maintenance server jakarta",
+    "IT support bogor",
+    "maintenance komputer kantor",
+    "jasa service komputer kantor",
+    "linux server jakarta",
+    "setup linux server",
+    "mikrotik jakarta",
+    "konfigurasi mikrotik",
+    "jasa jaringan kantor",
+    "instalasi jaringan jakarta",
+    "cctv jakarta",
+    "jasa instalasi cctv",
+    "email server zimbra",
+    "email hosting perusahaan",
+    "virtualisasi server proxmox",
+    "backup disaster recovery",
+    "IT konsultan jakarta",
+    "jasa IT support onsite remote",
   ],
 
-  authors: [{ name: "Denext", url: "https://denext.biz.id" }],
-
-  metadataBase: new URL("https://denext.biz.id"),
+  authors: [{ name: "Denext", url: "https://www.denext.biz.id" }],
 
   alternates: {
     canonical: "https://www.denext.biz.id/",
@@ -91,6 +110,83 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.denext.biz.id/#organization",
+      "name": "DENEXT",
+      "url": "https://www.denext.biz.id",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.denext.biz.id/favicon.png"
+      },
+      "email": "info.denext@gmail.com",
+      "telephone": "+6285117477481",
+      "sameAs": ["https://www.instagram.com/denext.id"]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.denext.biz.id/#localbusiness",
+      "name": "DENEXT - IT Support & Service Komputer",
+      "url": "https://www.denext.biz.id",
+      "image": "https://www.denext.biz.id/og-banner.png",
+      "telephone": "+6285117477481",
+      "email": "info.denext@gmail.com",
+      "priceRange": "Rp",
+      "description":
+        "Jasa service komputer, IT support onsite & remote, maintenance kantor, Linux server, Mikrotik, CCTV, jaringan, email server Zimbra, dan backup disaster recovery di Jabodetabek.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogor",
+        "addressRegion": "Jawa Barat",
+        "addressCountry": "ID"
+      },
+      "areaServed": ["Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi"].map(
+        (name) => ({ "@type": "City", name })
+      ),
+      "sameAs": ["https://www.instagram.com/denext.id"],
+      "parentOrganization": {
+        "@id": "https://www.denext.biz.id/#organization"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Layanan IT DENEXT",
+        "itemListElement": [
+          "Service Komputer & Laptop",
+          "IT Support Onsite & Remote",
+          "Maintenance Komputer Kantor",
+          "Instalasi Jaringan & Infrastruktur",
+          "Setup Linux Server & Virtualisasi",
+          "Konfigurasi Mikrotik",
+          "Instalasi CCTV",
+          "Email Server Zimbra",
+          "Backup & Disaster Recovery",
+          "Website & Aplikasi"
+        ].map((name) => ({
+          "@type": "OfferCatalog",
+          name,
+          itemListElement: {
+            "@type": "Service",
+            name,
+            provider: { "@id": "https://www.denext.biz.id/#organization" },
+            areaServed: "Jabodetabek"
+          }
+        }))
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.denext.biz.id/#website",
+      "url": "https://www.denext.biz.id",
+      "name": "DENEXT",
+      "inLanguage": "id-ID",
+      "publisher": { "@id": "https://www.denext.biz.id/#organization" }
+    }
+  ]
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -116,32 +212,10 @@ export default function RootLayout({
           `}
       </Script>
 
-      <Script id="ld-json" type="application/ld+json">
-  {`
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "DENEXT",
-    "url": "https://denext.biz.id",
-    "logo": "https://denext.biz.id/favicon.png",
-    "description": "Service komputer Jabodetabek dan solusi IT profesional.",
-
-    "telephone": "+6285117477481",
-
-    "areaServed": [
-      "Jakarta",
-      "Bogor",
-      "Depok",
-      "Tangerang",
-      "Bekasi"
-    ],
-
-    "sameAs": [
-      "https://www.instagram.com/denext.id"
-    ]
-  }
-  `}
-</Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       
     </html>
   );
