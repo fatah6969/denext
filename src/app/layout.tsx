@@ -40,6 +40,10 @@ export const metadata: Metadata = {
 
   metadataBase: new URL("https://denext.biz.id"),
 
+  alternates: {
+    canonical: "https://www.denext.biz.id/",
+  },
+
   openGraph: {
     title:
       "Service Komputer Jabodetabek | IT Support & Server - DENEXT",
