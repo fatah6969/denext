@@ -4,10 +4,10 @@ import { IconBrandWhatsapp } from '@tabler/icons-react'
 
 export const metadata: Metadata = {
   title:
-    'Service Komputer Jakarta | IT Support & Maintenance Kantor - DENEXT',
+    'Service Komputer Jakarta - IT Support & Maintenance Kantor',
 
   description:
-    'DENEXT menyediakan jasa service komputer Jakarta, maintenance komputer kantor, Linux server, Mikrotik, CCTV, jaringan kantor, dan IT support profesional.',
+    'Jasa service komputer Jakarta & Jabodetabek: maintenance kantor, Linux server, Mikrotik, CCTV, jaringan, email Zimbra. IT support onsite & remote, konsultasi gratis.',
 
   keywords: [
     'service komputer jakarta',
@@ -17,12 +17,63 @@ export const metadata: Metadata = {
     'linux server jakarta',
     'mikrotik jakarta',
     'jasa jaringan kantor',
+    'cctv jakarta',
+    'email server zimbra',
+    'backup disaster recovery',
+  ],
+
+  alternates: {
+    canonical: 'https://www.denext.biz.id/service-komputer-jakarta',
+  },
+
+  openGraph: {
+    title: 'Service Komputer Jakarta | IT Support & Maintenance - DENEXT',
+    description:
+      'Service komputer, server, Mikrotik, CCTV, dan jaringan kantor Jakarta & Jabodetabek oleh DENEXT.',
+    url: 'https://www.denext.biz.id/service-komputer-jakarta',
+    images: ['/og-banner.png'],
+  },
+}
+
+
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Apakah DENEXT melayani service komputer onsite di Jakarta?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ya. Tim DENEXT melayani service komputer onsite di Jakarta dan Jabodetabek, sekaligus support remote untuk penanganan lebih cepat.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Layanan IT apa saja yang tersedia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "DENEXT menyediakan service komputer, maintenance kantor, setup Linux server, konfigurasi Mikrotik, instalasi CCTV, jaringan kantor, email server Zimbra, dan backup disaster recovery.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah ada konsultasi gratis?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ya. Hubungi DENEXT via WhatsApp untuk konsultasi gratis kebutuhan IT bisnis Anda.",
+      },
+    },
   ],
 }
 
 export default function ServiceKomputerJakartaPage() {
   return (
     <Container size="lg" py={80}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+      />
       <Stack gap={40}>
         <Box>
           <Text
