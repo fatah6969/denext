@@ -85,7 +85,14 @@ export function Clients() {
   ]
 
   return (
-    <Container size="xl" id="client" pt={72}>
+    <Container
+      fluid
+      maw={1200}
+      id="client"
+      pt={72}
+      px="md"
+      style={{ width: '100%', alignSelf: 'stretch', marginInline: 0 }}
+    >
       <Stack gap="xl" align="center" ref={sectionRef}>
         
         {/* Header */}

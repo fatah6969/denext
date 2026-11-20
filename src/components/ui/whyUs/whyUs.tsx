@@ -58,7 +58,7 @@ export function WhyUs() {
         </Text>
       </Flex>
 
-      <Grid gutter={24} pt={32}>
+      <Grid columns={24} gutter={24} pt={32}>
         {features.map((feature) => (
           <Grid.Col key={feature.title} span={feature.span}>
             <Flex
