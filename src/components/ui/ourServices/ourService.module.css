@@ -4,18 +4,18 @@
 }
 
 .title {
-  background: linear-gradient(135deg, #4F8025 0%, #6B9B37 50%, #4F8025 100%);
+  background: linear-gradient(135deg, #166534 0%, #14532d 50%, #166534 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 2px 4px rgba(79, 128, 37, 0.1);
+  text-shadow: 0 2px 4px rgba(22, 101, 52, 0.1);
 }
 
 .titleUnderline {
   width: 80px;
   height: 4px;
   margin: 10px auto 0;
-  background: linear-gradient(90deg, #4F8025, #6B9B37);
+  background: linear-gradient(90deg, #166534, #14532d);
   border-radius: 2px;
 }
 
@@ -23,10 +23,16 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
-  border: 1px solid rgba(79, 128, 37, 0.08);
-  border-radius: 12px;
+  border: 1px solid rgba(22, 101, 52, 0.08);
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(22, 101, 52, 0.14);
 }
 
 .serviceCard::before {
@@ -36,7 +42,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #4F8025, #6B9B37);
+  background: linear-gradient(90deg, #166534, #14532d);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -44,7 +50,7 @@
 
 .serviceCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(79, 128, 37, 0.15);
+  box-shadow: 0 20px 40px rgba(22, 101, 52, 0.15);
 }
 
 .serviceCard:hover::before {
@@ -53,7 +59,7 @@
 
 .serviceCard:hover .iconWrapper {
   transform: scale(1.1);
-  background: linear-gradient(135deg, rgba(79, 128, 37, 0.15) 0%, rgba(107, 155, 55, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(22, 101, 52, 0.15) 0%, rgba(22, 101, 52, 0.15) 100%);
 }
 
 .serviceCard:hover .icon {
@@ -62,18 +68,18 @@
 
 .iconWrapper {
   padding: 16px;
-  background: linear-gradient(135deg, rgba(79, 128, 37, 0.1) 0%, rgba(107, 155, 55, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(22, 101, 52, 0.1) 0%, rgba(22, 101, 52, 0.1) 100%);
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .icon {
-  color: #4F8025;
+  color: #166534;
   transition: transform 0.3s ease;
 }
 
 .cardTitle {
-  color: #4F8025;
+  color: #166534;
   transition: color 0.3s ease;
 }
 
@@ -82,7 +88,7 @@
 }
 
 .serviceCard:hover .cardTitle {
-  color: #6B9B37;
+  color: #14532d;
 }
 
 .serviceCard:hover .cardDescription {
