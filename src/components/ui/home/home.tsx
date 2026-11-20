@@ -4,7 +4,6 @@ import { Box, Button, Flex, Stack, Text } from '@mantine/core'
 import { IconBrandWhatsapp } from '@tabler/icons-react'
 import Image from 'next/image'
 import hero from '../../../assets/hero_background.png'
-import vector from '../../../assets/content_vector.png'
 import gifHero from '../../../assets/gif_hero.gif'
 import { useMediaQuery } from '@mantine/hooks'
 import classes from './home.module.css'
@@ -16,18 +15,12 @@ export function Home() {
     <Flex
       justify={isMobile ? 'start' : 'space-between'}
       direction={isMobile ? 'column' : 'row'}
+      align="center"
       id="home"
-      pt={isMobile ? 46 : 0}
+      pt={isMobile ? 40 : 0}
       px={isMobile ? 'md' : 0}
       className={classes.homeContainer}
     >
-      {/* Floating Particles Background */}
-      <div className={classes.floatingParticles}>
-        {Array.from({ length: 9 }).map((_, i) => (
-          <div key={i} className={classes.particle} />
-        ))}
-      </div>
-
       <Stack gap={6} ta={isMobile ? 'center' : 'start'} justify="center">
         <Box className={classes.heroTitle}>
           <Box className={classes.heroKicker}>
@@ -37,22 +30,18 @@ export function Home() {
           </Box>
           <Text
             component="h1"
-            size={isMobile ? '40px' : '72px'}
+            size={isMobile ? '40px' : '64px'}
             fw={800}
             lh={1.08}
           >
             Service Komputer &{' '}
-            <Text
-              span
-              fw={900}
-              className={classes.highlightGreen}
-            >
+            <Text span fw={900} className={classes.highlightGreen}>
               IT Support
             </Text>
           </Text>
 
           <Text
-            size={isMobile ? '30px' : '56px'}
+            size={isMobile ? '28px' : '48px'}
             fw={700}
             pt={12}
             className={classes.heroSubtitle}
@@ -66,25 +55,12 @@ export function Home() {
           fw={400}
           lh={1.75}
           mt="md"
-          c="dimmed"
+          c="var(--color-ink-3)"
           className={classes.heroDescription}
-          style={{ wordBreak: 'break-word' }}
         >
-          DENEXT menyediakan jasa{' '}
-          <Text span fw={700} className={classes.highlightGreen}>
-            Service Komputer
-          </Text>
-          ,{' '}
-          <Text span fw={700} className={classes.highlightGreen}>
-            Maintenance Server
-          </Text>
-          ,{' '}
-          <Text span fw={700} className={classes.highlightGreen}>
-            Linux Server
-          </Text>
-          , Mikrotik, CCTV, Jaringan Kantor, Email Server Zimbra,
-          dan Solusi IT Profesional untuk perusahaan di area
-          Jakarta, Bogor, Depok, Tangerang, dan Bekasi.
+          DENEXT menyediakan jasa service komputer, maintenance server, Linux
+          server, Mikrotik, CCTV, jaringan kantor, dan email server Zimbra
+          untuk perusahaan di Jabodetabek.
         </Text>
 
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
@@ -116,22 +92,6 @@ export function Home() {
               Lihat Layanan Service Komputer Jakarta &nbsp;{'\u25B8'}
             </a>
           </Text>
-
-          {!isMobile && (
-            <Image
-              src={vector}
-              alt="content-vector"
-              height={500}
-              width={500}
-              className={classes.contentVector}
-              style={{
-                position: 'absolute',
-                bottom: 96,
-                left: -22,
-                zIndex: -999,
-              }}
-            />
-          )}
         </Box>
       </Stack>
 

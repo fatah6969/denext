@@ -38,27 +38,7 @@ function ContactIcon({
   const content = (
     <>
       <div className={classes.iconContainer}>
-        <svg className={classes.defs}>
-          <defs>
-            <linearGradient id="emailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#60a5fa' }} />
-              <stop offset="100%" style={{ stopColor: '#3b82f6' }} />
-            </linearGradient>
-
-            <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#34d399' }} />
-              <stop offset="100%" style={{ stopColor: '#22c55e' }} />
-            </linearGradient>
-
-            <linearGradient id="locationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#f87171' }} />
-              <stop offset="100%" style={{ stopColor: '#ef4444' }} />
-            </linearGradient>
-          </defs>
-        </svg>
-
-        <Icon size={26} className={classes.icon} />
-        <div className={classes.iconGlow}></div>
+        <Icon size={24} className={classes.icon} />
       </div>
 
       <div className={classes.content}>
