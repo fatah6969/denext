@@ -1,6 +1,6 @@
 .clientGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
@@ -56,16 +56,7 @@
   transition: all 0.3s ease;
 }
 
-/* Responsive adjustments */
-@media (min-width: 769px) {
-  .clientGrid > :nth-child(7) {
-    grid-column: 2; /* taruh di kolom kedua (tengah) */
-    justify-self: center; /* pastikan di tengah kolom */
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-  }
-}
+/* Grid klien — seragam, tanpa aturan nth-child yang bikin kolom kosong */
 
 @media (max-width: 768px) {
   .clientGrid {

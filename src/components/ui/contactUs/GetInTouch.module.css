@@ -53,9 +53,10 @@
 .input input,
 .textarea textarea {
   background: #f8fafc !important;
-  border: 1px solid var(--color-divider) !important;
+  border: 2px solid var(--color-divider) !important;
   border-radius: 12px !important;
-  padding: 12px 14px !important;
+  padding: 14px 16px !important;
+  min-height: 46px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 }
 
@@ -68,7 +69,8 @@
 .control {
   background: #14532d !important;
   border-radius: 999px !important;
-  padding: 12px 28px !important;
+  padding: 14px 32px !important;
+  min-height: 48px;
   font-weight: 700 !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }

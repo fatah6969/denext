@@ -1,7 +1,7 @@
 'use client'
 
-/* HeroVisual — ilustrasi dashboard IT yang bersih, menggantikan kolase stok.
-   Satu fokus utama + dua badge kecil. Semua vektor, tidak ada gambar luar. */
+/* HeroVisual — ilustrasi server rack & monitoring. Satu fokus yang jelas,
+   tanpa badge mengambang yang terasa seperti template SaaS. */
 export function HeroVisual() {
   return (
     <svg
@@ -9,7 +9,7 @@ export function HeroVisual() {
       width="100%"
       height="auto"
       role="img"
-      aria-label="Dashboard pemantauan sistem IT DENEXT"
+      aria-label="Ilustrasi teknisi DENEXT memantau server dan jaringan kantor"
       style={{ display: 'block', maxWidth: '100%' }}
     >
       <defs>
@@ -17,87 +17,66 @@ export function HeroVisual() {
           <stop offset="0%" stopColor="#ecfdf3" />
           <stop offset="100%" stopColor="#f0f9ff" />
         </linearGradient>
-        <linearGradient id="hvBar" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#166534" />
-          <stop offset="100%" stopColor="#22c55e" />
-        </linearGradient>
         <filter id="hvShadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="12" stdDeviation="18" floodColor="#0f172a" floodOpacity="0.12" />
+          <feDropShadow dx="0" dy="10" stdDeviation="16" floodColor="#0f172a" floodOpacity="0.12" />
         </filter>
       </defs>
 
-      {/* Background panel */}
+      {/* Panel latar */}
       <rect x="8" y="8" width="604" height="544" rx="28" fill="url(#hvBg)" />
-      {[80, 160, 240, 320, 400, 480].map((y) => (
-        <line key={`h${y}`} x1="32" y1={y} x2="588" y2={y} stroke="#166534" strokeOpacity="0.05" />
-      ))}
-      {[80, 160, 240, 320, 400, 500].map((x) => (
-        <line key={`v${x}`} x1={x} y1="32" x2={x} y2="528" stroke="#166534" strokeOpacity="0.05" />
-      ))}
 
-      {/* Main dashboard card */}
+      {/* Server rack — konkret & relevan */}
       <g filter="url(#hvShadow)">
-        <rect x="70" y="76" width="480" height="340" rx="22" fill="#ffffff" />
+        <rect x="60" y="60" width="230" height="440" rx="18" fill="#0f172a" />
       </g>
-
-      {/* Header */}
-      <circle cx="106" cy="116" r="7" fill="#22c55e" />
-      <text x="124" y="122" fontFamily="inherit" fontSize="15" fontWeight="700" fill="#0f172a">
-        System Status
-      </text>
-      <rect x="452" y="104" width="70" height="26" rx="13" fill="#dcfce7" />
-      <text x="470" y="122" fontSize="12" fontWeight="700" fill="#166534">LIVE</text>
-      <line x1="70" y1="144" x2="550" y2="144" stroke="#e2e8f0" />
-
-      {/* Rows */}
-      {[
-        { label: 'Server & Virtualisasi', value: '98%', w: 274 },
-        { label: 'Jaringan Kantor', value: '92%', w: 230 },
-        { label: 'Backup & Recovery', value: '86%', w: 190 },
-      ].map((row, i) => {
-        const y = 186 + i * 62
+      {[0, 1, 2, 3, 4].map((i) => {
+        const y = 92 + i * 76
         return (
-          <g key={row.label}>
-            <text x="106" y={y} fontSize="14" fontWeight="600" fill="#334155">{row.label}</text>
-            <text x="514" y={y} fontSize="14" fontWeight="700" fill="#166534" textAnchor="end">{row.value}</text>
-            <rect x="106" y={y + 14} width="408" height="8" rx="4" fill="#f1f5f9" />
-            <rect x="106" y={y + 14} width={row.w} height="8" rx="4" fill="url(#hvBar)" />
+          <g key={i}>
+            <rect x="82" y={y} width="186" height="60" rx="8" fill="#1e293b" />
+            <circle cx="102" cy={y + 20} r="5" fill={i === 2 ? '#f59e0b' : '#22c55e'} />
+            <rect x="118" y={y + 16} width="90" height="6" rx="3" fill="#475569" />
+            <rect x="118" y={y + 30} width="60" height="5" rx="2.5" fill="#334155" />
+            <rect x="218" y={y + 14} width="36" height="30" rx="5" fill="#020617" />
+            <path d={`M226 ${y + 29} h20`} stroke="#22c55e" strokeWidth="2" strokeLinecap="round" />
           </g>
         )
       })}
 
-      {/* Uptime line */}
-      <text x="106" y="382" fontSize="13" fontWeight="600" fill="#64748b">Uptime 30 hari</text>
-      <path
-        d="M106 400 L160 392 L214 398 L268 380 L322 388 L376 372 L430 384 L484 374 L514 380"
-        fill="none"
-        stroke="#166534"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      {/* Floating badge: uptime */}
+      {/* Kartu monitoring — menyatu, tidak mengambang */}
       <g filter="url(#hvShadow)">
-        <rect x="380" y="36" width="170" height="76" rx="18" fill="#ffffff" />
+        <rect x="318" y="108" width="244" height="200" rx="18" fill="#ffffff" />
       </g>
-      <text x="402" y="68" fontSize="26" fontWeight="800" fill="#166534">99.9%</text>
-      <text x="402" y="90" fontSize="12" fontWeight="600" fill="#64748b">UPTIME TERJAMIN</text>
+      <text x="340" y="140" fontSize="14" fontWeight="700" fill="#0f172a">Monitoring Server</text>
+      <circle cx="536" cy="135" r="6" fill="#22c55e" />
+      <line x1="318" y1="158" x2="562" y2="158" stroke="#e2e8f0" />
 
-      {/* Floating badge: support */}
+      {[
+        { label: 'Uptime', value: '99.9%', w: 176 },
+        { label: 'Beban CPU', value: '42%', w: 90 },
+        { label: 'Jaringan', value: 'Stabil', w: 140 },
+      ].map((row) => {
+        const y = 190 + [0, 1, 2][row.label === 'Uptime' ? 0 : row.label === 'Beban CPU' ? 1 : 2] * 42
+        return (
+          <g key={row.label}>
+            <text x="340" y={y} fontSize="12" fill="#64748b">{row.label}</text>
+            <text x="544" y={y} fontSize="12" fontWeight="700" fill="#166534" textAnchor="end">{row.value}</text>
+            <rect x="340" y={y + 9} width="204" height="6" rx="3" fill="#f1f5f9" />
+            <rect x="340" y={y + 9} width={row.w} height="6" rx="3" fill="#16a34a" />
+          </g>
+        )
+      })}
+
+      {/* Kartu jaringan */}
       <g filter="url(#hvShadow)">
-        <rect x="38" y="428" width="180" height="76" rx="18" fill="#ffffff" />
+        <rect x="318" y="332" width="244" height="126" rx="18" fill="#ffffff" />
       </g>
-      <circle cx="70" cy="466" r="10" fill="#dcfce7" />
-      <path d="M65 466 l4 4 l8 -9" fill="none" stroke="#166534" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="90" y="462" fontSize="20" fontWeight="800" fill="#0f172a">24/7</text>
-      <text x="90" y="482" fontSize="12" fontWeight="600" fill="#64748b">SUPPORT RESPONSIF</text>
-
-      {/* Small nodes */}
-      <circle cx="470" cy="466" r="8" fill="#22c55e" />
-      <circle cx="504" cy="446" r="5" fill="#166534" />
-      <circle cx="524" cy="482" r="5" fill="#0ea5e9" />
-      <path d="M470 466 L504 446 L524 482 Z" fill="none" stroke="#166534" strokeOpacity="0.25" strokeWidth="2" />
+      <text x="340" y="362" fontSize="14" fontWeight="700" fill="#0f172a">Jaringan Kantor</text>
+      <circle cx="380" cy="404" r="10" fill="#166534" />
+      <circle cx="470" cy="392" r="8" fill="#22c55e" />
+      <circle cx="530" cy="416" r="8" fill="#0ea5e9" />
+      <path d="M380 404 L470 392 L530 416" fill="none" stroke="#166534" strokeOpacity="0.35" strokeWidth="2" />
+      <text x="340" y="444" fontSize="12" fill="#64748b">MikroTik · VLAN · WiFi</text>
     </svg>
   )
 }
