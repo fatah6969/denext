@@ -49,12 +49,14 @@
 .heroImageContainer {
   animation: fadeInRight 0.9s ease-out 0.25s both;
   position: relative;
-  flex: 0 1 520px;
+  flex: 1 1 560px;
+  max-width: 620px;
 }
 
 .heroImageDesktop {
   width: 100%;
   height: auto;
+  display: block;
   transition: transform 0.3s ease;
   border-radius: 20px;
   box-shadow: 0 16px 48px rgba(22, 101, 52, 0.14);

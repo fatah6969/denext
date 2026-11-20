@@ -22,7 +22,14 @@ export function Home() {
       px={isMobile ? 'md' : 0}
       className={classes.homeContainer}
     >
-      <Stack gap={6} ta={isMobile ? 'center' : 'start'} justify="center" w="100%" maw="100%" style={{ overflowWrap: 'break-word' }}>
+      <Stack
+        gap={6}
+        ta={isMobile ? 'center' : 'start'}
+        justify="center"
+        w={isMobile ? '100%' : undefined}
+        maw={isMobile ? '100%' : 520}
+        style={{ overflowWrap: 'break-word' }}
+      >
         <Box className={classes.heroTitle}>
           <Box className={classes.heroKicker}>
             <Text size="13px" fw={800} tt="uppercase">
