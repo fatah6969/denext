@@ -16,12 +16,13 @@ export function Home() {
       justify={isMobile ? 'start' : 'space-between'}
       direction={isMobile ? 'column' : 'row'}
       align="center"
+      gap={isMobile ? 20 : 48}
       id="home"
       pt={isMobile ? 40 : 0}
       px={isMobile ? 'md' : 0}
       className={classes.homeContainer}
     >
-      <Stack gap={6} ta={isMobile ? 'center' : 'start'} justify="center">
+      <Stack gap={6} ta={isMobile ? 'center' : 'start'} justify="center" w="100%" maw="100%" style={{ overflowWrap: 'break-word' }}>
         <Box className={classes.heroTitle}>
           <Box className={classes.heroKicker}>
             <Text size="13px" fw={800} tt="uppercase">
@@ -30,7 +31,7 @@ export function Home() {
           </Box>
           <Text
             component="h1"
-            size={isMobile ? '40px' : '64px'}
+            size={isMobile ? '34px' : '64px'}
             fw={800}
             lh={1.08}
           >
@@ -41,7 +42,7 @@ export function Home() {
           </Text>
 
           <Text
-            size={isMobile ? '28px' : '48px'}
+            size={isMobile ? '24px' : '48px'}
             fw={700}
             pt={12}
             className={classes.heroSubtitle}
@@ -75,7 +76,7 @@ export function Home() {
             fullWidth={isMobile}
             className={classes.exploreButton}
             leftSection={<IconBrandWhatsapp size={20} />}
-            style={{ whiteSpace: 'nowrap' }}
+            style={{ whiteSpace: isMobile ? 'normal' : 'nowrap' }}
           >
             Konsultasi Gratis
           </Button>
@@ -89,7 +90,7 @@ export function Home() {
                 fontWeight: 600,
               }}
             >
-              Lihat Layanan Service Komputer Jakarta &nbsp;{'\u25B8'}
+              Lihat Layanan Service Komputer Jakarta →
             </a>
           </Text>
         </Box>
