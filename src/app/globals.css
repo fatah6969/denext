@@ -2,12 +2,31 @@
   font-family: "Roboto, sans-serif";
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: #f3f5f6;
-  /* background-color: #f33; */
+  overflow-x: hidden;
+}
+
+/* Gambar tidak boleh meluber dari container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Child flex/grid bisa menyusut di layar kecil */
+.mantine-Grid-col,
+.mantine-Flex-root,
+.mantine-Stack-root,
+.mantine-Container-root {
+  min-width: 0;
 }
 
 /* CUSTOM SCROLL BAR */
