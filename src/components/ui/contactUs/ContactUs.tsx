@@ -32,9 +32,11 @@ export function GetInTouch() {
             <Text size="xl" fw={700} c="#fff">
               Hubungi Kami
             </Text>
+            <Text size="sm" c="rgba(255,255,255,0.8)" mt={6} mb="lg">
+              Konsultasikan kebutuhan IT Anda bersama tim DENEXT.
+            </Text>
             <ContactIconsList />
           </div>
-          <div className={classes.contactsDecoration}></div>
         </div>
 
         {/* FORM */}
@@ -106,8 +108,7 @@ export function GetInTouch() {
                 className={classes.control}
                 size="md"
               >
-                <span className={classes.buttonText}>Kirim Pesan</span>
-                <div className={classes.buttonRipple}></div>
+                Kirim Pesan
               </Button>
             </Group>
           </div>

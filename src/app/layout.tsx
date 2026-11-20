@@ -1,6 +1,6 @@
 import Script from "next/script";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";
 import "@mantine/core/styles.css";
@@ -9,9 +9,9 @@ import "@mantine/dates/styles.css";
 import { MantineProvider } from "@mantine/core";
 import { theme } from "@/utils/customTheme";
 
-const roboto = Roboto({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -194,7 +194,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <body className={`${roboto.className}`}>
+      <body className={`${jakarta.className}`}>
         <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
 
