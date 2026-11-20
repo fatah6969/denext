@@ -6,48 +6,13 @@ import iconLogo from '../../../../public/favicon.png'
 import classes from './navbar.module.css'
 import { Link } from 'react-scroll'
 import { MobileMenu } from './sidebar'
-import { useCallback, useEffect, useRef, useState } from 'react'
-
-const SECTIONS = ['home', 'about-us', 'our-service', 'client', 'contact-us'] as const
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState<string>('home')
-
-  // Scroll-aware navbar (bg solid)
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  // Highlight active section via IntersectionObserver
-  useEffect(() => {
-    const sections = SECTIONS.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[]
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id)
-        })
-      },
-      { rootMargin: '-45% 0px -55% 0px', threshold: 0 },
-    )
-    sections.forEach((s) => {
-      if (s) observer.observe(s)
-    })
-    return () => observer.disconnect()
-  }, [])
-
-  const goTo = useCallback((section: string) => {
-    setActiveSection(section)
-    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' })
-  }, [])
-
   return (
     <Group
       h="70px"
-      px={0}
-      className={`${classes.navbarWrapper} ${scrolled ? classes.scrolled : ''}`}
+      px={0} // ⬅️ penting, biar center bener
+      className={classes.navbarWrapper}
     >
       <Group
         justify="space-between"
@@ -57,13 +22,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <Flex align="center" className={classes.logoContainer}>
-          <Link
-            to="home"
-            smooth
-            duration={500}
-            offset={-70}
-            className={`${classes.navLink} ${activeSection === 'home' ? classes.active : ''}`}
-          >
+          <Link to="home" smooth duration={500} offset={-70}>
             <Flex align="center">
               <Image src={iconLogo} alt="Logo" height={40} />
               <Flex direction="column" ml={8}>
@@ -80,20 +39,18 @@ export function Navbar() {
 
         {/* Desktop Menu */}
         <Group gap="lg" visibleFrom="sm">
-          {SECTIONS.map((section) => (
-            <Link
-              key={section}
-              to={section}
-              smooth
-              duration={500}
-              offset={-70}
-              data-nav={section}
-              className={`${classes.navLink} ${activeSection === section ? classes.active : ''}`}
-              onClick={() => goTo(section)}
-            >
-              {section === 'home' ? 'Beranda' : section === 'about-us' ? 'Tentang Kami' : section === 'our-service' ? 'Layanan' : section === 'client' ? 'Klien' : 'Kontak'}
-            </Link>
-          ))}
+          <Link to="home" smooth duration={500} offset={-70} className={classes.navLink}>
+            Beranda
+          </Link>
+          <Link to="about-us" smooth duration={500} offset={-70} className={classes.navLink}>
+            Tentang Kami
+          </Link>
+          <Link to="our-service" smooth duration={500} offset={-70} className={classes.navLink}>
+            Layanan
+          </Link>
+          <Link to="client" smooth duration={500} offset={-70} className={classes.navLink}>
+            Klien
+          </Link>
         </Group>
 
         {/* CTA */}

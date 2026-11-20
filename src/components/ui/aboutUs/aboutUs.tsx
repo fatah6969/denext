@@ -1,6 +1,7 @@
 'use client'
 import { Box, Flex, Text, Paper, Group } from '@mantine/core'
 import Image from 'next/image'
+import gifAbout from '../../../assets/gif_about.gif'
 import aboutus from '../../../assets/aboutus.png'
 import { useMediaQuery } from '@mantine/hooks'
 import { IconTarget, IconUsers } from '@tabler/icons-react'
@@ -18,11 +19,16 @@ export function AboutUs() {
         gap={'xl'}
         mb={60}
       >
-        {/* Image Section — satu gambar saja, tanpa GIF dobel */}
+        {/* Image Section */}
         <Flex justify="center" p={0} style={{ flex: 1 }}>
-          <Box className={styles.imageContainer}>
-            <Image src={aboutus} alt="Tim DENEXT" height={472} width={740} />
+          <Box visibleFrom="sm" className={styles.imageContainer}>
+            <Image src={aboutus} alt="About us" height={472} width={740} />
           </Box>
+          {isMobile && (
+            <Box pt={12} className={styles.fadeInUp}>
+              <Image src={gifAbout} alt="About GIF" height={200} width={200} />
+            </Box>
+          )}
         </Flex>
 
         {/* Content Section */}
@@ -34,7 +40,7 @@ export function AboutUs() {
           className={styles.fadeInRight}
         >
           <Box>
-            <Text size="2.2rem" c="#166534" fw={800} mb={4}>
+            <Text size="2.2rem" c="#4F8025" fw={800} mb={4}>
               Tentang Kami
             </Text>
 
@@ -42,7 +48,7 @@ export function AboutUs() {
               Di{' '}
               <Text
                 span
-                c="#166534"
+                c="#4F8025"
                 fw={700}
                 inherit
                 className={styles.brandText}
@@ -77,7 +83,7 @@ export function AboutUs() {
             <Box className={styles.iconContainer}>
               <IconTarget size={24} color="white" />
             </Box>
-            <Text size="1.6rem" c="#166534" fw={800}>
+            <Text size="1.6rem" c="#4F8025" fw={800}>
               Misi Kami
             </Text>
           </Group>
@@ -94,7 +100,7 @@ export function AboutUs() {
             <Box className={styles.iconContainer}>
               <IconUsers size={24} color="white" />
             </Box>
-            <Text size="1.6rem" c="#166534" fw={800}>
+            <Text size="1.6rem" c="#4F8025" fw={800}>
               Siapa Kami
             </Text>
           </Group>
