@@ -178,8 +178,8 @@ export function Clients() {
                   <Image
                     src={client.logo}
                     alt={client.name}
-                    width={120}
-                    height={80}
+                    width={140}
+                    height={90}
                     className={classes.logoImage}
                     style={{
                       filter:

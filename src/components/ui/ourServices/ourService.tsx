@@ -76,7 +76,7 @@ export function OurService() {
           <Grid.Col key={service.title} span={{ base: 12, sm: 6, md: 3 }}>
             <Box className={styles.serviceCard}>
               <Box className={styles.iconWrapper}>
-                <service.icon size={30} stroke={1.8} className={styles.icon} />
+                <service.icon size={38} stroke={1.7} className={styles.icon} />
               </Box>
               <Text fw={700} size="md" lh={1.3} className={styles.cardTitle}>
                 {service.title}

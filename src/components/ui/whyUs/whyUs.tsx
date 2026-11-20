@@ -71,7 +71,7 @@ export function WhyUs() {
                 </Box>
                 <Stack gap={4}>
                   <Text fw={700} lh={1.3}>{feature.title}</Text>
-                  <Text size="sm" c="var(--color-ink-3)" lh={1.6}>{feature.desc}</Text>
+                  <Text size="14px" c="var(--color-ink-3)" lh={1.6}>{feature.desc}</Text>
                 </Stack>
               </Flex>
             </Grid.Col>
