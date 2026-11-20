@@ -73,5 +73,5 @@ export const theme = createTheme({
     xl: "24px",
   },
 
-  fontFamily: "Roboto, sans-serif",
+  fontFamily: "Plus Jakarta Sans, sans-serif",
 });

@@ -1,42 +1,43 @@
-/* Home Section Main Container */
+/* Home Section */
 .homeContainer {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
   background: var(--color-bg);
-  padding-block: 48px;
+  padding-block: 56px;
 }
 
-/* Eyebrow / kicker label */
+/* Eyebrow */
 .heroKicker {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   padding: 7px 16px;
   border-radius: 999px;
   background: rgba(22, 101, 52, 0.08);
   color: #14532d;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
+  letter-spacing: 0.6px;
   margin-bottom: 18px;
 }
 
-/* Text Animation Classes */
 .heroTitle {
   animation: slideInUp 0.7s ease-out;
-  position: relative;
-  line-height: 1.08;
+  line-height: 1.12;
 }
 
-.heroSubtitle {
-  animation: slideInUp 0.7s ease-out 0.1s both;
+/* Region label —understated, bukan judul kedua */
+.heroRegion {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #64748b;
 }
 
 .heroDescription {
   animation: fadeInUp 0.7s ease-out 0.2s both;
-  position: relative;
   line-height: 1.75;
   max-width: 480px;
 }
@@ -45,7 +46,6 @@
   animation: fadeInUp 0.7s ease-out 0.3s both;
 }
 
-/* Image: satu fokus, tanpa overlay / vector berlebih */
 .heroImageContainer {
   animation: fadeInRight 0.9s ease-out 0.25s both;
   position: relative;
@@ -53,33 +53,8 @@
   max-width: 620px;
 }
 
-.heroImageDesktop {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-  border-radius: 20px;
-  box-shadow: 0 16px 48px rgba(22, 101, 52, 0.14);
-}
-
-.heroImageDesktop:hover {
-  transform: translateY(-4px);
-}
-
-.heroImageMobile {
-  animation: bounceIn 0.8s ease-out 0.4s both;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(22, 101, 52, 0.18);
-  display: block;
-  width: min(40vh, 70vw, 280px);
-  height: min(40vh, 70vw, 280px);
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-/* Button Enhancements */
+/* CTA */
 .exploreButton {
-  transform: translateY(0);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   background: linear-gradient(135deg, #14532d, #15803d);
   box-shadow: 0 4px 16px rgba(22, 101, 52, 0.28);
@@ -90,20 +65,26 @@
   box-shadow: 0 8px 24px rgba(22, 101, 52, 0.36);
 }
 
-.exploreButton:active {
-  transform: translateY(0);
+.exploreButton:active { transform: translateY(0); }
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #166534;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* Text Highlight (satu fokus) */
+.textLink:hover { text-decoration: underline; }
+
 .highlightGreen {
-  position: relative;
   background: linear-gradient(135deg, #166534, #22c55e);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Keyframe Animations */
 @keyframes slideInUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -119,14 +100,6 @@
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes bounceIn {
-  0% { opacity: 0; transform: scale(0.3); }
-  50% { transform: scale(1.05); }
-  70% { transform: scale(0.9); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .homeContainer {
     min-height: auto;
@@ -135,31 +108,16 @@
     padding-block: 24px 32px;
   }
 
-  .heroKicker {
-    align-self: center;
-  }
-
-  .heroTitle { text-align: center; }
-
-  .heroDescription {
-    text-align: center;
-    margin: 0 auto 8px;
-  }
+  .heroKicker { align-self: center; }
+  .heroTitle, .heroDescription { text-align: center; }
+  .heroDescription { margin: 0 auto 8px; }
+  .heroRegion { font-size: 14px; letter-spacing: 1.5px; }
 
   .heroImageContainer {
     flex: none;
     width: 100%;
-    min-height: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .heroImageMobile {
-    max-height: 45vh;
-    max-width: 75vw;
-    height: auto;
-    width: auto;
+    max-width: 420px;
+    margin: 0 auto;
   }
 
   .exploreButton { width: 100%; max-width: 240px; }
@@ -172,29 +130,10 @@
   }
 }
 
-@media (max-width: 480px) {
-  .heroImageMobile {
-    width: min(30vh, 55vw, 200px);
-    height: min(30vh, 55vw, 200px);
-  }
-}
-
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .heroTitle,
-  .heroSubtitle,
   .heroDescription,
   .heroButton,
-  .heroImageContainer,
-  .heroImageMobile {
-    animation: none !important;
-  }
-
-  .heroImageDesktop:hover {
-    transform: none;
-  }
-
-  .exploreButton:hover {
-    transform: none;
-  }
+  .heroImageContainer { animation: none !important; }
+  .exploreButton:hover { transform: none; }
 }
