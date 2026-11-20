@@ -1,7 +1,6 @@
 'use client'
 import { Box, Flex, Text, Paper, Group } from '@mantine/core'
 import Image from 'next/image'
-import gifAbout from '../../../assets/gif_about.gif'
 import aboutus from '../../../assets/aboutus.png'
 import { useMediaQuery } from '@mantine/hooks'
 import { IconTarget, IconUsers } from '@tabler/icons-react'
@@ -19,16 +18,11 @@ export function AboutUs() {
         gap={'xl'}
         mb={60}
       >
-        {/* Image Section */}
+        {/* Image Section — satu gambar saja, tanpa GIF dobel */}
         <Flex justify="center" p={0} style={{ flex: 1 }}>
-          <Box visibleFrom="sm" className={styles.imageContainer}>
-            <Image src={aboutus} alt="About us" height={472} width={740} />
+          <Box className={styles.imageContainer}>
+            <Image src={aboutus} alt="Tim DENEXT" height={472} width={740} />
           </Box>
-          {isMobile && (
-            <Box pt={12} className={styles.fadeInUp}>
-              <Image src={gifAbout} alt="About GIF" height={200} width={200} />
-            </Box>
-          )}
         </Flex>
 
         {/* Content Section */}
