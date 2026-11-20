@@ -34,7 +34,9 @@ img {
 
 /* Grid/flex child perlu min-width 0 agar bisa menyusut di HP */
 .mantine-Grid-col,
-.mantine-Flex-root {
+.mantine-Flex-root,
+.mantine-Stack-root,
+.mantine-Container-root {
   min-width: 0;
 }
 
