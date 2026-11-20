@@ -1,6 +1,6 @@
 .clientGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
@@ -19,7 +19,6 @@
   justify-content: center;
   background: white;
   border: 2px solid transparent;
-  border-radius: 16px;
 }
 
 .logoCard::before {
@@ -32,7 +31,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(22, 101, 52, 0.1),
+    rgba(79, 128, 37, 0.1),
     transparent
   );
   transition: left 0.5s;
@@ -56,7 +55,16 @@
   transition: all 0.3s ease;
 }
 
-/* Grid klien — seragam, tanpa aturan nth-child yang bikin kolom kosong */
+/* Responsive adjustments */
+@media (min-width: 769px) {
+  .clientGrid > :nth-child(7) {
+    grid-column: 2; /* taruh di kolom kedua (tengah) */
+    justify-self: center; /* pastikan di tengah kolom */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
 
 @media (max-width: 768px) {
   .clientGrid {
@@ -78,7 +86,7 @@
 
 /* Additional hover effects */
 .logoCard:hover {
-  box-shadow: 0 20px 40px rgba(22, 101, 52, 0.15) !important;
+  box-shadow: 0 20px 40px rgba(79, 128, 37, 0.15) !important;
 }
 
 /* Animation keyframes */

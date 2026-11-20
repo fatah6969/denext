@@ -1,10 +1,13 @@
 'use client'
 
 import { Box, Button, Flex, Stack, Text } from '@mantine/core'
-import { IconBrandWhatsapp, IconArrowRight } from '@tabler/icons-react'
+import { IconBrandWhatsapp } from '@tabler/icons-react'
+import Image from 'next/image'
+import hero from '../../../assets/hero_background.png'
+import vector from '../../../assets/content_vector.png'
+import gifHero from '../../../assets/gif_hero.gif'
 import { useMediaQuery } from '@mantine/hooks'
 import classes from './home.module.css'
-import { HeroVisual } from './HeroVisual'
 
 export function Home() {
   const isMobile = useMediaQuery('(max-width: 768px)')
@@ -13,43 +16,74 @@ export function Home() {
     <Flex
       justify={isMobile ? 'start' : 'space-between'}
       direction={isMobile ? 'column' : 'row'}
-      align="center"
-      gap={isMobile ? 20 : 48}
       id="home"
-      pt={isMobile ? 32 : 0}
-      px={isMobile ? 'md' : 0}
+      pt={isMobile ? 46 : 0}
+      px={isMobile ? 'md' : 0} // ✅ FIX padding mobile
       className={classes.homeContainer}
     >
-      <Stack
-        gap={6}
-        ta={isMobile ? 'center' : 'start'}
-        justify="center"
-        w={isMobile ? '100%' : undefined}
-        maw={isMobile ? '100%' : 520}
-        style={{ overflowWrap: 'break-word' }}
-      >
-        <Box className={classes.heroTitle}>
-          <Box className={classes.heroKicker}>
-            <Text size="12px" fw={800} tt="uppercase" c="inherit">
-              IT Support &amp; Solusi Bisnis
-            </Text>
-          </Box>
-          <Text component="h1" size={isMobile ? '36px' : '56px'} fw={800} lh={1.12}>
-            Service Komputer &amp;{' '}
-            <Text span fw={800} className={classes.highlightGreen}>
-              IT Support
-            </Text>
-          </Text>
-          <Text className={classes.heroRegion} tt="uppercase">
-            Jabodetabek
-          </Text>
-        </Box>
+      {/* Floating Particles Background */}
+      <div className={classes.floatingParticles}>
+        {Array.from({ length: 9 }).map((_, i) => (
+          <div key={i} className={classes.particle} />
+        ))}
+      </div>
 
-        <Text size="lg" fw={400} lh={1.75} mt="md" c="var(--color-ink-3)" className={classes.heroDescription}>
-          DENEXT menyediakan jasa service komputer, maintenance server, Linux,
-          Mikrotik, CCTV, jaringan kantor, dan email Zimbra untuk perusahaan
-          di Jabodetabek.
-        </Text>
+      <Stack gap={6} ta="start" justify="center">
+        <Box className={classes.heroTitle}>
+  <Text
+    component="h1"
+    size={isMobile ? '34px' : '72px'}
+    fw={800}
+    lh={1.1}
+    className={isMobile ? '' : classes.typingAnimation}
+  >
+    Service Komputer &{' '}
+    <Text
+      span
+      c="#4F8025"
+      fw={900}
+      inherit
+      className={classes.highlightGreen}
+    >
+      IT Support
+    </Text>
+  </Text>
+
+  <Text
+    size={isMobile ? '30px' : '64px'}
+    fw={700}
+    pt={12}
+    className={classes.heroSubtitle}
+  >
+    JABODETABEK
+  </Text>
+</Box>
+
+        <Text
+  size="lg"
+  fw={400}
+  lh={1.8}
+  mt="md"
+  c="dimmed"
+  className={classes.heroDescription}
+  style={{ wordBreak: 'break-word' }}
+>
+  DENEXT menyediakan jasa{' '}
+  <Text span fw={700} className={classes.highlightGreen}>
+    Service Komputer
+  </Text>
+  ,{' '}
+  <Text span fw={700} className={classes.highlightGreen}>
+    Maintenance Server
+  </Text>
+  ,{' '}
+  <Text span fw={700} className={classes.highlightTeal}>
+    Linux Server
+  </Text>
+  , Mikrotik, CCTV, Jaringan Kantor, Email Server Zimbra,
+  dan Solusi IT Profesional untuk perusahaan di area
+  Jakarta, Bogor, Depok, Tangerang, dan Bekasi.
+</Text>
 
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
           <Button
@@ -63,21 +97,68 @@ export function Home() {
             fullWidth={isMobile}
             className={classes.exploreButton}
             leftSection={<IconBrandWhatsapp size={20} />}
+            style={{ whiteSpace: 'nowrap' }}
           >
             Konsultasi Gratis
           </Button>
 
-          <Text mt={isMobile ? 'md' : 0}>
-            <a href="/service-komputer-jakarta" className={classes.textLink}>
-              Lihat layanan komputer Jakarta <IconArrowRight size={16} />
-            </a>
-          </Text>
+          <Text mt="md">
+  <a
+    href="/service-komputer-jakarta"
+    style={{
+      color: '#4F8025',
+      textDecoration: 'none',
+      fontWeight: 600,
+    }}
+  >
+    Lihat Layanan Service Komputer Jakarta →
+  </a>
+</Text>
+          
+          {!isMobile && (
+            <Image
+              src={vector}
+              alt="content-vector"
+              height={500}
+              width={500}
+              className={classes.contentVector}
+              style={{
+                position: 'absolute',
+                bottom: 96,
+                left: -22,
+                zIndex: -999,
+              }}
+            />
+          )}
         </Box>
       </Stack>
 
-      <Box className={classes.heroImageContainer}>
-        <HeroVisual />
-      </Box>
+      <Flex
+        justify={isMobile ? 'center' : 'flex-end'}
+        className={classes.heroImageContainer}
+      >
+        <Box visibleFrom="sm">
+          <Image
+            src={hero}
+            alt="Service Komputer dan IT Support Jabodetabek"
+            height={721}
+            width={837}
+            className={classes.heroImageDesktop}
+          />
+        </Box>
+
+        {isMobile && (
+          <Box>
+            <Image
+              src={gifHero}
+              alt="Jasa IT Support dan Maintenance Server"
+              height={200}
+              width={200}
+              className={classes.heroImageMobile}
+            />
+          </Box>
+        )}
+      </Flex>
     </Flex>
   )
 }
