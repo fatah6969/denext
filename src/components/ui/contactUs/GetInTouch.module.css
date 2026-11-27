@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #166534, #15803d, #166534);
+  background: linear-gradient(90deg, #4f8025, #90b76e, #4f8025);
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
 }
@@ -49,7 +49,7 @@
 
 .contacts {
   flex: 0 0 45%;
-  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+  background: linear-gradient(135deg, #4f8025 0%, #90b76e 100%);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -171,18 +171,18 @@
 
 .input:focus-within {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(22, 101, 52, 0.15);
+  box-shadow: 0 8px 25px rgba(79, 128, 37, 0.15);
 }
 
 .input input {
-  border: 2px solid rgba(22, 101, 52, 0.1) !important;
+  border: 2px solid rgba(79, 128, 37, 0.1) !important;
   transition: all 0.3s ease !important;
   background: rgba(255, 255, 255, 0.9) !important;
 }
 
 .input input:focus {
-  border-color: #166534 !important;
-  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.1) !important;
+  border-color: #4f8025 !important;
+  box-shadow: 0 0 0 3px rgba(79, 128, 37, 0.1) !important;
 }
 
 .textarea {
@@ -192,19 +192,19 @@
 
 .textarea:focus-within {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(22, 101, 52, 0.15);
+  box-shadow: 0 8px 25px rgba(79, 128, 37, 0.15);
 }
 
 .textarea textarea {
-  border: 2px solid rgba(22, 101, 52, 0.1) !important;
+  border: 2px solid rgba(79, 128, 37, 0.1) !important;
   transition: all 0.3s ease !important;
   background: rgba(255, 255, 255, 0.9) !important;
   resize: vertical !important;
 }
 
 .textarea textarea:focus {
-  border-color: #166534 !important;
-  box-shadow: 0 0 0 3px rgba(22, 101, 52, 0.1) !important;
+  border-color: #4f8025 !important;
+  box-shadow: 0 0 0 3px rgba(79, 128, 37, 0.1) !important;
 }
 
 .control {
@@ -222,7 +222,7 @@
 
 .control:hover {
   transform: translateY(-3px) !important;
-  box-shadow: 0 12px 35px rgba(22, 101, 52, 0.4) !important;
+  box-shadow: 0 12px 35px rgba(79, 128, 37, 0.4) !important;
 }
 
 .control:active {

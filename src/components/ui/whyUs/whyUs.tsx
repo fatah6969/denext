@@ -13,7 +13,7 @@ export function WhyUs() {
   return (
     <Stack pt={72} px={isMobile ? 'md' : 0}>
       <Flex justify="center" direction="column" align="center" gap={12}>
-        <Text size="2rem" c="#166534" fw={800}>
+        <Text size="2rem" c="#4F8025" fw={800}>
           Mengapa DENEXT?
         </Text>
         <Text size="sm" fw={600} w={{ base: '100%', sm: 600 }} ta="center">
