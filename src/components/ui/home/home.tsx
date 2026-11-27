@@ -18,7 +18,7 @@ export function Home() {
       direction={isMobile ? 'column' : 'row'}
       id="home"
       pt={isMobile ? 46 : 0}
-      px={isMobile ? 'md' : 0}
+      px={isMobile ? 'md' : 0} // ✅ FIX padding mobile
       className={classes.homeContainer}
     >
       {/* Floating Particles Background */}
@@ -28,64 +28,62 @@ export function Home() {
         ))}
       </div>
 
-      <Stack gap={6} ta={isMobile ? 'center' : 'start'} justify="center">
+      <Stack gap={6} ta="start" justify="center">
         <Box className={classes.heroTitle}>
-          <Box className={classes.heroKicker}>
-            <Text size="13px" fw={800} tt="uppercase">
-              Solusi IT Profesional
-            </Text>
-          </Box>
-          <Text
-            component="h1"
-            size={isMobile ? '40px' : '72px'}
-            fw={800}
-            lh={1.08}
-          >
-            Service Komputer &{' '}
-            <Text
-              span
-              fw={900}
-              className={classes.highlightGreen}
-            >
-              IT Support
-            </Text>
-          </Text>
+  <Text
+    component="h1"
+    size={isMobile ? '34px' : '72px'}
+    fw={800}
+    lh={1.1}
+    className={isMobile ? '' : classes.typingAnimation}
+  >
+    Service Komputer &{' '}
+    <Text
+      span
+      c="#4F8025"
+      fw={900}
+      inherit
+      className={classes.highlightGreen}
+    >
+      IT Support
+    </Text>
+  </Text>
 
-          <Text
-            size={isMobile ? '30px' : '56px'}
-            fw={700}
-            pt={12}
-            className={classes.heroSubtitle}
-          >
-            JABODETABEK
-          </Text>
-        </Box>
+  <Text
+    size={isMobile ? '30px' : '64px'}
+    fw={700}
+    pt={12}
+    className={classes.heroSubtitle}
+  >
+    JABODETABEK
+  </Text>
+</Box>
 
         <Text
-          size="lg"
-          fw={400}
-          lh={1.75}
-          mt="md"
-          c="dimmed"
-          className={classes.heroDescription}
-          style={{ wordBreak: 'break-word' }}
-        >
-          DENEXT menyediakan jasa{' '}
-          <Text span fw={700} className={classes.highlightGreen}>
-            Service Komputer
-          </Text>
-          ,{' '}
-          <Text span fw={700} className={classes.highlightGreen}>
-            Maintenance Server
-          </Text>
-          ,{' '}
-          <Text span fw={700} className={classes.highlightGreen}>
-            Linux Server
-          </Text>
-          , Mikrotik, CCTV, Jaringan Kantor, Email Server Zimbra,
-          dan Solusi IT Profesional untuk perusahaan di area
-          Jakarta, Bogor, Depok, Tangerang, dan Bekasi.
-        </Text>
+  size="lg"
+  fw={400}
+  lh={1.8}
+  mt="md"
+  c="dimmed"
+  className={classes.heroDescription}
+  style={{ wordBreak: 'break-word' }}
+>
+  DENEXT menyediakan jasa{' '}
+  <Text span fw={700} className={classes.highlightGreen}>
+    Service Komputer
+  </Text>
+  ,{' '}
+  <Text span fw={700} className={classes.highlightGreen}>
+    Maintenance Server
+  </Text>
+  ,{' '}
+  <Text span fw={700} className={classes.highlightTeal}>
+    Linux Server
+  </Text>
+  , Mikrotik, CCTV, Jaringan Kantor, Email Server Zimbra,
+  dan Solusi IT Profesional untuk perusahaan di area
+  Jakarta, Bogor, Depok, Tangerang, dan Bekasi.
+</Text>
 
         <Box pt={isMobile ? 16 : 24} className={classes.heroButton}>
           <Button
@@ -104,19 +102,19 @@ export function Home() {
             Konsultasi Gratis
           </Button>
 
-          <Text mt={isMobile ? 'md' : 0}>
-            <a
-              href="/service-komputer-jakarta"
-              style={{
-                color: '#166534',
-                textDecoration: 'none',
-                fontWeight: 600,
-              }}
-            >
-              Lihat Layanan Service Komputer Jakarta &nbsp;{'\u25B8'}
-            </a>
-          </Text>
-
+          <Text mt="md">
+  <a
+    href="/service-komputer-jakarta"
+    style={{
+      color: '#4F8025',
+      textDecoration: 'none',
+      fontWeight: 600,
+    }}
+  >
+    Lihat Layanan Service Komputer Jakarta →
+  </a>
+</Text>
+          
           {!isMobile && (
             <Image
               src={vector}

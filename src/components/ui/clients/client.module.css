@@ -19,7 +19,6 @@
   justify-content: center;
   background: white;
   border: 2px solid transparent;
-  border-radius: 16px;
 }
 
 .logoCard::before {
@@ -32,7 +31,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(22, 101, 52, 0.1),
+    rgba(79, 128, 37, 0.1),
     transparent
   );
   transition: left 0.5s;
@@ -87,7 +86,7 @@
 
 /* Additional hover effects */
 .logoCard:hover {
-  box-shadow: 0 20px 40px rgba(22, 101, 52, 0.15) !important;
+  box-shadow: 0 20px 40px rgba(79, 128, 37, 0.15) !important;
 }
 
 /* Animation keyframes */
